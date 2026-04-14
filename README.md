@@ -1,7 +1,8 @@
 # 전시용 챗봇 (위키 우선 + 원문 RAG)
 
-## 폴더 구조 (위키)
+## 폴더 구조
 
+- `docs/` — 비개발자 초기 설정(`setup-first-time-ko.md`), Vercel 배포(`vercel-deploy-ko.md`).
 - `wiki/canonical/` — 전시 **정본** Markdown (RAG 1차). 파일명 예: `00_project_overview.md` … `09_critic_faq.md`.
 - `wiki/sources/` — 원천 로그 (`chatgpt`, `other_ai`, `critics`, `scripts`, `references` …). RAG 2차(원문) 인제스트 대상.
 - `wiki/archived/` — 참고용 보관. **기본 인제스트 대상 아님** (필요 시 스크립트 확장).
@@ -9,10 +10,10 @@
 
 ## 준비
 
-1. Supabase에서 Postgres + `pgvector` 활성화 후, `supabase/migrations/20250414000000_init.sql` 실행.
+1. Supabase에서 Postgres + `pgvector` 활성화 후, **`supabase/migrations/20250414000000_init.sql`** 전체를 SQL Editor에 붙여넣고 Run (스키마 단일 소스).
 2. `.env.example`을 참고해 `.env.local` 작성 (`OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_SECRET` 등).
-3. **Supabase SQL**: `설정용_SQL_한번에_실행.sql` 내용을 Supabase SQL Editor에 붙여넣고 Run (비개발자는 `비개발자_처음설정.txt` 참고).
-4. **`.env.local`**: 저장소에 포함된 파일은 **예시 문구**입니다. `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_SECRET` 네 곳을 **본인 키로 반드시 교체**하세요. (키는 GitHub/카톡에 올리지 마세요.)
+3. 비개발자용 단계별 안내: **[docs/setup-first-time-ko.md](docs/setup-first-time-ko.md)**.
+4. **`.env.local`** 은 Git에 올라가지 않습니다. 키는 **본인만** 채우고 GitHub/카톡에 공유하지 마세요.
 5. `npm install` 후:
    - **원문만 넣고 빠르게 검색만 갱신**: `1_벡터만_올리기.bat` 더블클릭 (= `npm run sync:knowledge`)
    - **소화 알고리즘까지 전부**: `2_원문소화후_벡터올리기.bat` 더블클릭 (= `digest:all-canonical` + `sync:knowledge`, API 비용·시간 큼)
@@ -21,7 +22,7 @@
 
 ## Vercel 배포 (인터넷 URL)
 
-인터넷에서 접속하게 하려면 [VERCEL_배포.md](VERCEL_배포.md)대로 GitHub 연동 후 배포하면 됩니다. 환경 변수는 Vercel 대시보드에만 설정합니다.
+[docs/vercel-deploy-ko.md](docs/vercel-deploy-ko.md) 참고. 환경 변수는 Vercel 대시보드에만 설정합니다.
 
 ## 챗봇이 쓰는 API (연결)
 

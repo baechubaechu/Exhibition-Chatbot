@@ -1,4 +1,5 @@
 -- pgvector + 전시용 RAG 스키마
+-- Supabase 대시보드 → SQL Editor에서 이 파일 전체를 붙여넣고 Run 해도 됩니다(Migration과 동일, idempotent).
 -- 임베딩: text-embedding-3-small 기본 차원 1536
 
 create extension if not exists vector;
