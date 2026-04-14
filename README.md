@@ -39,6 +39,14 @@
 - **전시 운영**: IP 기준 메모리 레이트리밋, 동일 질문 짧은 메모리 캐시, `STATIC_FAQ_JSON` 정적 FAQ.
 - **일일 gap**: `chat_turns`에 `gap_candidate` 기록. `/admin/gaps`에서 목록·Markdown/CSV보내기·처리 완료 표시.
 
+## 인터랙티브 통합 (MVP)
+
+- 이벤트 버스 API: `/api/events/*` (`publish`, `pull`, `state`, `heartbeat`, `recover`)
+- 컨트롤 패널: `/control` (사람수/dB/감정 상태 override 발행, 안전 복귀 트리거)
+- 챗 연동: `chat.scene_hint` 이벤트가 질문 완료 시 자동 발행
+- 계약 문서: [docs/event-bus-contract-ko.md](docs/event-bus-contract-ko.md)
+- 환경 서비스(로컬 노트북 실행): `spatial-environment-agent/README.md`
+
 ## 환경 변수
 
 자세한 키는 `.env.example` 참고.

@@ -1,0 +1,61 @@
+﻿safe_scene: safe_neutral
+scenes:
+  - id: calm_gallery
+    hold_sec: 120
+    target_zone: all
+    light:
+      brightness: 42
+      color_temp: 4300
+      transition_ms: 1200
+    sound:
+      track: ambient_calm
+      volume: 22
+      fade_ms: 1200
+
+  - id: dense_flux
+    hold_sec: 90
+    target_zone: all
+    light:
+      brightness: 70
+      color_temp: 5000
+      transition_ms: 600
+    sound:
+      track: crowd_flux
+      volume: 40
+      fade_ms: 700
+
+  - id: critical_focus
+    hold_sec: 100
+    target_zone: all
+    light:
+      brightness: 58
+      color_temp: 6200
+      transition_ms: 800
+    sound:
+      track: focus_pulse
+      volume: 30
+      fade_ms: 800
+
+  - id: night_reflect
+    hold_sec: 140
+    target_zone: all
+    light:
+      brightness: 28
+      color_temp: 3000
+      transition_ms: 1800
+    sound:
+      track: low_reflect
+      volume: 18
+      fade_ms: 1500
+
+  - id: safe_neutral
+    hold_sec: 60
+    target_zone: all
+    light:
+      brightness: 38
+      color_temp: 4100
+      transition_ms: 500
+    sound:
+      track: silence
+      volume: 0
+      fade_ms: 500

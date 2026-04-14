@@ -14,6 +14,7 @@
     "digest:canonical": "tsx scripts/digest-sources-to-canonical.ts",
     "digest:all-canonical": "tsx scripts/digest-all-canonical.ts",
     "extract:media": "tsx scripts/extract-media-sources.ts",
+    "check:event-bus": "tsx scripts/check-event-bus-health.ts",
     "sync:knowledge": "npm run ingest:raw && npm run ingest:wiki",
     "sync:knowledge:with-digest": "npm run digest:all-canonical && npm run sync:knowledge",
     "sync:knowledge:with-media": "npm run extract:media && npm run digest:all-canonical && npm run sync:knowledge"

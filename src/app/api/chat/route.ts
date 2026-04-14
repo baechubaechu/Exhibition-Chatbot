@@ -9,6 +9,7 @@ import { tryStaticFaqMatch } from "@/lib/staticFaq";
 import { insertChatTurn, classifyOutcome } from "@/lib/chatTurn";
 import { classifyExhibitTopic } from "@/lib/offTopic";
 import { translateToEnglishBatch } from "@/lib/translateDisplay";
+import { publishSceneHintFromChat } from "@/lib/sceneHint";
 
 export const runtime = "nodejs";
 
@@ -316,6 +317,11 @@ export async function POST(req: NextRequest) {
         maxTokens: answerMaxTokens,
         messages: coreMessages,
         async onFinish({ text }) {
+          publishSceneHintFromChat({
+            question,
+            locale,
+            sessionId: body.sessionId,
+          });
           const { outcome, gapCandidate } = classifyOutcome(debug);
           await insertChatTurn({
             sessionId: body.sessionId,
