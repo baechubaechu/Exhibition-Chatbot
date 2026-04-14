@@ -13,8 +13,10 @@
     "ingest:raw": "tsx scripts/ingest-raw.ts",
     "digest:canonical": "tsx scripts/digest-sources-to-canonical.ts",
     "digest:all-canonical": "tsx scripts/digest-all-canonical.ts",
+    "extract:media": "tsx scripts/extract-media-sources.ts",
     "sync:knowledge": "npm run ingest:raw && npm run ingest:wiki",
-    "sync:knowledge:with-digest": "npm run digest:all-canonical && npm run sync:knowledge"
+    "sync:knowledge:with-digest": "npm run digest:all-canonical && npm run sync:knowledge",
+    "sync:knowledge:with-media": "npm run extract:media && npm run digest:all-canonical && npm run sync:knowledge"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.3.24",
@@ -23,12 +25,14 @@
     "ai": "^4.3.19",
     "next": "^15.2.4",
     "openai": "^4.96.0",
+    "pdf-parse": "^1.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.14.1",
+    "@types/pdf-parse": "^1.1.4",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "dotenv": "^16.6.1",

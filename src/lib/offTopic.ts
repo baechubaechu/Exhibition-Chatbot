@@ -23,7 +23,11 @@ export async function loadProjectScopeSnippet(): Promise<string> {
   try {
     const p = join(process.cwd(), "wiki", "canonical", "00_project_overview.md");
     const full = await readFile(p, "utf8");
-    scopeCache = full.slice(0, 6000);
+    const mc = Number(process.env.PROJECT_SCOPE_SNIPPET_MAX_CHARS);
+    const maxChars = Number.isFinite(mc)
+      ? Math.min(8000, Math.max(1500, mc))
+      : 3800;
+    scopeCache = full.slice(0, maxChars);
   } catch {
     scopeCache =
       "이 챗봇은 건축 졸업전시 프로젝트(금정 맥락, 대지·층위·노드·매싱·이론·FAQ) 안내만 합니다. " +
@@ -38,10 +42,12 @@ export async function loadProjectScopeSnippet(): Promise<string> {
  */
 export async function classifyExhibitTopic(userQuestion: string): Promise<z.infer<typeof topicSchema>> {
   const scope = await loadProjectScopeSnippet();
+  const topicModel = process.env.OPENAI_TOPIC_MODEL ?? process.env.OPENAI_CHAT_MODEL ?? "gpt-4o-mini";
   const { object } = await generateObject({
-    model: openai(process.env.OPENAI_CHAT_MODEL ?? "gpt-4o-mini"),
+    model: openai(topicModel),
     schema: topicSchema,
     temperature: 0,
+    maxTokens: 180,
     prompt: [
       "다음 SCOPE는 전시 챗봇이 다루는 프로젝트 범위 설명이다.",
       "USER_QUESTION이 이 범위와 직접 관련 있으면 on_topic.",

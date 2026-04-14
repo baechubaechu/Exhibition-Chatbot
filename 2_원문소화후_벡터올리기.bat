@@ -4,21 +4,25 @@ cd /d "%~dp0"
 title 전시챗봇 - 원문 소화(전체) + 벡터 올리기
 echo.
 echo [주의] OpenAI API 를 많이 호출합니다. 시간이 오래 걸리고 비용이 나갈 수 있습니다.
-echo wiki\sources 에 넣은 원문을 알고리즘대로 각 canonical 문서에 초안으로 붙인 뒤,
+echo wiki\sources 에 넣은 원문·PDF·이미지를 (1) 텍스트로 뽑고 (2) 알고리즘대로 canonical 에 초안 붙인 뒤,
 echo Supabase 에 벡터를 다시 올립니다.
 echo.
 pause
 echo.
-echo [1/2] 전체 canonical 소화 중...
+echo [0/3] PDF/이미지 → 텍스트 (wiki\sources\_media_extracts) …
+call npm run extract:media
+if errorlevel 1 goto err
+echo.
+echo [1/3] 전체 canonical 소화 중...
 call npm run digest:all-canonical
 if errorlevel 1 goto err
 echo.
-echo [2/2] 벡터 올리기...
+echo [2/3] 벡터 올리기...
 call npm run sync:knowledge
 if errorlevel 1 goto err
 echo.
 echo ===== 완료 =====
-echo wiki\canonical\*.md 맨 아래 "자동 소화 초안" 을 꼭 읽고 고친 뒤, 다시 이 배치를 돌리면 반영됩니다.
+echo wiki\canonical\*.md 맨 아래 "자동 소화 초안" 과 _media_extracts\*.md 를 꼭 읽고 고친 뒤, 다시 이 배치를 돌리면 반영됩니다.
 goto end
 :err
 echo.

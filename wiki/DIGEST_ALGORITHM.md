@@ -8,6 +8,7 @@
 
 1. **수집(Collection)**  
    - 대상: `wiki/sources/**/*.{md,txt}` (선택적으로 하위 폴더만, 예: `chatgpt/`)  
+   - PDF·이미지는 먼저 `npm run extract:media`로 `wiki/sources/_media_extracts/**/*.md`로 바꾼 뒤, 그 `.md`도 동일하게 수집된다.  
    - 각 파일에 **출처 경로**(`sources/chatgpt/…`)를 메타로 붙인다.
 
 2. **정규화(Normalize)**  
@@ -32,6 +33,9 @@
 ## 스크립트
 
 ```bash
+# (선택) PDF·이미지 → wiki/sources/_media_extracts/*.md
+npm run extract:media
+
 # 예: 대지 분석 문서로 소화 (sources 전체를 입력으로)
 npx tsx scripts/digest-sources-to-canonical.ts --canonical 03_site_analysis.md
 
@@ -43,3 +47,4 @@ npx tsx scripts/digest-sources-to-canonical.ts --canonical 08_public_faq.md --so
 
 - LLM이 “요약” 과정에서 왜곡할 수 있으므로 **반드시 canonical에 검수 단계**를 둔다.  
 - 법적·저작권이 있는 `references`는 자동 반영 전 **인용 범위**를 사람이 확인한다.
+- Vision·PDF 파일 해석은 **모델이 틀릴 수 있으므로** `_media_extracts`와 canonical 초안을 사람이 확인한다.

@@ -30,6 +30,11 @@ export type TwoStageResult = {
   debug: GateDebug;
 };
 
+/** 원문 RPC 직전에 호출(스트림에 상태 푸시 등). */
+export type TwoStageRetrieveHooks = {
+  onBeforeRawSearch?: () => void | Promise<void>;
+};
+
 function envNum(name: string, fallback: number): number {
   const v = process.env[name];
   const n = v ? Number(v) : NaN;
@@ -86,6 +91,19 @@ function rowsToWikiChunks(rows: WikiRpcRow[]): RetrievedChunk[] {
   }));
 }
 
+function rowsToRawChunks(rows: WikiRpcRow[]): RetrievedChunk[] {
+  return rows.map((r) => ({
+    id: r.id,
+    source: "raw" as const,
+    docId: r.doc_id,
+    title: r.title,
+    sectionPath: r.section_path,
+    content: r.content,
+    similarity: r.similarity,
+    metadata: r.metadata ?? {},
+  }));
+}
+
 /** 동일 청크 id는 더 높은 유사도만 유지해 병합 후 정렬 */
 function mergeWikiRpcRows(a: WikiRpcRow[], b: WikiRpcRow[]): WikiRpcRow[] {
   const map = new Map<number, WikiRpcRow>();
@@ -120,7 +138,10 @@ function applyOverviewIntroBoost(query: string, chunks: RetrievedChunk[]): Retri
     .sort((a, b) => b.similarity - a.similarity);
 }
 
-export async function twoStageRetrieve(query: string): Promise<TwoStageResult> {
+export async function twoStageRetrieve(
+  query: string,
+  hooks?: TwoStageRetrieveHooks,
+): Promise<TwoStageResult> {
   const wikiThreshold = envNum("WIKI_MATCH_THRESHOLD", 0.21);
   const rawThreshold = envNum("RAW_MATCH_THRESHOLD", 0.2);
   const marginMin = envNum("WIKI_MARGIN_MIN", 0.018);
@@ -143,13 +164,17 @@ export async function twoStageRetrieve(query: string): Promise<TwoStageResult> {
   const useDualEmbed = short && soundsOverview;
 
   let wikiRows: WikiRpcRow[];
-  /** 2단계 원문 검색에도 동일 질의 벡터 사용 */
   let rawQueryVector: number[];
+
+  const rpcRaw = (vec: number[]) =>
+    supabase.rpc("match_raw_chunks", {
+      query_embedding: vec,
+      match_threshold: rawRecallFloor,
+      match_count: matchCount,
+    });
+
   if (useDualEmbed) {
-    const [vecRaw, vecAug] = await Promise.all([
-      embedText(trimmed),
-      embedText(retrievalQuery),
-    ]);
+    const [vecRaw, vecAug] = await Promise.all([embedText(trimmed), embedText(retrievalQuery)]);
     rawQueryVector = vecAug;
     const [resA, resB] = await Promise.all([
       supabase.rpc("match_wiki_chunks", {
@@ -168,13 +193,13 @@ export async function twoStageRetrieve(query: string): Promise<TwoStageResult> {
     wikiRows = mergeWikiRpcRows((resA.data ?? []) as WikiRpcRow[], (resB.data ?? []) as WikiRpcRow[]);
   } else {
     rawQueryVector = await embedText(retrievalQuery);
-    const { data, error: wErr } = await supabase.rpc("match_wiki_chunks", {
+    const wRes = await supabase.rpc("match_wiki_chunks", {
       query_embedding: rawQueryVector,
       match_threshold: wikiRecallFloor,
       match_count: matchCount,
     });
-    if (wErr) throw wErr;
-    wikiRows = (data ?? []) as WikiRpcRow[];
+    if (wRes.error) throw wRes.error;
+    wikiRows = (wRes.data ?? []) as WikiRpcRow[];
   }
 
   const wikiChunks = applyOverviewIntroBoost(trimmed, rowsToWikiChunks(wikiRows));
@@ -191,27 +216,14 @@ export async function twoStageRetrieve(query: string): Promise<TwoStageResult> {
     top1 >= wikiThreshold && (secondIsNotCompetitive || margin >= marginMinEff);
 
   let rawChunks: RetrievedChunk[] = [];
-  let rawTop: number | undefined;
+  let rawTop = 0;
   let rawConfidenceOK = false;
 
   if (!wikiConfidenceOK) {
-    const { data: rawRows, error: rErr } = await supabase.rpc("match_raw_chunks", {
-      query_embedding: rawQueryVector,
-      match_threshold: rawRecallFloor,
-      match_count: matchCount,
-    });
-    if (rErr) throw rErr;
-    const raw = (rawRows ?? []) as WikiRpcRow[];
-    rawChunks = raw.map((r) => ({
-      id: r.id,
-      source: "raw" as const,
-      docId: r.doc_id,
-      title: r.title,
-      sectionPath: r.section_path,
-      content: r.content,
-      similarity: r.similarity,
-      metadata: r.metadata ?? {},
-    }));
+    await hooks?.onBeforeRawSearch?.();
+    const rawRes = await rpcRaw(rawQueryVector);
+    if (rawRes.error) throw rawRes.error;
+    rawChunks = rowsToRawChunks((rawRes.data ?? []) as WikiRpcRow[]);
     rawTop = rawChunks[0]?.similarity ?? 0;
     rawConfidenceOK = !!rawTop && rawTop >= rawThreshold;
   }
@@ -221,7 +233,7 @@ export async function twoStageRetrieve(query: string): Promise<TwoStageResult> {
     wikiSecond: wikiChunks[1]?.similarity,
     wikiMargin: margin,
     wikiConfidenceOK,
-    rawTop: rawTop ?? 0,
+    rawTop,
     rawConfidenceOK,
     wikiThreshold,
     rawThreshold,
