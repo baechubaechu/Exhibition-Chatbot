@@ -1,0 +1,240 @@
+:root {
+  color-scheme: dark;
+  --bg-deep: #06090d;
+  --bg: #0a0f16;
+  --panel: rgba(18, 25, 36, 0.85);
+  --panel-solid: #121a26;
+  --border: rgba(100, 140, 190, 0.22);
+  --border-strong: rgba(120, 170, 220, 0.35);
+  --text: #eef3fa;
+  --muted: #8a9db5;
+  --accent: #6ec8ff;
+  --accent-soft: rgba(110, 200, 255, 0.14);
+  --glow: rgba(110, 200, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Noto Sans KR",
+    sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* —— Extra Space 챗 UI —— */
+.es-page {
+  min-height: 100vh;
+  padding: 28px 18px 56px;
+  background:
+    radial-gradient(ellipse 100% 70% at 50% -15%, var(--glow), transparent 55%),
+    linear-gradient(165deg, #0b1018 0%, var(--bg-deep) 45%, #070a10 100%);
+}
+
+.es-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.es-header {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+.es-kicker {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.es-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 5vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  background: linear-gradient(120deg, #fff 0%, #c5e6ff 45%, #8ecfff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.es-sub {
+  margin: 14px auto 0;
+  max-width: 34em;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.es-card {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 24px 48px rgba(0, 0, 0, 0.35);
+  padding: 18px 18px 14px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+}
+
+.es-empty {
+  margin: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  padding: 24px 12px;
+}
+
+.es-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 92%;
+}
+
+.es-row--user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.es-row--bot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.es-meta {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+  letter-spacing: 0.02em;
+}
+
+.es-bubble {
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+}
+
+.es-bubble--user {
+  background: linear-gradient(145deg, #1a2838 0%, #152030 100%);
+  border-color: rgba(110, 200, 255, 0.2);
+  border-bottom-right-radius: 5px;
+}
+
+.es-bubble--bot {
+  background: linear-gradient(165deg, #0e141d 0%, #0a1018 100%);
+  border-bottom-left-radius: 5px;
+}
+
+.es-form {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.es-input {
+  flex: 1 1 240px;
+  min-height: 52px;
+  resize: vertical;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(8, 12, 18, 0.75);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.es-input:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.es-btn {
+  padding: 0 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(110, 200, 255, 0.45);
+  background: linear-gradient(180deg, rgba(110, 200, 255, 0.18) 0%, rgba(70, 140, 200, 0.1) 100%);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  min-width: 100px;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.es-btn:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.es-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.es-footer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.es-footer a {
+  opacity: 0.85;
+}
+
+/* 관리자 페이지 공통 */
+.admin-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.admin-back:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,43 @@
+# 전시용 챗봇 (위키 우선 + 원문 RAG)
+
+## 폴더 구조 (위키)
+
+- `wiki/canonical/` — 전시 **정본** Markdown (RAG 1차). 파일명 예: `00_project_overview.md` … `09_critic_faq.md`.
+- `wiki/sources/` — 원천 로그 (`chatgpt`, `other_ai`, `critics`, `scripts`, `references` …). RAG 2차(원문) 인제스트 대상.
+- `wiki/archived/` — 참고용 보관. **기본 인제스트 대상 아님** (필요 시 스크립트 확장).
+- `wiki/DIGEST_ALGORITHM.md` — 원문 → canonical 소화 절차 설명.
+
+## 준비
+
+1. Supabase에서 Postgres + `pgvector` 활성화 후, `supabase/migrations/20250414000000_init.sql` 실행.
+2. `.env.example`을 참고해 `.env.local` 작성 (`OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_SECRET` 등).
+3. **Supabase SQL**: `설정용_SQL_한번에_실행.sql` 내용을 Supabase SQL Editor에 붙여넣고 Run (비개발자는 `비개발자_처음설정.txt` 참고).
+4. **`.env.local`**: 저장소에 포함된 파일은 **예시 문구**입니다. `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_SECRET` 네 곳을 **본인 키로 반드시 교체**하세요. (키는 GitHub/카톡에 올리지 마세요.)
+5. `npm install` 후:
+   - **원문만 넣고 빠르게 검색만 갱신**: `1_벡터만_올리기.bat` 더블클릭 (= `npm run sync:knowledge`)
+   - **소화 알고리즘까지 전부**: `2_원문소화후_벡터올리기.bat` 더블클릭 (= `digest:all-canonical` + `sync:knowledge`, API 비용·시간 큼)
+   - 또는 터미널: `npm run digest:canonical -- --canonical 03_site_analysis.md` (한 파일만 소화)
+6. `npm run dev` → http://localhost:3000
+
+## Vercel 배포 (인터넷 URL)
+
+인터넷에서 접속하게 하려면 [VERCEL_배포.md](VERCEL_배포.md)대로 GitHub 연동 후 배포하면 됩니다. 환경 변수는 Vercel 대시보드에만 설정합니다.
+
+## 챗봇이 쓰는 API (연결)
+
+- **OpenAI** HTTP API를 **서버에서만** 호출합니다.
+- 라이브러리: **Vercel AI SDK** `streamText` / `generateObject` + **`@ai-sdk/openai`** 어댑터.
+- 모델: `.env`의 `OPENAI_CHAT_MODEL`(기본 `gpt-4o-mini`), 임베딩은 `OPENAI_EMBEDDING_MODEL`.
+- 별도의 “Responses API 전용 URL”을 붙일 필요는 없고, **`OPENAI_API_KEY`만 유효하면** 동일 베이스 URL로 연결됩니다.
+
+## 기능
+
+- **오프토픽**: 질문이 전시 범위 밖이면 거절(`refused`, gap 아님). 범위 문구는 `PROJECT_SCOPE_SNIPPET` 또는 `wiki/canonical/00_project_overview.md` 앞부분. 끄려면 `DISABLE_TOPIC_GUARD=1`.
+- **2단계 검색**: 위키 유사도 + 마진 게이트 통과 시 위키만 사용; 실패 시 원문 청크 검색.
+- **근거**: 서버에서 RAG로 검색하나, 현재 UI에는 출처 패널을 표시하지 않습니다.
+- **전시 운영**: IP 기준 메모리 레이트리밋, 동일 질문 짧은 메모리 캐시, `STATIC_FAQ_JSON` 정적 FAQ.
+- **일일 gap**: `chat_turns`에 `gap_candidate` 기록. `/admin/gaps`에서 목록·Markdown/CSV보내기·처리 완료 표시.
+
+## 환경 변수
+
+자세한 키는 `.env.example` 참고.
