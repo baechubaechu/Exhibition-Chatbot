@@ -1,0 +1,3 @@
+[메모] 원문 소화 파이프라인
+- canonical은 전시용 정본, sources는 각종 AI·비평·스크립트 원천.
+- digest 스크립트 실행 후 반드시 사람이 canonical을 편집한 다음 ingest:wiki 할 것.
