@@ -42,6 +42,41 @@ a:hover {
   border-bottom-color: var(--line-strong);
 }
 
+/* entry splash */
+.es-splash {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  background: #fbf8f2;
+  color: var(--text);
+  opacity: 1;
+  transition: opacity 420ms ease;
+}
+
+.es-splash.is-fading {
+  opacity: 0;
+}
+
+.es-splash-logo-image {
+  width: min(58vw, 340px);
+  height: auto;
+  background: #fbf8f2;
+  animation: es-splash-pop 420ms ease-out;
+}
+
+@keyframes es-splash-pop {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* --- 챗 패널 --- */
 .es-page {
   position: relative;
@@ -142,6 +177,12 @@ a:hover {
   letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--text);
+}
+
+.es-title-logo {
+  display: block;
+  width: min(62vw, 250px);
+  height: auto;
 }
 
 .es-sub {

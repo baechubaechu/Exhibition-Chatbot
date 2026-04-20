@@ -1,8 +1,10 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
+import Image from "next/image";
 import type { FormEvent, KeyboardEvent } from "react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import logoTitle from "../../logo2.png";
 
 function newSessionId(): string {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
@@ -164,13 +166,13 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
       kicker: "Graduation exhibit",
       title: "Extra Space",
       sub: "작품이나 전시 이야기, 편하게 물어보세요.",
-      empty: "대화가 여기에 쌓입니다. 아래 예시들이나 직접 입력할 수 있어요.",
+      empty: "대화가 여기에 쌓입니다. 아래 예시 질문들을 누르거나 직접 입력할 수 있어요.",
       visitor: "방문",
       guide: "안내",
       generating: "답변 생성중",
       searchingSources: "더 나은 답변을 위해 깊게 생각중",
       suggestions: "이런 질문은 어때요?",
-      placeholder: "여기에 적어 주세요. 보내기는 엔터, 줄을 바꾸려면 Shift+Enter",
+      placeholder: "보내기는 Enter, 줄바꿈은 Shift + Enter",
       send: "보내기",
       sending: "보내는 중…",
       refresh: "새로고침",
@@ -240,7 +242,9 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
 
         <header className="es-header">
           <p className="es-kicker">{t.kicker}</p>
-          <h1 className="es-title">{t.title}</h1>
+          <h1 className="es-title">
+            <Image src={logoTitle} alt={t.title} className="es-title-logo" priority={false} />
+          </h1>
           <p className="es-sub">{t.sub}</p>
         </header>
 
