@@ -159,7 +159,6 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
         errorSuffix: "Clear and try again.",
         langGroupAria: "Language",
         adminFooter: "Admin · daily gap review",
-        opsConsole: "Exhibit control (staff)",
       };
     }
     return {
@@ -180,7 +179,6 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
       errorSuffix: "새로고침한 뒤 다시 시도해 주세요.",
       langGroupAria: "언어",
       adminFooter: "관리자 · 일일 gap 정리",
-      opsConsole: "운영 제어 (스태프)",
     };
   }, [lang]);
 
@@ -317,13 +315,7 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
         </form>
 
         <footer className="es-footer">
-          {variant === "kiosk" ? (
-            process.env.NEXT_PUBLIC_EXHIBIT_CONTROL_URL ? (
-              <a href={process.env.NEXT_PUBLIC_EXHIBIT_CONTROL_URL}>{t.opsConsole}</a>
-            ) : null
-          ) : (
-            <a href="/admin/gaps">{t.adminFooter}</a>
-          )}
+          {variant !== "kiosk" ? <a href="/admin/gaps">{t.adminFooter}</a> : null}
         </footer>
       </div>
     </div>

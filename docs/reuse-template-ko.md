@@ -31,27 +31,10 @@ git checkout backup/chat-ui-template-20260414
 - `wiki/sources/` 원문 교체
 - `npm run sync:knowledge` 실행
 
-## 5) 인터랙티브 기능 점검
+## 5) 챗봇 로컬 점검
 
-- `npm run dev:webpack`
-- `/` : 채팅 + 예시질문 무한스크롤
-- `/control` : 시나리오 오버라이드 발행
-- `/api/events/state` : 이벤트 버스 상태 확인
+- 이 폴더에서 `npm run dev` → `http://localhost:3000/`
 
-## 6) 환경서비스 실행
+## 6) 전시 스택 (별도 동작)
 
-```powershell
-cd spatial-environment-agent
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-$env:EVENT_BRIDGE_BASE_URL="http://127.0.0.1:3000"
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
-
-## 7) 장치 연동 시 교체 지점
-
-- `spatial-environment-agent/app/device/light_driver.py`
-- `spatial-environment-agent/app/device/speaker_driver.py`
-
-위 2개 파일의 TODO 부분을 실제 장치 SDK 호출로 바꾸면 됩니다.
+같은 상위 폴더의 **`exhibition-agent/`** 가 제어 웹·FastAPI·장치 브리지를 담당합니다. **이 챗봇과 이벤트·API 연동은 하지 않습니다.** 실행 방법은 `exhibition-suite/README.md` 및 `exhibition-agent/README.md` 를 따르세요.

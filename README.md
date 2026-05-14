@@ -1,6 +1,6 @@
 # 전시용 챗봇 (위키 우선 + 원문 RAG)
 
-이 디렉터리는 **`exhibition-suite`** 안의 챗봇 전용 앱입니다. 이벤트 버스·조명 제어 UI는 형제 폴더 **`../control/`** 을 띄우고, `EXHIBIT_EVENTS_BASE_URL` 로 연결합니다.
+이 디렉터리는 **`exhibition-suite`** 안의 **RAG 챗봇** 앱입니다. **`exhibition-agent`(제어·하드웨어)와는 연동하지 않습니다** — 전시 현장에서 쓸 챗봇은 별도 개체로 두어도 됩니다.
 
 ## 폴더 구조
 
@@ -41,13 +41,6 @@
 - **근거**: 서버에서만 RAG로 검색하며, 답변 본문에는 출처·번호 표기를 넣지 않습니다.
 - **전시 운영**: IP 기준 메모리 레이트리밋, 동일 질문 짧은 메모리 캐시, `STATIC_FAQ_JSON` 정적 FAQ.
 - **일일 gap**: `chat_turns`에 `gap_candidate` 기록. `/admin/gaps`에서 목록·Markdown/CSV보내기·처리 완료 표시.
-
-## 인터랙티브 통합 (MVP)
-
-- 이벤트 버스·제어 UI: **`../control/`** Next 앱 (`/api/events/*`, 루트 `/` 가 제어 패널)
-- 챗 연동: 답변 완료 시 `chat.scene_hint` 를 **`EXHIBIT_EVENTS_BASE_URL`** 로 HTTP 발행
-- 계약 문서: [docs/event-bus-contract-ko.md](docs/event-bus-contract-ko.md) (엔드포인트는 control 앱 기준으로 읽으면 됩니다)
-- 환경 서비스: **`../spatial-environment-agent/README.md`**
 
 ## 환경 변수
 

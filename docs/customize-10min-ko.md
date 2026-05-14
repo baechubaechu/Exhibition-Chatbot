@@ -79,20 +79,7 @@ PDF/이미지 포함 시:
 npm run sync:knowledge:with-media
 ```
 
-## 5) 환경 연동(선택, 2분+)
-
-### 파일: `spatial-environment-agent/config/scenes.yaml`
-
-- 씬 이름/밝기/색온도/트랙/볼륨 수정
-
-### 파일:
-
-- `spatial-environment-agent/app/device/light_driver.py`
-- `spatial-environment-agent/app/device/speaker_driver.py`
-
-- TODO 부분에 실제 장치 SDK 호출 연결
-
-## 6) 실행/검증
+## 5) 실행/검증 (이 챗봇만)
 
 ```bash
 npm run clean
@@ -101,8 +88,8 @@ npm run build
 ```
 
 - 채팅 UI: `http://localhost:3000` (또는 점유 시 다른 포트)
-- 시나리오 UI: `/control`
-- 이벤트 상태: `/api/events/state`
+
+전시 제어·조명·이벤트 버스는 **`exhibition-suite/exhibition-agent/`** 를 참고합니다. 이 챗봇과는 **코드 연동 없음**.
 
 ---
 
@@ -113,4 +100,3 @@ npm run build
 - 색 테마: `src/app/globals.css`
 - DB/키: `.env.local`
 - 콘텐츠: `wiki/canonical/*`, `wiki/sources/*`
-- 씬/장치: `spatial-environment-agent/config/scenes.yaml`, `app/device/*`

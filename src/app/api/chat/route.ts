@@ -9,8 +9,6 @@ import { tryStaticFaqMatch } from "@/lib/staticFaq";
 import { insertChatTurn, classifyOutcome } from "@/lib/chatTurn";
 import { classifyExhibitTopic } from "@/lib/offTopic";
 import { translateToEnglishBatch } from "@/lib/translateDisplay";
-import { publishSceneHintFromChat } from "@/lib/sceneHint";
-
 export const runtime = "nodejs";
 
 const bodySchema = z.object({
@@ -395,11 +393,6 @@ async function handleChatPost(req: NextRequest): Promise<Response> {
         maxTokens: answerMaxTokens,
         messages: coreMessages,
         async onFinish({ text }) {
-          await publishSceneHintFromChat({
-            question,
-            locale,
-            sessionId: body.sessionId,
-          });
           const { outcome, gapCandidate } = classifyOutcome(debug);
           await insertChatTurn({
             sessionId: body.sessionId,

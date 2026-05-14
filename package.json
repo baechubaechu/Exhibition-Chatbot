@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true});\"",
     "dev": "next dev --turbopack",
+    "dev:lan": "next dev --turbopack --hostname 0.0.0.0",
     "dev:webpack": "next dev",
     "dev:clean": "npm run clean && next dev --turbopack",
     "build": "next build",
