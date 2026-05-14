@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME ?? "Extra Space",
+  title: process.env.NEXT_PUBLIC_APP_NAME ?? "X-tra Space",
   description: "졸업전시 작품 안내",
 };
 

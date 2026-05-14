@@ -42,8 +42,33 @@ a:hover {
   border-bottom-color: var(--line-strong);
 }
 
-/* entry splash */
+/* entry splash + crossfade handoff */
+.es-entry-root {
+  --splash-fade-in-ms: 1000ms;
+  --splash-crossfade-ms: 1000ms;
+  position: relative;
+  min-height: 100vh;
+}
+
+.es-entry-chat {
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity var(--splash-crossfade-ms, 1000ms) cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.es-entry-chat--in {
+  opacity: 1;
+}
+
+.es-entry-chat--done {
+  pointer-events: auto;
+}
+
 .es-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
   min-height: 100vh;
   display: grid;
   place-content: center;
@@ -51,30 +76,24 @@ a:hover {
   gap: 12px;
   background: #fbf8f2;
   color: var(--text);
-  opacity: 1;
-  transition: opacity 420ms ease;
+  opacity: 0;
+  transition: opacity var(--splash-fade-in-ms, 1000ms) cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
 }
 
-.es-splash.is-fading {
+.es-splash.es-splash--in {
+  opacity: 1;
+}
+
+.es-splash.es-splash--in.is-fading {
   opacity: 0;
+  transition: opacity var(--splash-crossfade-ms, 1000ms) cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .es-splash-logo-image {
-  width: min(58vw, 340px);
+  width: min(calc(58vw * 0.7), calc(340px * 0.7));
   height: auto;
   background: #fbf8f2;
-  animation: es-splash-pop 420ms ease-out;
-}
-
-@keyframes es-splash-pop {
-  from {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* --- 챗 패널 --- */
@@ -155,15 +174,14 @@ a:hover {
 
 .es-header {
   text-align: left;
-  padding: 28px 0 0;
-  padding-right: 120px;
+  padding: 14px 120px 12px 0;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 18px;
 }
 
 .es-kicker {
-  margin: 0 0 8px;
+  margin: 0 0 1lh;
   font-size: 0.68rem;
+  line-height: 1.35;
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -175,7 +193,7 @@ a:hover {
   font-size: clamp(1.5rem, 4vw, 1.85rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 0;
   color: var(--text);
 }
 
@@ -186,7 +204,7 @@ a:hover {
 }
 
 .es-sub {
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   max-width: 36em;
   font-size: 0.92rem;
   line-height: 1.65;

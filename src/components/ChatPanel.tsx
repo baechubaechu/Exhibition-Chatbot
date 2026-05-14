@@ -27,7 +27,7 @@ type UiLang = "ko" | "en";
 const EXAMPLE_PROMPTS: { labelKo: string; labelEn: string; question: string }[] = [
   { labelKo: "이 작품 한 줄 소개", labelEn: "One-line intro", question: "이 작품을 한 줄로 소개해 줘." },
   { labelKo: "왜 금정역인가요?", labelEn: "Why Geumjeong Station?", question: "왜 금정역을 입지로 택했어?" },
-  { labelKo: "Extra Space가 뭐예요?", labelEn: "What is Extra Space?", question: "extra space가 뭔지 쉽게 설명해 줘." },
+  { labelKo: "X-tra Space가 뭐예요?", labelEn: "What is X-tra Space?", question: "X-tra Space가 뭔지 쉽게 설명해 줘." },
   { labelKo: "산본천과 설계", labelEn: "Sanboncheon & design", question: "산본천이 이 설계에서 어떤 역할이야?" },
   { labelKo: "레이어와 노드", labelEn: "Layers & nodes", question: "여기서 레이어와 노드는 각각 무슨 뜻이야?" },
   { labelKo: "전시에서 뭘 보나요?", labelEn: "What to see at the exhibit", question: "전시에서 어떤 자료나 내용을 볼 수 있어?" },
@@ -63,7 +63,7 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
     if (typeof document === "undefined") return;
     document.documentElement.lang = lang === "en" ? "en" : "ko";
     document.title =
-      lang === "en" ? "Extra Space — Exhibit assistant" : "Extra Space — 졸업전시 작품 안내";
+      lang === "en" ? "X-tra Space — Exhibit assistant" : "X-tra Space — 졸업전시 작품 안내";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -143,7 +143,7 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
     if (lang === "en") {
       return {
         kicker: "Graduation exhibit",
-        title: "Extra Space",
+        title: "X-tra Space",
         sub: "Ask about the project and exhibit.",
         empty: "Your conversation shows up here. Try a sample below, or write your own.",
         visitor: "You",
@@ -163,7 +163,7 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
     }
     return {
       kicker: "Graduation exhibit",
-      title: "Extra Space",
+      title: "X-tra Space",
       sub: "작품이나 전시 이야기, 편하게 물어보세요.",
       empty: "대화가 여기에 쌓입니다. 아래 예시 질문들을 누르거나 직접 입력할 수 있어요.",
       visitor: "방문",

@@ -5,29 +5,63 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import logoImage from "../../logo.png";
 
-const SPLASH_HOLD_MS = 1000;
-const SPLASH_FADE_MS = 700;
+const SPLASH_HOLD_MS = 1600;
+const SPLASH_CROSSFADE_MS = 1000;
+
+type EntryPhase = "splash" | "crossfade" | "done";
 
 export default function HomePage() {
-  const [showSplash, setShowSplash] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
+  const [phase, setPhase] = useState<EntryPhase>("splash");
+  const [splashIn, setSplashIn] = useState(false);
+  const [chatIn, setChatIn] = useState(false);
 
   useEffect(() => {
-    const holdTimer = window.setTimeout(() => setFadeOut(true), SPLASH_HOLD_MS);
-    const exitTimer = window.setTimeout(() => setShowSplash(false), SPLASH_HOLD_MS + SPLASH_FADE_MS);
+    const t = window.setTimeout(() => setSplashIn(true), 30);
+    return () => window.clearTimeout(t);
+  }, []);
+
+  useEffect(() => {
+    if (phase !== "crossfade") return;
+    let cancelled = false;
+    let raf2 = 0;
+    const raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(() => {
+        if (!cancelled) setChatIn(true);
+      });
+    });
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+    };
+  }, [phase]);
+
+  useEffect(() => {
+    const holdTimer = window.setTimeout(() => setPhase("crossfade"), SPLASH_HOLD_MS);
+    const exitTimer = window.setTimeout(() => setPhase("done"), SPLASH_HOLD_MS + SPLASH_CROSSFADE_MS);
     return () => {
       window.clearTimeout(holdTimer);
       window.clearTimeout(exitTimer);
     };
   }, []);
 
-  if (showSplash) {
-    return (
-      <main className={`es-splash ${fadeOut ? "is-fading" : ""}`} aria-label="Extra Space Intro">
-        <Image src={logoImage} alt="Extra Space logo" className="es-splash-logo-image" priority />
-      </main>
-    );
-  }
-
-  return <ChatPanel variant="kiosk" />;
+  return (
+    <div className="es-entry-root">
+      {phase !== "splash" && (
+        <div
+          className={`es-entry-chat ${chatIn ? "es-entry-chat--in" : ""} ${phase === "done" ? "es-entry-chat--done" : ""}`}
+        >
+          <ChatPanel variant="kiosk" />
+        </div>
+      )}
+      {phase !== "done" && (
+        <main
+          className={`es-splash ${splashIn ? "es-splash--in" : ""} ${phase === "crossfade" ? "is-fading" : ""}`}
+          aria-label="X-tra Space intro"
+        >
+          <Image src={logoImage} alt="X-tra Space" className="es-splash-logo-image" priority />
+        </main>
+      )}
+    </div>
+  );
 }
