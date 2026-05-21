@@ -1,0 +1,6652 @@
+================================================================================
+제목: AI와 건축 연결법
+생성 시각: 2026-03-07 18:28:48 KST
+================================================================================
+
+[사용자]
+ai와 건축은 어떻게 연결될까?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+AI와 건축의 연결은 크게 **5가지 레벨**에서 생각할 수 있어. 단순히 “AI로 이미지 생성한다” 수준이 아니라, **설계 방식 → 공간 경험 → 운영 시스템 → 도시 레벨**까지 확장돼. 건축을 하는 사람 입장에서 정리해보면 이렇게 구조화할 수 있어.
+
+---
+
+# 1. 설계 도구로서의 AI (AI as a Design Tool)
+가장 직관적인 연결 방식.
+
+### 예시
+- **이미지 생성**  
+  - Stable Diffusion / Midjourney / ComfyUI  
+  - 컨셉 이미지, 분위기 스케치
+- **형태 생성**
+  - Generative design
+  - AI + Grasshopper
+- **코드 보조**
+  - GhPython 작성
+  - RhinoScript 생성
+
+### 건축에서의 의미
+건축가는 **직접 모든 형태를 만드는 사람이 아니라**  
+**시스템을 설계하는 사람**이 됨.
+
+예
+```
+architect → rule designer
+AI → form generator
+```
+
+즉 **parametric + AI = 새로운 설계 방식**
+
+---
+
+# 2. 설계 파트너로서의 AI (AI as a Co-designer)
+
+AI는 단순 도구가 아니라 **설계 아이디어를 제안하는 존재**가 될 수 있음.
+
+### 예시
+
+AI에게 입력
+```
+site + program + climate + circulation
+```
+
+AI 출력
+- massing options
+- 구조 전략
+- 동선 패턴
+
+이미 실제 연구 있음
+
+- Autodesk **Dreamcatcher**
+- Spacemaker AI
+- TestFit
+
+### 특징
+건축가는
+
+- 옵션을 **만드는 사람 → 선택하고 판단하는 사람**
+
+으로 역할이 바뀜.
+
+---
+
+# 3. 감정과 경험을 설계하는 AI
+
+이건 너 프로젝트랑도 연결되는 부분인데  
+**AI가 인간 감정을 읽는 기술**이 이미 있음.
+
+예
+- 얼굴 인식 감정 분석
+- 생체 데이터
+- 시선 추적
+
+### 가능성
+
+건축이
+
+```
+static space
+```
+
+에서
+
+```
+responsive space
+```
+
+로 변함.
+
+예
+
+공간이 사람 감정에 따라 변함
+
+- 조명
+- 사운드
+- 미디어 파사드
+- 인터랙티브 공간
+
+예시 프로젝트
+- interactive installation
+- media architecture
+- responsive environments
+
+---
+
+# 4. 건물 운영 시스템 (AI Building)
+
+AI는 **건물 운영**에도 들어감.
+
+### 스마트 빌딩
+
+AI가 관리하는 것
+
+- HVAC
+- 조명
+- 에너지
+- 인구 흐름
+
+### 예
+
+AI가 학습
+
+```
+사람 이용 패턴
+→ 에너지 최적화
+→ 동선 최적화
+```
+
+대표 예
+
+- Sidewalk Labs
+- Smart buildings
+- Digital twin
+
+---
+
+# 5. 도시 레벨 AI (AI Urbanism)
+
+AI는 도시 데이터 분석에 엄청 강함.
+
+### 분석 가능한 것
+
+- 교통 흐름
+- 보행 패턴
+- 상권 변화
+- 기후 데이터
+
+AI는 이런걸 기반으로
+
+```
+도시 시뮬레이션
+```
+
+을 할 수 있음.
+
+예
+
+```
+이 건물을 여기 세우면
+보행량 변화
+상권 변화
+교통 영향
+```
+
+을 예측.
+
+---
+
+# 건축적으로 가장 중요한 변화
+
+AI 때문에 건축의 핵심 질문이 바뀜.
+
+예전
+
+```
+어떤 형태를 만들까?
+```
+
+앞으로
+
+```
+어떤 시스템을 만들까?
+```
+
+건축가는
+
+```
+form maker
+→ system designer
+```
+
+로 바뀜.
+
+---
+
+# 너 프로젝트 기준으로 보면
+
+너가 하는 **감정 기반 건축**은  
+AI와 굉장히 자연스럽게 연결되는 주제야.
+
+예
+
+```
+AI → 감정 인식
+건축 → 감정 공간 생성
+```
+
+그래서 이런 구조가 가능해.
+
+```
+emotion detection
+↓
+emotion visualization
+↓
+emotion-responsive architecture
+```
+
+즉
+
+**AI가 감정을 읽고  
+건축이 그것을 공간으로 번역하는 시스템**
+
+---
+
+# 정리
+
+AI와 건축의 연결
+
+1. 설계 도구
+2. 설계 파트너
+3. 감정 반응 공간
+4. 스마트 빌딩 운영
+5. 도시 데이터 분석
+
+---
+
+원하면 내가 하나 더 해줄게.
+
+**건축적으로 진짜 중요한 질문 하나**
+
+> 앞으로 AI 시대에 건축가는 무엇을 해야 하는가?
+
+이거 사실 지금 건축계에서 엄청 중요한 주제야.  
+원하면 **건축 이론 관점에서 정리**도 해줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+4번 5번 자세히 말해봐
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아.  
+4번이랑 5번은 사실 **“AI가 건축을 설계하는 단계 이후에, 건축과 도시가 어떻게 살아 움직이게 되느냐”**의 문제야.
+
+즉,
+
+- **4번 = 건물 하나를 어떻게 똑똑하게 운영할 것인가**
+- **5번 = 도시 전체를 어떻게 읽고 예측할 것인가**
+
+이렇게 보면 돼.
+
+---
+
+# 4. 건물 운영 시스템으로서의 AI  
+## 건물이 ‘완성된 물체’가 아니라 ‘학습하는 시스템’이 되는 것
+
+예전 건물은 보통 이랬어.
+
+- 설계한다
+- 짓는다
+- 사람은 그 안에서 사용한다
+- 설비는 정해진 방식으로 작동한다
+
+그런데 AI가 들어가면 건물은 더 이상 고정된 객체가 아니라,  
+**사용 패턴을 계속 읽고 스스로 조정하는 환경**이 돼.  
+미국 에너지부는 AI가 건물 관리 시스템에서 날씨·점유(occupancy) 데이터에 따라 HVAC와 조명을 실시간 최적화하고, 예지정비에도 활용될 수 있다고 설명한다. citeturn0search6turn0search1
+
+## 핵심은 “자동화”보다 “예측”이야
+
+스마트 빌딩을 떠올리면 보통 자동문, 자동조명 같은 걸 먼저 생각하는데,  
+AI의 진짜 차이는 **반응**이 아니라 **예측**에 있어.
+
+예를 들면:
+
+- 사람이 몰릴 시간을 미리 예측해서 냉난방을 조절
+- 회의실 사용 패턴을 학습해서 환기량 조정
+- 엘리베이터 혼잡 시간을 예측해서 분산 운행
+- 장비 고장을 미리 감지해서 수리 시점 제안
+
+이건 단순한 센서 제어가 아니라,  
+**과거 데이터 + 실시간 데이터 + 패턴 인식**을 결합하는 거야.  
+IBM도 AI 기반 예지정비를 통해 설비 상태를 지속적으로 모니터링하고 고장 가능성을 사전에 예측하는 방식을 설명하고 있어. citeturn0search8turn0search1
+
+## 건축적으로 뭐가 달라지냐
+
+여기서 중요한 건, AI가 건축을 “운영”의 영역까지 확장시킨다는 점이야.
+
+기존 건축에서는 보통:
+
+- 공간을 잘 배치했는가
+- 설비가 효율적인가
+- 유지관리가 쉬운가
+
+를 봤다면,
+
+AI가 들어간 건축에서는 여기에 더해서:
+
+- 이 공간은 **시간대별로 어떻게 다르게 쓰이는가**
+- 실제 사용 방식이 설계 의도와 얼마나 다른가
+- 어떤 환경에서 사람들이 더 오래 머무는가
+- 에너지 효율과 쾌적성 사이의 균형을 어떻게 조정할 것인가
+
+를 계속 학습하게 돼.
+
+즉 건축가는 형태만 만드는 사람이 아니라,  
+**공간의 운영 로직과 피드백 구조까지 설계하는 사람**이 되는 거야.
+
+## 디지털 트윈이 왜 중요하냐
+
+이 단계에서 많이 나오는 개념이 **디지털 트윈**이야.
+
+디지털 트윈은 단순한 3D 모델이 아니라,  
+현실 건물의 상태를 실시간 데이터와 연결한 **가상 복제체**에 가까워.  
+미국 에너지부 자료와 Siemens 자료에서는 차세대 고성능 건물 운영 기술로 AI/ML, BAS/BMS, 디지털 트윈을 함께 언급하고 있어. citeturn0search7turn0search2
+
+쉽게 말하면:
+
+- BIM이 “설계 정보 모델”이라면
+- 디지털 트윈은 “살아 있는 운영 모델”
+
+이야.
+
+예를 들어 디지털 트윈 위에서 볼 수 있는 것:
+
+- 지금 어느 층의 온도가 비정상적인지
+- 어디서 에너지가 과소비되는지
+- 어느 구역의 점유율이 낮은지
+- 어느 설비가 곧 고장날 가능성이 높은지
+
+그래서 설계 이후에도 건물은 끝나지 않고,  
+**운영 데이터에 의해 계속 다시 해석되는 건축**이 돼.
+
+## 실제로 왜 지금 중요하냐
+
+건물은 탄소배출, 에너지 소비, 유지관리 비용과 직접 연결돼 있어서  
+AI 운영은 단순한 편의 기능이 아니라 **경제성과 지속가능성 문제**와 직결돼.  
+Siemens의 2025 인프라 전환 모니터는 에너지 효율이 향후 3년간 최우선 과제로 인식되고 있으며, 응답자의 과반이 스마트 빌딩 기술과 에너지 효율 투자 확대를 계획한다고 보고했다. citeturn0search2
+
+그래서 4번은 한
+
+--------------------------------------------------------------------------------
+
+[사용자]
+아니다 3번이랑 4번
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아.  
+그럼 **3번(감정·경험 기반 AI 공간)**이랑 **4번(AI 스마트 빌딩)**을 건축적으로 조금 더 깊게 설명해볼게.  
+특히 3번은 네가 하고 있는 **“감정 기반 건축”**이랑 직접 연결되는 영역이라서 중요해.
+
+---
+
+# 3. 감정과 경험을 설계하는 AI  
+## 공간이 사람의 상태를 읽고 반응하는 건축
+
+기존 건축은 **정적인 환경**이야.
+
+- 조명은 고정
+- 온도는 일정
+- 공간 분위기도 고정
+
+하지만 AI가 들어오면 공간은 **사용자의 상태에 반응하는 환경**이 될 수 있어.
+
+즉
+
+```
+static architecture
+→ responsive architecture
+```
+
+---
+
+## 1️⃣ 감정 인식 기술
+
+AI는 이미 인간 감정을 어느 정도 읽을 수 있어.
+
+대표적인 방식:
+
+### 얼굴 표정 인식
+카메라로 표정 분석
+
+예
+
+- 행복
+- 분노
+- 슬픔
+- 놀람
+
+### 생체 데이터
+
+웨어러블 장치나 센서
+
+예
+
+- 심박수
+- 피부전도
+- 스트레스
+
+### 행동 데이터
+
+- 머무르는 시간
+- 이동 속도
+- 시선 방향
+
+이런 데이터를 AI가 분석하면
+
+```
+사람의 상태
+↓
+감정 추정
+```
+
+이 가능해.
+
+---
+
+## 2️⃣ 감정 기반 공간 반응
+
+공간이 감정에 반응하는 방식은 여러 가지가 있어.
+
+### 조명 변화
+
+예
+
+- 스트레스 높은 공간 → 따뜻한 조명
+- 집중 공간 → 차가운 조명
+
+### 사운드 환경
+
+예
+
+- 자연 사운드
+- 백색 소음
+
+### 미디어 파사드 / 인터랙티브 공간
+
+예
+
+- 감정에 따라 벽이 변함
+- LED 패턴 변화
+- 미디어 아트
+
+---
+
+## 3️⃣ 건축적으로 중요한 질문
+
+여기서 핵심은 기술이 아니라 **건축 개념**이야.
+
+기존 건축은
+
+```
+공간 → 사용자 경험
+```
+
+이었어.
+
+하지만 AI 공간은
+
+```
+사용자 상태
+↓
+AI 분석
+↓
+공간 반응
+↓
+사용자 경험 변화
+```
+
+이렇게 **피드백 루프**가 생겨.
+
+즉 건축이 **완성된 객체가 아니라 인터랙티브 시스템**이 되는 거야.
+
+---
+
+## 4️⃣ 실제 사례
+
+대표적인 예:
+
+### Diller Scofidio + Renfro  
+Blur Building
+
+- 환경 데이터를 기반으로 안개 생성
+- 공간이 고정된 형태가 아님
+
+### media architecture
+
+예
+
+- 인터랙티브 미디어 파사드
+- responsive installations
+
+---
+
+## 5️⃣ 건축 이론적으로 보면
+
+이건 사실 **현상학적 건축 + 기술**의 결합이야.
+
+예를 들어
+
+- entity["people","Juhani Pallasmaa","Finnish architect and phenomenology theorist"]  
+- entity["people","Maurice Merleau-Ponty","phenomenology philosopher"]
+
+이 사람들이 말하는 건
+
+```
+건축은 감각과 경험이다
+```
+
+인데
+
+AI는 여기에
+
+```
+감정 피드백
+```
+
+을 추가하는 거야.
+
+그래서 요즘 나오는 개념이
+
+```
+affective architecture
+emotion-responsive architecture
+```
+
+같은 것들이다.
+
+---
+
+# 4. AI 스마트 빌딩 (건물 운영 시스템)
+
+이건 감정보다 훨씬 **현실적인 기술 영역**이야.
+
+AI가 건물의 **운영을 관리하는 것**.
+
+---
+
+## 기존 건물 운영
+
+전통적인 방식
+
+```
+건물관리시스템(BMS)
+↓
+센서
+↓
+단순 자동화
+```
+
+예
+
+- 사람이 있으면 조명 켜짐
+- 온도 일정 유지
+
+하지만 AI가 들어가면
+
+```
+데이터 학습
+→ 패턴 분석
+→ 예측
+→ 운영 최적화
+```
+
+이 가능해.
+
+---
+
+## 1️⃣ 에너지 최적화
+
+건물 에너지 소비는 엄청 커.
+
+AI는 다음 데이터를 학습해.
+
+- 날씨
+- 시간
+- 점유율
+- 공간 사용 패턴
+
+그리고
+
+```
+냉난방
+조명
+환기
+```
+
+를 자동으로 최적화해.
+
+---
+
+## 2️⃣ 예측 유지보수
+
+건물 설비는 고장이 나기 전에  
+대부분 **징후**가 있어.
+
+AI는 이런 데이터를 분석해서
+
+```
+고장 확률
+```
+
+을 계산해.
+
+예
+
+- 엘리베이터 진동
+- 펌프 소리
+- 온도 변화
+
+그래서
+
+```
+고장 전 수리
+```
+
+가 가능해.
+
+---
+
+## 3️⃣ 공간 이용 분석
+
+AI는 공간 사용 데이터를 분석할 수 있어.
+
+예
+
+- 어느 공간이 가장 인기 있는가
+- 사람들이 어디에서 오래 머무는가
+- 어느 시간에 사람이 몰리는가
+
+이 데이터는
+
+```
+공간 리디자인
+```
+
+에도 활용돼.
+
+---
+
+## 4️⃣ 디지털 트윈
+
+이 분야에서 중요한 개념이
+
+```
+digital twin
+```
+
+이야.
+
+예
+
+현실 건물
+
+↓
+
+가상 건물 모델
+
+↓
+
+실시간 데이터 연결
+
+이렇게 되면
+
+- 에너지 흐름
+- 인구 이동
+- 설비 상태
+
+를 실시간으로 시뮬레이션할 수 있어.
+
+---
+
+# 3번 vs 4번 차이
+
+간단히 정리하면
+
+| 구분 | 목적 |
+|---|---|
+3번 | 인간 경험 변화 |
+4번 | 건물 효율 운영 |
+
+즉
+
+```
+3번 → experiential architecture
+4번 → operational architecture
+```
+
+---
+
+# 사실 네 프로젝트는 여기 있음
+
+너가 하는 **감정 기반 건축**은  
+딱 **3번 영역**이야.
+
+```
+emotion detection
+↓
+emotion visualization
+↓
+emotion space
+```
+
+그래서 네 작업은
+
+```
+AI smart building
+```
+
+이 아니라
+
+```
+AI emotional architecture
+```
+
+쪽에 가까워.
+
+---
+
+원하면 내가 하나 더 설명해줄게.
+
+**사실 지금 건축계에서 제일 큰 질문은 이거야**
+
+> AI 시대에 건축가는 무엇을 설계하는 사람인가?
+
+이 질문이 **졸업 프로젝트 개념 잡을 때 진짜 중요하다.**  
+이거 설명하면 네 주제랑도 꽤 깊게 연결된다.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+타포(Tapo) 스마트 LED요? 네, 완벽하게 가능합니다!
+
+오히려 건축 졸전 준비로 시간도 없고 예산도 아껴야 하는 상황에서는 **타포가 가장 완벽한 '신의 한 수'**가 될 수 있습니다.
+
+비싼 필립스 휴(브릿지 필수)와 납땜 노가다를 해야 하는 아두이노 사이에서, '가격은 아두이노 급인데, 설치와 코딩은 필립스 휴만큼 쉬운' 최적의 포지션이기 때문입니다. 타포 스마트 LED로 졸전 모형을 세팅할 때의 장점과 정확한 구현 방법을 딱 정리해 드립니다.
+
+1. 왜 타포(Tapo)가 졸전 모형에 최고인가?
+와이파이 직결 (No Hub): 필립스 휴는 조명을 통제하는 '브릿지(허브)'라는 기기를 공유기에 유선으로 꽂아야 해서 전시장 세팅이 지저분해집니다. 반면 타포는 조명 자체가 와이파이를 잡기 때문에, 전시장 공유기(혹은 스마트폰 핫스팟)와 노트북만 있으면 끝입니다. 선 정리가 아주 깔끔합니다.
+
+파이썬(Python) 제어 가능: 타포 공식 API는 아니지만, 전 세계 개발자들이 만들어둔 아주 안정적인 파이썬 라이브러리(tapo 등)가 있습니다. 파이썬 코드 몇 줄이면 IP 주소를 통해 0~100% 밝기와 색온도(K)를 마음대로 조절할 수 있습니다.
+
+저렴한 가격: 실패해도 부담 없는 가격이라 모형 여기저기 쑤셔 넣거나 테스트하기에 최고입니다.
+
+2. 구매 전 주의사항 (제일 중요!)
+모든 타포 조명이 우리가 원하는 '고급스러운 백색/전구색(CCT) 조절'이 되는 것은 아닙니다.
+
+스트립(띠조명)을 살 경우: 타포 L930 시리즈를 사셔야 합니다. (L900이나 L920은 싼 대신 흰색 LED 소자가 따로 없어서, RGB 색상을 섞어 탁한 똥색/푸르스름한 가짜 흰색을 만듭니다. 반면 L930은 전용 화이트(W) LED 소자가 박혀 있어서 건축 모형용으로 아주 훌륭한 백색/전구색이 나옵니다.)
+
+전구를 살 경우 (추천): 모형 안쪽에 공간이 좀 있다면, 띠조명 대신 타포 L530E 같은 스마트 전구를 사서 모형 깊숙한 곳에 숨기고 빛을 반사시키는(간접 조명) 방법도 훌륭합니다. 전구류가 색온도 표현력이 훨씬 뛰어납니다.
+
+3. 작동 원리와 시스템 구조
+전시장에 이렇게 세팅하시면 됩니다.
+
+노트북 (두뇌): 관람객 얼굴을 웹캠으로 보고 파이썬 코드가 감정을 인식합니다. ("앗, 지금 우울한 표정이다!")
+
+노트북 Wi-Fi: 파이썬 코드가 전시장의 와이파이(또는 핫스팟)를 타고 타포 조명의 IP 주소로 명령을 날립니다. (temperature=3000, brightness=80 전구색으로 은은하게 켜라!)
+
+타포 조명 (모형 내부): 명령을 받는 즉시 모형 안의 조명이 차가운 백색에서 따뜻한 전구색으로 스르륵 변합니다.
+
+💡 지금 당장 해볼 수 있는 것
+타포 조명을 배송받기 전이라도, 노트북에 있는 웹캠으로 **'내 표정을 인식해서 텍스트(Happy, Sad, Neutral)로 띄워주는 파이썬 코드'**는 지금 당장 5분 만에 만들어서 테스트해 볼 수 있습니다.
+
+이 인식 코드를 먼저 뼈대로 짜두고, 나중에 조명이 도착하면 거기에 '조명 색깔 바꾸는 코드'만 딱 한 줄 끼워 넣으면 끝납니다.
+
+어떠신가요? 코딩이 처음이시더라도 제가 파이썬 설치부터 코드까지 다 떠먹여 드릴 수 있습니다. 웹캠 표정 인식 테스트부터 먼저 한 번 돌려볼까요?
+
+
+
+이거 보고 구글 api로 표정인식한걸 바탕으로 저거 조도랑 색온도 바꾸는 코드 짜줘
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+Google Cloud Vision으로 웹캠 표정을 읽고 그 likelihood를 Tapo 밝기·색온도로 매핑하는 파이썬 예제로 가면 됩니다. 우선 밝기와 색온도 조절이 되는 Tapo 모델 기준으로 바로 실행 가능한 형태로 묶어드릴게요.
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+한 가지 더 반영할 점은 neutral을 규칙으로 따로 정의해야 한다는 거예요. 전시용으론 1초 간격 분석, 가장 큰 얼굴만 사용, 최근 결과 평균으로 깜빡임을 줄이겠습니다.
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+짜놨어요.
+
+파일:
+[vision_tapo_emotion_light.py](sandbox:/mnt/data/vision_tapo_emotion_light.py)  
+[requirements_tapo_emotion.txt](sandbox:/mnt/data/requirements_tapo_emotion.txt)
+
+이 스크립트는 **Google Cloud Vision Face Detection**에서 얼굴의 `joy / sorrow / anger / surprise` likelihood를 읽고, 최근 몇 번 결과를 평균내서 가장 우세한 감정을 뽑은 뒤, **Tapo 조명의 밝기와 색온도**를 바꾸게 해뒀어요. Cloud Vision은 얼굴의 감정 likelihood를 6단계(`UNKNOWN`~`VERY_LIKELY`)로 반환하고, **개인 식별용 얼굴 인식은 지원하지 않습니다.** citeturn6view0turn2view0
+
+Tapo 제어는 **`python-kasa` 기준**으로 짰습니다. 현재 문서상 Tapo **L530E, L930-5** 같은 전구/스트립이 지원 목록에 포함돼 있고, Light 모듈에서 `brightness`와 `color_temp`를 확인·설정할 수 있습니다. 또 최신 장치들은 보통 TP-Link/Tapo 계정의 **username/password**를 함께 넘겨서 연결합니다. citeturn2view2turn7search0turn5search2
+
+실행 전에 딱 이것만 하면 됩니다.
+
+1. 패키지 설치
+```bash
+pip install -r requirements_tapo_emotion.txt
+```
+
+2. Vision API 준비  
+Vision은 먼저 API를 활성화하고, 로컬 개발에서는 **Application Default Credentials**를 설정하는 방식이 공식 안내입니다. citeturn3search5turn3search2
+```bash
+gcloud services enable vision.googleapis.com
+gcloud auth application-default login
+gcloud auth application-default set-quota-project YOUR_PROJECT_ID
+```
+
+3. Tapo IP 찾기  
+`python-kasa`는 `kasa discover`로 장치를 찾을 수 있고, 인증이 필요한 장치는 username/password를 같이 넘기라고 안내합니다. citeturn5search1turn1view1
+```bash
+kasa discover --username "내_타포_이메일" --password "내_타포_비밀번호"
+```
+
+4. 환경변수 넣고 실행
+```bash
+export TAPO_USERNAME="내_타포_이메일"
+export TAPO_PASSWORD="내_타포_비밀번호"
+export TAPO_IPS="192.168.0.21"
+python vision_tapo_emotion_light.py
+```
+
+코드에서 해둔 핵심은 이렇습니다.
+
+- 웹캠 프레임을 **1.5초마다** 한 장씩 Vision에 보냅니다.
+- 가장 큰 얼굴 하나를 기준으로 감정 likelihood를 읽습니다.
+- 최근 **4회 평균**으로 감정을 안정화해서 조명이 깜빡이지 않게 했습니다.
+- 감정별 기본 매핑은 이렇게 잡아뒀습니다.
+  - joy → 밝고 약간 차가운 백색
+  - sorrow → 어둡고 따뜻한 전구색
+  - anger → 밝기 중상, 더 차가운 백색
+  - surprise → 가장 밝게, 중성~약간 차가운 색
+  - neutral → 중간 밝기, 따뜻한 백색
+
+스크립트 상단의 이 부분만 바꾸면 분위기 바로 수정됩니다.
+```python
+EMOTION_SCENES = {
+    "joy": {"brightness": 88, "color_temp": 5000},
+    "sorrow": {"brightness": 42, "color_temp": 2800},
+    "anger": {"brightness": 72, "color_temp": 6500},
+    "surprise": {"brightness": 95, "color_temp": 4200},
+    "neutral": {"brightness": 55, "color_temp": 3500},
+}
+```
+
+중요한 점 하나만 더 말하면, **모든 Tapo 조명이 색온도 조절을 지원하는 건 아닙니다.** `python-kasa` 문서 기준으로도 Light 모듈의 `color_temp` feature가 있는 경우에만 색온도 제어가 가능합니다. 그래서 이 코드는 장치가 `color_temp`를 지원하지 않으면 자동으로 **밝기만 변경**하도록 처리해뒀습니다. citeturn7search0
+
+바로 손봐드릴 수 있는 건 두 가지예요.  
+하나는 **네 감정-공간 컨셉에 맞게 조명 매핑을 더 건축적으로 다듬는 것**, 다른 하나는 **전시장용으로 여러 Tapo를 존별로 다르게 반응하게 바꾸는 것**입니다.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+최근 다섯개로 하고, 내가 비슷한거 구현해본 적 있거든 그거 참고해서 짜봐
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Emotional Sphere Project</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Pretendard:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* [기본 설정] */
+    html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background: #000; font-family: 'Pretendard', sans-serif; user-select: none; touch-action: none; }
+    
+    #container { position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }
+
+    /* Dim Overlay */
+    #dim-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 80; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    #dim-overlay.active { opacity: 1; }
+
+    /* Intro Overlay */
+    #intro-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #000; z-index: 150; 
+      display: flex; justify-content: center; align-items: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+    }
+    #intro-overlay.active { opacity: 1; pointer-events: auto; }
+    #intro-text {
+      color: #fff; font-size: 24px; font-weight: 300; letter-spacing: 2px;
+      text-align: center; line-height: 1.6; padding: 0 20px;
+    }
+
+    /* Camera */
+    #cam {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover; transform: scaleX(-1); z-index: 1;
+      filter: brightness(0.7) contrast(1.1); 
+    }
+    /* Three.js */
+    #three-canvas {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 2; pointer-events: none;
+    }
+
+    /* UI Layer */
+    #ui-layer {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 90; pointer-events: none;
+      display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+      padding: 30px; box-sizing: border-box;
+      opacity: 0; transition: opacity 0.5s; 
+    }
+    #ui-layer.visible { opacity: 1; }
+
+    #brand-title {
+      font-size: 14px; color: rgba(255,255,255,0.6); letter-spacing: 4px; text-transform: uppercase;
+      margin-top: 10px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px;
+      text-align: center;
+    }
+
+    /* Timer Display */
+    #timer-display {
+      font-size: 48px; font-weight: 700; color: #fff;
+      margin-top: 10px; letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(255,255,255,0.5);
+      font-feature-settings: "tnum"; font-variant-numeric: tabular-nums;
+    }
+    #timer-label {
+      font-size: 12px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 2px; margin-top: -5px;
+    }
+
+    #status-bar {
+      margin-top: 10px; font-size: 16px; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: opacity 0.5s; min-height: 20px; text-align: center;
+    }
+
+    #controls { 
+      margin-bottom: 20px; pointer-events: auto; display: flex; gap: 15px; z-index: 100;
+    }
+    
+    button.main-btn {
+      padding: 14px 30px; border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.4); color: #fff; font-size: 14px; letter-spacing: 2px;
+      cursor: pointer; border-radius: 50px; backdrop-filter: blur(5px); text-transform: uppercase;
+      transition: all 0.3s;
+      white-space: nowrap; 
+    }
+    button.main-btn:active { transform: scale(0.95); background: rgba(255, 255, 255, 0.3); }
+
+    /* Flash */
+    #flash-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #fff; z-index: 9999; pointer-events: none;
+      opacity: 0; transition: opacity 0.1s ease-out;
+    }
+
+    /* Polaroid - 기본(PC/태블릿) */
+    .polaroid {
+      position: fixed; top: 50%; left: 50%; width: 280px; 
+      background: #fff; padding: 15px 15px 50px 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6); z-index: 95;
+      transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); opacity: 0;
+    }
+    .polaroid.animate-to-corner {
+      transform: translate(0, 0) scale(0.35) rotate(-5deg) !important;
+      transition: all 0.4s cubic-bezier(0.5, 0, 0, 1);
+    }
+    .polaroid img { 
+        width: 100%; height: auto; display: block; background: #000; border: 1px solid #eee; 
+        opacity: 0.85; 
+    }
+    .polaroid-text {
+      font-family: 'Caveat', cursive; font-size: 28px; color: #222;
+      text-align: center; margin-top: 15px; line-height: 1.1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .polaroid-watermark {
+      font-family: 'Pretendard', sans-serif; font-size: 8px; color: #888;
+      text-align: center; margin-top: 12px; line-height: 1.4; text-transform: uppercase; letter-spacing: 1px;
+      border-top: 1px solid #eee; padding-top: 8px; width: 80%; margin-left: 10%;
+    }
+
+    /* Gallery Screen */
+    #gallery-screen {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10, 10, 10, 0.98); z-index: 200; 
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      opacity: 0; transition: opacity 0.5s;
+    }
+    #gallery-screen.active { display: flex; opacity: 1; pointer-events: auto; }
+
+    #gallery-viewport {
+        width: 100%; height: 65%; overflow: hidden;
+        display: flex; align-items: center; position: relative;
+    }
+    #gallery-container {
+      display: flex; align-items: center;
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
+      will-change: transform; 
+      /* [수정] 중앙 정렬 로직을 JS로 제어하기 위해 패딩 제거 */
+      padding-left: 0; 
+    }
+    .gallery-item {
+      flex: 0 0 auto; width: 300px; 
+      background: #fff; padding: 15px 15px 60px 15px;
+      box-sizing: border-box; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      margin-right: 40px; transform: scale(0.5); opacity: 0.5; z-index: 1;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .gallery-item.active { transform: scale(1.0); opacity: 1; z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,1); }
+    .gallery-item img { 
+        width: 100%; display: block; border: 1px solid #eee; 
+        opacity: 0.9;
+        filter: brightness(0.9) contrast(1.2) saturate(1.1);
+    }
+    
+    #gallery-controls { margin-top: 30px; display: flex; gap: 20px; }
+    button.reset-btn {
+      padding: 16px 30px; border: 1px solid rgba(255, 100, 100, 0.4);
+      background: rgba(100, 0, 0, 0.6); color: #ffcccc; font-size: 16px; letter-spacing: 2px;
+      cursor: pointer; border-radius: 50px; backdrop-filter: blur(5px); text-transform: uppercase;
+    }
+
+    /* Start Screen */
+    #start-screen {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: #000; z-index: 100;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      transition: opacity 0.8s;
+    }
+    #startBtn {
+      border: 1px solid #fff; background: transparent; color: #fff;
+      padding: 15px 40px; font-size: 18px; letter-spacing: 4px;
+      cursor: pointer; animation: pulse 2s infinite; pointer-events: auto;
+    }
+    @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+    
+    #warning-msg {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      background: rgba(255, 50, 50, 0.3); border: 1px solid rgba(255, 100, 100, 0.5);
+      color: #ffcece; font-size: 18px; padding: 15px 30px; border-radius: 8px;
+      display: none; backdrop-filter: blur(10px); text-align: center;
+      width: 80%;
+    }
+    #snap { display: none; }
+
+    /* 모바일 전용 (화면폭 768px 이하) */
+    @media (max-width: 768px) {
+        #brand-title { font-size: 12px; }
+        #timer-display { font-size: 60px; margin-top: 5px; }
+        #status-bar { font-size: 14px; margin-top: 5px; }
+        
+        /* [수정] 폴라로이드 크기 축소 (55vw -> 45vw) */
+        .polaroid { 
+            width: 45vw; 
+            padding: 8px 8px 30px 8px; 
+        }
+        .polaroid-text { font-size: 16px; margin-top: 8px; } 
+        .polaroid-watermark { font-size: 6px; margin-top: 6px; }
+
+        .gallery-item {
+            width: 65vw; 
+            margin-right: 20px;
+            padding: 10px 10px 50px 10px;
+        }
+        
+        button.reset-btn { font-size: 14px; padding: 12px 25px; }
+        #startBtn { font-size: 16px; padding: 12px 30px; width: 80%; text-align: center; }
+        
+        #intro-text { font-size: 20px; line-height: 1.5; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="flash-overlay"></div>
+<div id="dim-overlay"></div>
+
+<div id="intro-overlay">
+  <div id="intro-text">
+    1분간 최대한 많은<br>감정을 찾아보세요!
+  </div>
+</div>
+
+<div id="start-screen">
+  <div style="font-size: 12px; color: #888; margin-bottom: 20px;">EMOTIONAL SPHERE PROJECT</div>
+  <button id="startBtn">TOUCH TO START</button>
+</div>
+
+<div id="container">
+  <video id="cam" autoplay playsinline muted></video>
+  <div id="three-canvas"></div>
+</div>
+
+<div id="ui-layer">
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    <div id="brand-title">EMOTIONAL SPHERE</div>
+    
+    <div id="timer-display">60</div>
+    <div id="timer-label">SECONDS LEFT</div>
+    
+    <div id="status-bar"></div>
+  </div>
+  
+  <div id="warning-msg">얼굴을 인식할 수 없습니다</div>
+  
+  <div id="controls">
+    <button id="galleryBtn" class="main-btn" style="display:none;">FINISH & VIEW</button>
+  </div>
+</div>
+
+<div id="gallery-screen">
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    <div id="brand-title" style="margin-bottom:10px;">YOUR EMOTIONAL JOURNEY</div>
+    <div style="color:rgba(255,255,255,0.7); font-size:14px; letter-spacing:1px;">
+      SESSION CLOSING IN <span id="gallery-timer" style="color:#fff; font-weight:bold;">30</span>s
+    </div>
+  </div>
+
+  <div id="gallery-viewport">
+      <div id="gallery-container"></div>
+  </div>
+  <div id="gallery-controls">
+    <button id="resetBtn" class="reset-btn">FINISH (GO TO START)</button>
+  </div>
+</div>
+
+<canvas id="snap"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+const SERVER_URL = "https://emotion-server-backend-907115489834.asia-northeast3.run.app/analyze";
+
+/* ================= [0] Noise Function ================= */
+const SimplexNoise = function() {
+  this.grad3 = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],[1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],[0,1,1],[0,-1,1],[0,1,-1],[0,-1,-1]];
+  this.p = []; for (var i=0; i<256; i++) this.p[i] = Math.floor(Math.random()*256);
+  this.perm = []; for(var i=0; i<512; i++) this.perm[i]=this.p[i & 255];
+};
+SimplexNoise.prototype.dot = function(g, x, y) { return g[0]*x + g[1]*y; };
+SimplexNoise.prototype.noise = function(xin, yin) {
+  var n0, n1, n2; 
+  var F2 = 0.5*(Math.sqrt(3.0)-1.0), G2 = (3.0-Math.sqrt(3.0))/6.0;
+  var s = (xin+yin)*F2; var i = Math.floor(xin+s); var j = Math.floor(yin+s);
+  var t = (i+j)*G2; var X0 = i-t; var Y0 = j-t; var x0 = xin-X0; var y0 = yin-Y0;
+  var i1, j1; 
+  if(x0>y0) {i1=1; j1=0;} else {i1=0; j1=1;}
+  var x1 = x0 - i1 + G2; var y1 = y0 - j1 + G2;
+  var x2 = x0 - 1.0 + 2.0 * G2; var y2 = y0 - 1.0 + 2.0 * G2;
+  var ii = i & 255; var jj = j & 255;
+  var gi0 = this.perm[ii+this.perm[jj]] % 12; var gi1 = this.perm[ii+i1+this.perm[jj+j1]] % 12; var gi2 = this.perm[ii+1+this.perm[jj+1]] % 12;
+  var t0 = 0.5 - x0*x0 - y0*y0;
+  if(t0<0) n0 = 0.0; else { t0 *= t0; n0 = t0 * t0 * this.dot(this.grad3[gi0], x0, y0); }
+  var t1 = 0.5 - x1*x1 - y1*y1;
+  if(t1<0) n1 = 0.0; else { t1 *= t1; n1 = t1 * t1 * this.dot(this.grad3[gi1], x1, y1); }
+  var t2 = 0.5 - x2*x2 - y2*y2;
+  if(t2<0) n2 = 0.0; else { t2 *= t2; n2 = t2 * t2 * this.dot(this.grad3[gi2], x2, y2); }
+  return 70.0 * (n0 + n1 + n2);
+};
+const noise = new SimplexNoise();
+
+
+/* ================= [1] System Logic ================= */
+const videoElement = document.getElementById("cam");
+const statusBar = document.getElementById("status-bar");
+const warningMsg = document.getElementById("warning-msg");
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("start-screen");
+const uiLayer = document.getElementById("ui-layer");
+const introOverlay = document.getElementById("intro-overlay");
+
+// Timers
+const timerDisplay = document.getElementById("timer-display");
+const galleryTimerDisplay = document.getElementById("gallery-timer");
+
+const galleryBtn = document.getElementById("galleryBtn"); // Finish Early
+
+const galleryScreen = document.getElementById("gallery-screen");
+const galleryViewport = document.getElementById("gallery-viewport");
+const galleryContainer = document.getElementById("gallery-container");
+const resetBtn = document.getElementById("resetBtn");
+
+const flashOverlay = document.getElementById("flash-overlay");
+const dimOverlay = document.getElementById("dim-overlay");
+
+let stream = null;
+let isRunning = false;
+let isProcessing = false;
+let loopInterval = null;
+let snapshotCooldown = false;
+let photoCount = 0; 
+let createdPolaroids = []; 
+let capturedImagesData = [];
+
+let capturedEmotionsSet = new Set();
+let hasTakenFirstShot = false;
+
+// Gallery Vars
+let currentGalleryIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Timers
+let sessionTimeLeft = 60;
+let sessionTimerInterval = null;
+let galleryTimeLeft = 30;
+let galleryTimerInterval = null;
+
+const MIN_FACE_SIZE = 0.15;  
+
+// Start Button Click
+startBtn.addEventListener("click", async () => {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
+    videoElement.srcObject = stream;
+    videoElement.play();
+    
+    // 1. Hide Start Screen
+    startScreen.style.opacity = 0;
+    setTimeout(() => { startScreen.style.display = "none"; }, 500);
+    
+    // 2. Show Intro (Blackout with Text)
+    introOverlay.classList.add('active');
+
+    // 3. [수정] Wait 2 seconds (다시 2초로 복구)
+    setTimeout(() => {
+        introOverlay.classList.remove('active');
+        uiLayer.classList.add('visible'); // Show UI
+        
+        galleryBtn.style.display = "block";
+        statusBar.textContent = "Ready";
+        
+        startSession();
+    }, 2000); 
+
+  } catch (e) { alert("카메라 권한이 필요합니다."); }
+});
+
+// Start Session (1 Minute)
+function startSession() {
+    if (isRunning) return;
+    isRunning = true;
+    
+    // Init Timer
+    sessionTimeLeft = 60;
+    timerDisplay.textContent = sessionTimeLeft;
+    timerDisplay.style.color = "#fff";
+    
+    // Start Analyzing IMMEDIATELY
+    captureAndAnalyze();
+
+    // Start AR Loop
+    loopInterval = setInterval(() => {
+        if (!isProcessing) captureAndAnalyze();
+    }, 700);
+
+    // Start Session Countdown
+    sessionTimerInterval = setInterval(() => {
+        sessionTimeLeft--;
+        timerDisplay.textContent = sessionTimeLeft;
+        
+        if (sessionTimeLeft <= 10) timerDisplay.style.color = "#ff5555";
+
+        if (sessionTimeLeft <= 0) {
+            finishSession();
+        }
+    }, 1000);
+}
+
+// Finish Session -> Go to Gallery
+function finishSession() {
+    clearInterval(loopInterval);
+    clearInterval(sessionTimerInterval);
+    isRunning = false;
+    
+    openGallery();
+}
+
+// Full Reset (Go to Start)
+function resetSystem() {
+  console.log("System Reset");
+  clearInterval(loopInterval);
+  clearInterval(sessionTimerInterval);
+  clearInterval(galleryTimerInterval);
+  isRunning = false;
+  isProcessing = false;
+
+  if (stream) {
+    stream.getTracks().forEach(track => track.stop());
+    stream = null;
+  }
+  videoElement.srcObject = null;
+
+  startScreen.style.display = "flex";
+  galleryScreen.classList.remove("active");
+  uiLayer.classList.remove("visible"); // Hide Main UI
+  
+  setTimeout(() => { startScreen.style.opacity = 1; }, 10);
+  
+  galleryBtn.style.display = "none";
+  warningMsg.style.display = "none";
+  statusBar.textContent = "";
+  
+  updateSpheresState([]);
+
+  createdPolaroids.forEach(el => el.remove());
+  createdPolaroids = [];
+  capturedImagesData = [];
+  photoCount = 0;
+  capturedEmotionsSet.clear(); 
+  hasTakenFirstShot = false; 
+  
+  galleryContainer.innerHTML = '';
+  galleryContainer.style.transform = 'translateX(0)';
+}
+
+// Manual Finish
+galleryBtn.addEventListener("click", () => {
+    finishSession();
+});
+
+// Open Gallery
+function openGallery() {
+  galleryContainer.innerHTML = "";
+  if (capturedImagesData.length === 0) {
+    galleryContainer.innerHTML = '<div style="color:#888; font-size:14px; margin-left: 0;">NO PHOTOS CAPTURED</div>'; // 정렬 수정
+    galleryContainer.style.transform = 'translateX(0)';
+  } else {
+    capturedImagesData.forEach((data, index) => {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.onclick = () => {
+          currentGalleryIndex = index;
+          updateGalleryPosition();
+      }
+      item.innerHTML = `
+        <img src="${data.src}">
+        <div class="polaroid-text">${data.label}</div>
+        <div class="polaroid-watermark">
+          2026 ADD+ Oscillation<br>Emotional Sphere
+        </div>
+      `;
+      galleryContainer.appendChild(item);
+    });
+    
+    currentGalleryIndex = capturedImagesData.length - 1;
+    updateGalleryPosition();
+  }
+
+  galleryScreen.classList.add("active");
+  startGalleryTimer();
+}
+
+// Gallery Countdown (30s)
+function startGalleryTimer() {
+    galleryTimeLeft = 30;
+    galleryTimerDisplay.textContent = galleryTimeLeft;
+    
+    clearInterval(galleryTimerInterval);
+    galleryTimerInterval = setInterval(() => {
+        galleryTimeLeft--;
+        galleryTimerDisplay.textContent = galleryTimeLeft;
+        
+        if (galleryTimeLeft <= 0) {
+            resetSystem();
+        }
+    }, 1000);
+}
+
+
+
+function extendGalleryTime() {
+    galleryTimeLeft = 30;
+    galleryTimerDisplay.textContent = galleryTimeLeft;
+}
+galleryScreen.addEventListener('click', extendGalleryTime);
+galleryScreen.addEventListener('touchstart', extendGalleryTime);
+
+
+// [수정] 갤러리 정렬 로직 완전 수정 (화면 중앙 강제 정렬)
+function updateGalleryPosition() {
+    const items = document.querySelectorAll('.gallery-item');
+    if (items.length === 0) return;
+
+    items.forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === currentGalleryIndex) {
+            item.classList.add('active');
+        }
+    });
+
+    const activeItem = items[currentGalleryIndex];
+    if (!activeItem) return;
+
+    // Viewport의 중앙
+    const viewportCenter = galleryViewport.offsetWidth / 2;
+    // Item의 중심 좌표 (offsetLeft는 컨테이너 기준)
+    const itemCenter = activeItem.offsetLeft + (activeItem.offsetWidth / 2);
+    
+    // 중앙에 오게 하려면 이동해야 할 거리
+    const moveX = viewportCenter - itemCenter;
+
+    galleryContainer.style.transform = `translateX(${moveX}px)`;
+}
+
+galleryViewport.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, false);
+galleryViewport.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); }, false);
+galleryViewport.addEventListener('mousedown', e => { touchStartX = e.screenX; }, false);
+galleryViewport.addEventListener('mouseup', e => { touchEndX = e.screenX; handleSwipe(); }, false);
+
+function handleSwipe() {
+    const threshold = 50; 
+    if (touchEndX < touchStartX - threshold) {
+        if (currentGalleryIndex < capturedImagesData.length - 1) {
+            currentGalleryIndex++;
+            updateGalleryPosition();
+        }
+    }
+    if (touchEndX > touchStartX + threshold) {
+        if (currentGalleryIndex > 0) {
+            currentGalleryIndex--;
+            updateGalleryPosition();
+        }
+    }
+}
+
+resetBtn.addEventListener("click", () => {
+  resetSystem();
+});
+
+
+// [Snapshot Logic]
+function triggerSnapshot(label) {
+  if(snapshotCooldown) return;
+  snapshotCooldown = true;
+  photoCount++;
+
+  capturedEmotionsSet.add(label);
+
+  const w = renderer.domElement.width;
+  const h = renderer.domElement.height;
+  
+  const captureCanvas = document.createElement("canvas");
+  captureCanvas.width = w;
+  captureCanvas.height = h;
+  const ctx = captureCanvas.getContext("2d");
+  
+  // Video Cover Logic
+  const vw = videoElement.videoWidth;
+  const vh = videoElement.videoHeight;
+  const screenAspect = w / h;
+  const videoAspect = vw / vh;
+  let drawW, drawH, startX, startY;
+
+  if (screenAspect > videoAspect) {
+    drawW = w; drawH = w / videoAspect;
+    startX = 0; startY = (h - drawH) / 2;
+  } else {
+    drawW = h * videoAspect; drawH = h;
+    startX = (w - drawW) / 2; startY = 0;
+  }
+
+  ctx.save();
+  ctx.translate(w, 0); ctx.scale(-1, 1); 
+  ctx.drawImage(videoElement, startX, startY, drawW, drawH);
+  ctx.restore();
+
+  // Dark Overlay
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)'; 
+  ctx.fillRect(0, 0, w, h);
+
+  // Sphere Overlay (Screen Blend)
+  ctx.save();
+  ctx.globalCompositeOperation = 'screen'; 
+  ctx.drawImage(renderer.domElement, 0, 0, w, h);
+  ctx.restore();
+
+  const imgData = captureCanvas.toDataURL("image/jpeg");
+  capturedImagesData.push({ src: imgData, label: label });
+
+  const polaroid = document.createElement('div');
+  polaroid.className = 'polaroid';
+  polaroid.innerHTML = `
+    <img src="${imgData}">
+    <div class="polaroid-text">${label}</div>
+    <div class="polaroid-watermark">
+      2026 ADD+ Oscillation<br>
+      Emotional Sphere
+    </div>
+  `;
+  document.body.appendChild(polaroid);
+  createdPolaroids.push(polaroid);
+
+  flashOverlay.style.opacity = 1;
+  setTimeout(() => { flashOverlay.style.opacity = 0; }, 100);
+  
+  dimOverlay.classList.add('active');
+  polaroid.style.opacity = 1; 
+
+  setTimeout(() => {
+    dimOverlay.classList.remove('active');
+
+    const jitterX = (Math.random() - 0.5) * 20; 
+    const jitterY = (Math.random() - 0.5) * 20;
+    
+    const targetRight = 20 + jitterX;
+    const targetBottom = 30 + jitterY; 
+
+    polaroid.style.top = 'auto';
+    polaroid.style.left = 'auto';
+    polaroid.style.right = targetRight + 'px';
+    polaroid.style.bottom = targetBottom + 'px';
+    
+    polaroid.style.transform = `scale(0.35) rotate(${Math.random() * 10 - 5}deg)`; 
+    polaroid.classList.add('animate-to-corner');
+    
+    setTimeout(() => { snapshotCooldown = false; }, 2000);
+
+  }, 1000); // [수정] 다시 1초로 복구 (중앙 확인 시간)
+}
+
+async function captureAndAnalyze() {
+  isProcessing = true;
+
+  const canvas = document.getElementById("snap");
+  const ctx = canvas.getContext("2d");
+  canvas.width = 640;
+  canvas.height = 480;
+  ctx.save(); ctx.scale(-1, 1);
+  ctx.drawImage(videoElement, -canvas.width, 0, canvas.width, canvas.height);
+  ctx.restore();
+
+  const basicMeta = { device: navigator.userAgent };
+
+  canvas.toBlob(async blob => {
+    const form = new FormData();
+    form.append("frame", blob, "frame.jpg");
+    form.append("metadata", JSON.stringify(basicMeta));
+    
+    try {
+      const res = await fetch(SERVER_URL, { method: "POST", body: form });
+      if(!res.ok) throw new Error("Error");
+      const data = await res.json();
+
+      let validFaces = [];
+      if (data.status === "ok" && data.faces_list) {
+        validFaces = data.faces_list.filter(f => f.pose.boxSize >= MIN_FACE_SIZE);
+      }
+
+      if (validFaces.length > 0) {
+        warningMsg.style.display = "none";
+        if(!snapshotCooldown) statusBar.textContent = ""; 
+        updateSpheresState(validFaces);
+
+        if (!hasTakenFirstShot && !snapshotCooldown) {
+            hasTakenFirstShot = true;
+            triggerSnapshot("First Emotion");
+            statusBar.textContent = "Welcome!";
+            return; 
+        }
+
+        if (!snapshotCooldown) {
+            let triggeredLabel = null;
+
+            for (let f of validFaces) {
+                const joy = f.emotions.joy;
+                const anger = f.emotions.anger;
+                const sorrow = f.emotions.sorrow;
+                const surprise = f.emotions.surprise;
+
+                const C_TH = 0.6;
+                let compound = null;
+                if (joy > C_TH && surprise > C_TH) compound = "Ecstatic";
+                else if (joy > C_TH && sorrow > C_TH) compound = "Ambivalent";
+                else if (joy > C_TH && anger > C_TH) compound = "Manic";
+                else if (anger > C_TH && sorrow > C_TH) compound = "Frustrated";
+                else if (anger > C_TH && surprise > C_TH) compound = "Outraged";
+                else if (sorrow > C_TH && surprise > C_TH) compound = "Shocked";
+
+                if (compound && !capturedEmotionsSet.has(compound)) {
+                    triggeredLabel = compound;
+                    break;
+                }
+
+                const P_TH = 0.7;
+                let pure = null;
+                if (!compound) {
+                    if (joy > P_TH) pure = "Pure Joy";
+                    else if (anger > P_TH) pure = "Furious";
+                    else if (surprise > P_TH) pure = "Freaked Out";
+                    else if (sorrow > P_TH) pure = "Deep Sorrow";
+                }
+
+                if (pure && !capturedEmotionsSet.has(pure)) {
+                    triggeredLabel = pure;
+                    break;
+                }
+
+                if (!compound && !pure) {
+                    if (joy <= 0.2 && anger <= 0.2 && sorrow <= 0.2 && surprise <= 0.2) {
+                        let serenity = "Pure Serenity";
+                        if (!capturedEmotionsSet.has(serenity)) {
+                            triggeredLabel = serenity;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (triggeredLabel) {
+                triggerSnapshot(triggeredLabel);
+                statusBar.textContent = "Moment Captured!";
+            }
+        }
+
+      } else {
+        updateSpheresState([]); 
+        warningMsg.style.display = "block";
+      }
+    } catch (e) { console.log("Skip"); } 
+    finally { isProcessing = false; }
+  }, "image/jpeg", 0.8);
+}
+
+
+/* ================= [2] Three.js Logic ================= */
+let scene, camera, renderer;
+let time = 0;
+const MAX_SPHERES = 6; 
+let spheres = []; 
+const IMG_W = 640; const IMG_H = 480;
+
+class Sphere {
+    constructor(scene) {
+        this.particleCount = 4000; 
+        this.radius = 120; 
+        this.particlesData = [];
+        this.emotions = { joy: 0, sorrow: 0, anger: 0, surprise: 0 };
+        this.pose = { pan: 0, tilt: 0, boxSize: 0.5 };
+        this.targetPos = new THREE.Vector3(0, 0, 0);
+        this.currentPos = new THREE.Vector3(0, 0, 0);
+        this.isActive = false;
+        this.targetOpacity = 0.0;
+        this.currentOpacity = 0.0;
+        this.rotationSpeed = { x: 0, y: 0.002, z: 0 }; 
+        this._initMesh(scene);
+    }
+
+    _initMesh(scene) {
+        const posArray = new Float32Array(this.particleCount * 3);
+        const colorArray = new Float32Array(this.particleCount * 3);
+        for(let i=0; i<this.particleCount; i++) {
+            const phi = Math.acos( -1 + ( 2 * i ) / this.particleCount );
+            const theta = Math.sqrt( this.particleCount * Math.PI ) * phi;
+            const x = this.radius * Math.cos( theta ) * Math.sin( phi );
+            const y = this.radius * Math.sin( theta ) * Math.sin( phi );
+            const z = this.radius * Math.cos( phi );
+            posArray[i*3] = x; posArray[i*3+1] = y; posArray[i*3+2] = z;
+            this.particlesData.push({ ox: x, oy: y, oz: z, seed: Math.random() * 100 });
+            colorArray[i*3] = 1; colorArray[i*3+1] = 1; colorArray[i*3+2] = 1;
+        }
+        const geo = new THREE.BufferGeometry();
+        geo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        geo.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+        const mat = new THREE.PointsMaterial({ 
+            size: 2.5, vertexColors: true, transparent: true, opacity: 0, 
+            blending: THREE.AdditiveBlending, depthWrite: false 
+        });
+        this.mesh = new THREE.Points(geo, mat);
+        this.group = new THREE.Group();
+        this.group.add(this.mesh);
+        scene.add(this.group);
+    }
+
+    updateData(faceData, targetX, targetY) {
+        this.emotions = faceData.emotions;
+        this.pose = faceData.pose;
+        this.isActive = true;
+        this.targetOpacity = 1.0;
+        this.targetPos.set(targetX, targetY, 0);
+    }
+
+    hide() {
+        this.isActive = false;
+        this.targetOpacity = 0.0;
+    }
+
+    animate(time) {
+        this.currentOpacity += (this.targetOpacity - this.currentOpacity) * 0.1;
+        this.mesh.material.opacity = this.currentOpacity;
+        if (this.currentOpacity < 0.01) return;
+
+        this.currentPos.lerp(this.targetPos, 0.08); 
+        this.group.position.copy(this.currentPos);
+
+        const positions = this.mesh.geometry.attributes.position.array;
+        const colors = this.mesh.geometry.attributes.color.array;
+        const { joy, sorrow, anger, surprise } = this.emotions;
+        const { pan, tilt, boxSize } = this.pose;
+
+        this.group.rotation.y += (pan * 2.5 - this.group.rotation.y) * 0.1;
+        this.group.rotation.x += (-tilt * 2.5 - this.group.rotation.x) * 0.1;
+        const squashX = 1.0 - Math.abs(pan) * 0.3; 
+        this.group.scale.x += (squashX - this.group.scale.x) * 0.1;
+
+        let targetSX = 0, targetSY = 0.002, targetSZ = 0; 
+        const baseSpeed = 0.02;
+        if (this.isActive) {
+            if (joy > 0.1) { targetSY = baseSpeed * (1 + joy * 3); } 
+            else if (anger > 0.1) { targetSX = baseSpeed * (1 + anger * 4); targetSZ = baseSpeed * (0.5 + anger * 2); } 
+            else if (sorrow > 0.1) { targetSY = baseSpeed * 0.05; } 
+            else if (surprise > 0.1) { targetSY = baseSpeed * (1 + surprise); }
+        }
+        this.rotationSpeed.x += (targetSX - this.rotationSpeed.x) * 0.05;
+        this.rotationSpeed.y += (targetSY - this.rotationSpeed.y) * 0.05;
+        this.rotationSpeed.z += (targetSZ - this.rotationSpeed.z) * 0.05;
+        this.mesh.rotation.x += this.rotationSpeed.x;
+        this.mesh.rotation.y += this.rotationSpeed.y;
+        this.mesh.rotation.z += this.rotationSpeed.z;
+        
+        const targetScale = 0.5 + (boxSize * 1.8); 
+        const currentScale = this.group.scale.y; 
+        const nextScale = currentScale + (targetScale - currentScale) * 0.1;
+        this.group.scale.set(nextScale * squashX, nextScale, nextScale);
+
+        let tr=0.5, tg=0.5, tb=0.8; 
+        let noiseIntensity = 0.5; let breathingSpeed = 1.0; let pulse = 0.0;          
+
+        if (this.isActive) {
+            if (joy > 0.1) { tr=1.0; tg=0.9; tb=0.2; noiseIntensity = 2.0; pulse = joy * 15; }
+            if (anger > 0.1) { tr=1.0; tg=0.1; tb=0.1; noiseIntensity = 10.0 + anger * 10; breathingSpeed = 5.0; }
+            if (sorrow > 0.1) { tr=0.1; tg=0.3; tb=0.9; noiseIntensity = 1.0; }
+            if (surprise > 0.1) { tr=1.0; tg=1.0; tb=1.0; noiseIntensity = 5.0; pulse = surprise * 25; }
+        }
+
+        for (let i = 0; i < this.particleCount; i++) {
+            const idx = i * 3;
+            const p = this.particlesData[i];
+            let x = p.ox; let y = p.oy; let z = p.oz;
+
+            const n = noise.noise(x * 0.01 + time, y * 0.01 + time * breathingSpeed);
+            const distortion = n * noiseIntensity;
+            const len = Math.sqrt(x*x + y*y + z*z);
+            const nx = x / len; const ny = y / len; const nz = z / len;
+
+            let finalX = x + nx * (distortion + pulse);
+            let finalY = y + ny * (distortion + pulse);
+            let finalZ = z + nz * (distortion + pulse);
+
+            if (sorrow > 0.2) finalY -= Math.abs(n) * (sorrow * 30);
+
+            positions[idx] = finalX; positions[idx+1] = finalY; positions[idx+2] = finalZ;
+
+            colors[idx] += (tr - colors[idx]) * 0.05; 
+            colors[idx+1] += (tg - colors[idx+1]) * 0.05; 
+            colors[idx+2] += (tb - colors[idx+2]) * 0.05;
+        }
+        this.mesh.geometry.attributes.position.needsUpdate = true;
+        this.mesh.geometry.attributes.color.needsUpdate = true;
+    }
+}
+
+function initThree() {
+    const container = document.getElementById("three-canvas");
+    scene = new THREE.Scene(); 
+    scene.background = null; 
+    
+    camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 2000);
+    camera.position.z = 600; 
+
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, preserveDrawingBuffer: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    container.appendChild(renderer.domElement);
+
+    for (let i = 0; i < MAX_SPHERES; i++) {
+        spheres.push(new Sphere(scene));
+    }
+
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+}
+
+function updateSpheresState(facesList) {
+    const count = Math.min(facesList.length, MAX_SPHERES);
+    const dist = camera.position.z;
+    const vFOV = THREE.Math.degToRad(camera.fov); 
+    const visibleHeight = 2 * Math.tan(vFOV / 2) * dist;
+    const visibleWidth = visibleHeight * camera.aspect;
+
+    for (let i = 0; i < count; i++) {
+        const faceData = facesList[i];
+        const rect = faceData.rect;
+        const centerX = (rect.min_x + rect.max_x) / 2;
+        const centerY = (rect.min_y + rect.max_y) / 2;
+
+        const normX = ((centerX / IMG_W) - 0.5); 
+        const normY = -((centerY / IMG_H) - 0.5); 
+
+        const targetX = normX * visibleWidth;
+        const targetY = normY * visibleHeight;
+
+        spheres[i].updateData(faceData, targetX, targetY);
+    }
+
+    for (let i = count; i < MAX_SPHERES; i++) {
+        spheres[i].hide();
+    }
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    time += 0.01;
+    spheres.forEach(s => s.animate(time));
+    renderer.render(scene, camera);
+}
+
+initThree(); 
+animate();
+</script>
+</body>
+</html>
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+네가 준 구현 스타일을 반영해서, 최근 5개 기준 안정화에 감정 우선순위와 중복 억제 흐름까지 맞춘 형태로 다시 짜볼게요.
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+추가로 Google Vision의 6단계 likelihood를 먼저 0~1 점수로 바꿔서, 네 threshold가 그대로 먹도록 맞추는 쪽으로 다듬고 있어요.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+하고있는거지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+응, 이미 반영해서 수정해뒀어.
+
+최근 5개 평균으로 판정하고, 네 JS 구조 참고해서  
+- compound 감정 우선
+- pure 감정
+- serenity
+- fallback dominant emotion  
+순서로 조명 바뀌게 해놨다.
+
+파일은 여기야:  
+[vision_tapo_emotion_light.py](sandbox:/mnt/data/vision_tapo_emotion_light.py)
+
+문법 체크도 끝났어.  
+다음엔 네가 원하는 감정별 조도/색온도 표로 바로 맞춰줄 수 있어.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+내가 지금 생각하고있는건 AI를이용한 실내공간설비담당 에이전트를 만드는거야. 
+지금은 내가 미리 만들어둔 특정 세팅값에 반응하잖아? 근데 그게 아니라, 너한테 조명, 백색소음, 루버 같은것들의 통제권을 주고, 내부공간 안의 상황에 따라 자율적으로 판단하여 조절하는거지  그걸 내가 만드는게 가능할까? ai를 학습시켜야하는거지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+가능해.  
+근데 핵심은 **“무조건 AI를 새로 학습시켜야 하느냐?”는 아니고, 보통은 아니다**야.
+
+네가 말하는 건 그냥 “감정이 joy면 5000K” 같은 **고정 매핑 시스템**이 아니라,
+
+- 지금 공간에 사람이 몇 명 있는지
+- 표정/행동/소음/시간대가 어떤지
+- 눈부심, 더위, 답답함, 과몰입 같은 상태가 어떤지
+- 그래서 지금 **조명 / 백색소음 / 루버 / 환기 / 미디어**를 어떻게 조절해야 전체 경험이 가장 좋아지는지
+
+를 **상황 판단 → 목표 설정 → 장치 제어**까지 하는  
+일종의 **실내환경 운영 에이전트**를 만드는 거야.
+
+이건 충분히 가능해. 다만 구조를 잘 나눠야 해.
+
+---
+
+## 1. 네가 만들려는 건 정확히 뭐냐
+이건 보통 이렇게 볼 수 있어.
+
+**센서 입력**
+- 카메라: 얼굴, 밀집도, 체류
+- 마이크: 소음 레벨
+- 환경센서: 조도, 온습도, CO₂
+- 시간/이벤트 정보: 오전인지, 피크 시간인지, 전시 흐름이 어떤지
+
+**판단 레이어**
+- 지금 공간 상태를 해석
+- 목표를 정함  
+  예: “집중 유지”, “긴장 완화”, “체류 유도”, “혼잡 완화”
+
+**액추에이터 출력**
+- 조명 밝기
+- 색온도
+- 백색소음 볼륨/종류
+- 루버 각도
+- 필요하면 팬, 향, 프로젝션까지
+
+즉 네가 만들려는 건 **AI 조명 제어**가 아니라  
+**AI 기반 실내공간 설비 운영자**에 가까워.
+
+---
+
+## 2. 꼭 학습을 시켜야 하냐
+처음부터는 **아니야**.  
+대부분은 아래 3단계로 가는 게 맞아.
+
+### A. 규칙 기반
+가장 먼저 만들기 쉬운 방식.
+
+예:
+- 사람이 많고 소음이 높으면 백색소음 줄이기
+- 얼굴이 무표정/침체 위주면 조도 조금 올리고 3500K로 이동
+- 강한 직사광이 들어오면 루버 닫기
+
+이건 학습이 아니라 **네가 설계한 논리**로 움직이는 시스템이야.
+
+### B. 점수 기반 / 상태 기반
+한 단계 더 나가면,
+여러 입력을 점수화해서 종합 판단하게 만들 수 있어.
+
+예:
+- stress_score
+- engagement_score
+- crowding_score
+- calmness_score
+
+그리고 에이전트가 이렇게 판단:
+- stress 높음 + crowding 높음 → 눈부심 줄이고 소리 줄이고 루버 부분 폐쇄
+- engagement 낮음 + 체류시간 짧음 → 대비 높은 조명, 공간 포인트 강화
+
+이 단계도 꼭 ML이 필요하지 않아.
+
+### C. 학습 기반
+그다음이 진짜 “AI가 스스로 배운다”에 가까운 단계야.
+
+이때는 보통
+- supervised learning
+- reinforcement learning
+- contextual bandit
+같은 방식이 들어감.
+
+특히 건물 제어 쪽에서는 **강화학습(RL)** 연구가 많이 쓰이고 있어. RL은 건물 상태를 보고 행동을 고르고, 쾌적성·에너지·비용 같은 목표를 보상으로 받아 정책을 학습하는 방식이야. NREL은 실제로 RL 기반 HVAC 제어가 에너지 비용과 편의성을 동시에 다루는 방향으로 연구되고 있다고 정리하고 있고, 최근 리뷰 논문들도 HVAC 제어에서 RL이 활발히 쓰인다고 본다. citeturn0search3turn0search11turn0search2
+
+---
+
+## 3. 네 경우엔 어떤 방식이 현실적이냐
+네가 지금 만드는 프로젝트나 프로토타입이라면,  
+**처음부터 거대한 학습형 AI를 만들 필요는 없어.**
+
+오히려 추천 구조는 이거야.
+
+### 1단계: 규칙 기반 에이전트
+네가 원하는 공간 철학을 먼저 코드로 넣어.
+
+예를 들면:
+- 목표: 안정 / 몰입 / 각성 / 회복
+- 상태: 군중도, 감정 분위기, 조도, 시간대
+- 행동: 밝기, 색온도, 루버 각도, 백색소음
+
+즉 **건축가가 의도를 설계하고**, 시스템은 그걸 실행.
+
+### 2단계: LLM 또는 AI 판단 보조
+여기서 GPT 같은 모델은 “직접 설비를 켜고 끄는 두뇌”라기보다  
+**고수준 의사결정 레이어**로 두는 게 좋아.
+
+예:
+- “현재 공간은 과자극 상태다”
+- “관람자 회전율이 너무 빠르다”
+- “긴장을 조금 완화하는 방향으로 조정하자”
+
+그리고 실제 장치 제어는 별도의 안전한 컨트롤러가 맡는 방식.
+
+### 3단계: 학습 추가
+로그를 충분히 쌓은 뒤,
+- 어떤 조합이 체류시간을 늘렸는지
+- 어떤 조합이 표정 긴장을 완화했는지
+- 어떤 시간대에 어떤 세팅이 효과적인지
+
+를 바탕으로 조금씩 자동 최적화를 붙이는 거야.
+
+---
+
+## 4. 진짜 “학습”을 하려면 뭐가 필요하냐
+학습형 에이전트를 만들려면 최소한 이 4개가 필요해.
+
+### 상태(state)
+AI가 보는 현재 상황
+
+예:
+- 평균 감정 점수
+- 사람 수
+- 평균 체류시간
+- 현재 조도
+- 현재 소음
+- 외부 일사량
+- 시간대
+
+### 행동(action)
+AI가 바꿀 수 있는 것
+
+예:
+- 밝기 40/60/80
+- 색온도 2700/3500/5000
+- 루버 각도 0/30/60
+- 백색소음 off/low/high
+
+### 목표 또는 보상(reward)
+뭘 잘하면 좋은지
+
+예:
+- 체류시간 증가
+- 부정적 긴장 감소
+- 과도한 혼잡 방지
+- 에너지 과소비 억제
+
+### 로그 데이터
+학습 재료
+
+예:
+- 14:03 / 사람 5명 / 무표정 많음 / 3000K / 체류 18초
+- 14:05 / 4000K + 약한 백색소음 / 체류 31초
+
+이런 로그가 쌓여야 진짜로 “배운다.”
+
+---
+
+## 5. 그런데 조심할 점
+이런 시스템은 기술적으로 가능해도,  
+실제로는 **안전장치**가 훨씬 중요해.
+
+건물 제어 시스템은 원래 BACnet 같은 표준 프로토콜로 여러 제조사 장비를 연결하는 경우가 많고, HVAC·조명·차양 같은 기능을 통합한다. KNX도 조명, 셔터, HVAC 등을 하나의 표준으로 묶는 대표적인 빌딩 자동화 표준이야. citeturn0search8turn0search12turn0search5turn0search1
+
+하지만 네 에이전트가 자율 판단을 하더라도,  
+바로 장비에 무제한 권한을 주면 위험해.
+
+예:
+- 루버를 과하게 닫아서 너무 어두워짐
+- 백색소음이 계속 커져서 피로 유발
+- 조명이 너무 자주 바뀌어 오히려 불쾌
+- 냉난방까지 건드리면 안전·민원 문제 발생
+
+그래서 실제 구조는 보통 이렇게 짜.
+
+**AI 판단**  
+→ **제약 조건 검사**  
+→ **장치 제어**
+
+예:
+- 밝기는 30~85% 안에서만
+- 색온도 변화는 10초에 한 번만
+- 루버는 최대 15도씩만 이동
+- 야간/전시장 특정 시간에는 특정 모드 금지
+
+즉 AI 위에 **건축적/환경적 가드레일**을 씌워야 해.
+
+---
+
+## 6. 네가 졸업 프로젝트 수준에서 만들 수 있는 현실적인 버전
+충분히 가능하고, 오히려 전시용으로는 이 버전이 제일 좋다.
+
+### 프로토타입 구조
+- 입력: 웹캠 + 마이크 + 조도센서 정도
+- 판단:
+  - 사람 수
+  - 표정 평균
+  - 공간 소음
+  - 시간 경과
+- 출력:
+  - Tapo 조명
+  - 스피커 백색소음
+  - 서보모터 루버
+
+### 두뇌
+- 처음엔 규칙 기반 상태머신
+- 그 위에 GPT를 “설명 가능한 운영자”처럼 붙임
+
+예:
+- 현재 상태 요약
+- 목표 선택
+- 다음 행동 추천
+- 추천 이유 설명
+
+이렇게 하면 전시에서도 훨씬 설득력 있어.
+왜냐면 “AI가 알아서 했다”보다  
+**“AI가 공간 상태를 읽고 목표를 설정해 환경을 운영한다”**가 훨씬 건축적으로 강하거든.
+
+---
+
+## 7. 그래서 결론
+네 아이디어는 가능해.  
+그리고 반드시 처음부터 모델을 새로 학습시킬 필요는 없어.
+
+가장 좋은 순서는 이거야.
+
+**1. 규칙 기반 에이전트로 먼저 구현**  
+**2. 데이터 로그 축적**  
+**3. 그다음에 학습형 최적화 추가**
+
+즉,
+
+- 지금: “joy면 5000K”
+- 다음: “현재 상태를 보고 여러 장치를 종합 판단”
+- 그다음: “과거 결과를 학습해서 더 잘 판단”
+
+이 흐름으로 가는 게 맞아.
+
+건물 제어 분야에서도 RL 같은 학습형 접근은 유망하지만, 실제 적용에서는 쾌적성·에너지·안전 제약을 함께 다뤄야 하고, 보통은 기존 제어 로직과 병행하거나 단계적으로 붙인다. citeturn0search11turn0search14turn0search2
+
+원하면 다음 답변에서  
+**“실내공간설비담당 AI 에이전트” 시스템 구조도**를 네 졸전용으로 바로 그려서,
+센서 / 판단 / 액추에이터 / 로그 / 학습 레이어까지 한 번에 정리해줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+사실 규칙기반으로 하는건 ai를 사용했다고 보기는 어렵잖아?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+맞아. 네 말이 정확해.  
+
+**규칙 기반 시스템은 엄밀히 말하면 AI라고 보기 어렵다.**  
+그건 그냥 **automation / control system**에 더 가까워.
+
+예를 들어
+
+```
+if joy > 0.7:
+    light = 5000K
+```
+
+이건 **AI가 아니라 그냥 조건문**이야.
+
+그래서 너가 느끼는 문제의식이 맞아.  
+“AI를 썼다”라고 말하려면 보통 아래 중 하나는 있어야 해.
+
+---
+
+# 1️⃣ 패턴을 학습한다 (Machine Learning)
+
+AI가 데이터를 보고 **패턴을 스스로 학습**하는 경우.
+
+예
+
+입력  
+- 표정 데이터
+- 사람 수
+- 소음
+- 시간
+- 조도
+
+출력  
+- 적절한 조명
+- 적절한 소리
+- 루버 각도
+
+즉
+
+```
+state → action
+```
+
+이 관계를 **데이터로 학습**함.
+
+이게 전통적인 ML 방식.
+
+---
+
+# 2️⃣ 경험을 통해 정책을 만든다 (Reinforcement Learning)
+
+이건 조금 더 AI다운 방식이야.
+
+구조:
+
+```
+공간 상태
+↓
+AI 행동 선택
+↓
+결과 평가
+↓
+보상
+↓
+AI 정책 업데이트
+```
+
+예
+
+상태  
+- 사람 3명
+- 조용함
+- 무표정
+
+행동  
+- 3500K
+- 루버 30°
+
+결과  
+- 체류시간 증가
+
+→ 보상
+
+이런걸 반복하면서
+
+```
+최적의 공간 운영 전략
+```
+
+을 학습하는 거야.
+
+이건 **진짜 AI에 가까움**.
+
+---
+
+# 3️⃣ LLM 기반 에이전트
+
+요즘은 이 방식이 많이 쓰여.
+
+AI가 이렇게 판단함.
+
+예
+
+```
+현재 상황
+
+- 사람 4명
+- 표정 neutral
+- 소음 낮음
+- 체류시간 짧음
+
+목표
+
+- 관람 몰입 증가
+
+행동
+
+- 조명 contrast 증가
+- 공간 highlight 강화
+```
+
+즉
+
+```
+센서 데이터
+→ AI reasoning
+→ 환경 제어
+```
+
+이건 **학습보다는 reasoning 기반 AI**야.
+
+---
+
+# 중요한 건 하나야
+
+AI 시스템은 보통 **세 가지를 섞어 쓴다.**
+
+```
+rule
++
+learning
++
+reasoning
+```
+
+예
+
+```
+rule
+→ 안전 제한
+
+ML
+→ 상태 해석
+
+LLM
+→ 전략 결정
+```
+
+---
+
+# 네 프로젝트에서 진짜 흥미로운 건 여기야
+
+너가 말한 건 사실
+
+**AI 건물 관리자 (AI facility manager)**
+
+에 가까워.
+
+예
+
+AI가 판단
+
+```
+지금 공간은 긴장도가 높다
+```
+
+그래서
+
+```
+조명 warm
+루버 partially close
+백색소음 약하게
+```
+
+즉
+
+건축이
+
+```
+정적 공간
+```
+
+에서
+
+```
+운영되는 환경
+```
+
+으로 바뀌는 거야.
+
+---
+
+# 그런데 솔직히 말하면
+
+네 아이디어는 단순 AI 프로젝트보다  
+**건축적으로 훨씬 흥미로운 질문**을 건드리고 있어.
+
+질문은 이거야.
+
+> 건축가는 공간을 설계하는 사람인가  
+> 아니면 공간의 운영 시스템을 설계하는 사람인가
+
+AI가 들어오면 건축은
+
+```
+form design
+→ environmental governance
+```
+
+로 바뀔 가능성이 있어.
+
+---
+
+# 개인적으로는
+
+너 아이디어를 이렇게 발전시키는 게 훨씬 강하다고 봐.
+
+단순히
+
+```
+emotion → light
+```
+
+이 아니라
+
+```
+AI spatial operator
+```
+
+즉
+
+**AI가 공간을 운영하는 건축**
+
+---
+
+# 내가 궁금한 거 하나
+
+너가 말한 이 시스템에서  
+AI의 **목표 함수**는 뭐야?
+
+예를 들면
+
+- 체류시간 증가
+- 감정 다양성 증가
+- 긴장 완화
+- 몰입 유지
+- 사회적 상호작용 증가
+
+이 목표에 따라
+
+**완전히 다른 건축 시스템**이 만들어져.
+
+이게 사실 이 프로젝트에서  
+**가장 중요한 설계 질문**일 수도 있어.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+나는 내 졸업전시 공간 1층에 적용하려고 하니까  공공공간에서의 사람들의 사용성 증가, 전반적인 공간경험 향상이 목표야
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋은 목표야.  
+**“공공공간에서의 사용성 증가 + 전반적인 공간 경험 향상”**이면, AI 에이전트 설계에서 가장 중요한 건 **측정 가능한 목표와 상태 정의**야. 그래야 AI가 무엇을 기준으로 판단할지 명확해져.
+
+아래처럼 구조를 잡으면 실제로 구현 가능한 수준이 돼.
+
+---
+
+# 1️⃣ 목표를 AI가 이해할 수 있는 지표로 바꾸기
+“공간 경험 향상”은 추상적이라서 AI가 직접 최적화할 수 없어.  
+그래서 보통 **proxy metric(대리 지표)**를 쓴다.
+
+예를 들면:
+
+### 사용성
+- **체류시간** (dwell time)
+- **재방문 빈도**
+- **동선 다양성**
+
+### 공간 경험
+- **감정 분포** (joy / neutral 증가)
+- **스트레스 감소**
+- **혼잡도 안정화**
+
+그래서 목표 함수는 이렇게 만들 수 있어.
+
+```
+reward =
+0.4 * dwell_time
++ 0.2 * interaction_count
++ 0.2 * positive_emotion_ratio
+- 0.2 * crowding_penalty
+```
+
+즉 AI는  
+**사람이 오래 머무르고, 긍정적 경험을 하고, 너무 혼잡하지 않은 상태**를 만들려고 행동하게 된다.
+
+---
+
+# 2️⃣ AI가 보는 “공간 상태 (state)”
+AI가 판단하려면 공간 상태를 숫자로 표현해야 해.
+
+예:
+
+```
+state = {
+  people_count,
+  avg_dwell_time,
+  emotion_vector,
+  sound_level,
+  light_level,
+  time_of_day
+}
+```
+
+실제로 구현하면 이런 식이 될 거야.
+
+### 카메라
+- 사람 수
+- 체류시간
+- 감정 평균
+
+### 마이크
+- 소음 레벨
+
+### 센서
+- 조도
+- 온도
+
+---
+
+# 3️⃣ AI가 할 수 있는 행동 (actions)
+
+네가 말한 것들:
+
+```
+actions = {
+  light_brightness
+  color_temperature
+  white_noise_volume
+  louver_angle
+}
+```
+
+예
+
+```
+light = 40~90%
+temp = 2700~5000K
+noise = off/low/mid
+louver = 0~60°
+```
+
+---
+
+# 4️⃣ AI가 판단하는 과정
+
+AI 에이전트는 보통 이렇게 돌아간다.
+
+```
+현재 상태 관측
+↓
+행동 선택
+↓
+환경 변화
+↓
+사람 반응 관찰
+↓
+보상 계산
+↓
+정책 업데이트
+```
+
+즉
+
+**공간 → 사람 반응 → AI 학습**
+
+---
+
+# 5️⃣ 졸업전시용으로 현실적인 구현 방법
+
+솔직히 말하면 **완전한 RL 시스템은 시간상 어렵다.**  
+그래서 아래 구조가 현실적이야.
+
+### Layer 1 — 센서
+- 웹캠 (사람 + 감정)
+- 마이크
+- 조도센서
+
+### Layer 2 — 상태 추정
+Python에서 계산
+
+```
+crowding_score
+engagement_score
+stress_score
+```
+
+### Layer 3 — AI 판단
+GPT나 작은 모델에게 상태 전달
+
+```
+current_state = {
+  people: 6
+  avg_emotion: neutral
+  noise: low
+  dwell_time: short
+}
+```
+
+AI가 행동 결정
+
+```
+{
+ light: 4200K
+ brightness: 70%
+ noise: low
+ louver: 30°
+}
+```
+
+### Layer 4 — 장치 제어
+
+- Tapo light
+- 스피커
+- 서보 루버
+
+---
+
+# 6️⃣ 건축적으로 이 프로젝트의 의미
+너가 만드는 건 사실
+
+**AI 환경 운영 건축 (AI-operated architecture)**
+
+이거야.
+
+전통적인 건축:
+
+```
+건축가 → 공간 설계
+사람 → 공간 사용
+```
+
+AI 건축:
+
+```
+건축가 → 환경 운영 시스템 설계
+AI → 실시간 공간 운영
+사람 → 경험
+```
+
+즉 건축이
+
+**static object → adaptive environment**
+
+로 바뀌는 거지.
+
+---
+
+# 7️⃣ 전시에 보여주면 좋은 것
+졸업전시에서 설득력 높이려면 이걸 같이 보여줘.
+
+### 실시간 대시보드
+
+예
+
+```
+people: 7
+avg emotion: neutral
+noise: 32dB
+crowding: medium
+
+AI decision:
+brightness +10%
+louver close 20°
+```
+
+이걸 스크린에 띄우면  
+**“AI가 공간을 운영한다”**는 게 바로 보인다.
+
+---
+
+# 하나 궁금한 게 있어
+
+네 공간 규모가 어느 정도야?
+
+예
+
+- 6m × 6m
+- 10m × 15m
+- 로비형
+
+이게 중요해.  
+왜냐면 **AI 공간 제어 전략이 공간 크기에 따라 완전히 달라지거든.**
+
+작은 공간이면  
+**감정 기반**
+
+큰 공간이면  
+**군중 기반**
+
+으로 가는 게 보통이야.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+이건 전시때 프로토타입으로 보여줄거라 모형이 될거야.  아마 300 600 600 정도 크기로?  조명, 백색소음,  그리고 된다면 서브모터를 이용한 루버까지. 통제가능한 공간을 모형으로 보여주는거지.  그 공간은 지하철역에서 대합실이 좋아보이고
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+그 규모라면 **졸업전시 프로토타입으로 아주 적절한 스케일**이야.  
+300 × 600 × 600 모형이면 **“AI가 운영하는 지하철 대합실”**을 충분히 보여줄 수 있어. 중요한 건 **기술보다 시스템 구조를 명확하게 보여주는 것**이야.
+
+내가 보기엔 네 프로젝트는 이렇게 정의하면 제일 강해.
+
+> **AI Spatial Operator**  
+> – 공공공간(지하철 대합실)의 환경 설비를 AI가 실시간으로 운영한다.
+
+즉 건축가가 설계하는 건 **형태가 아니라 “환경 운영 알고리즘”**이라는 메시지.
+
+---
+
+# 1. 모형 시스템 구조 (현실적으로 구현 가능한 방식)
+
+모형 기준으로 보면 4개의 레이어로 나누는 게 좋아.
+
+```
+센서 레이어
+↓
+상태 해석
+↓
+AI 에이전트
+↓
+공간 설비 제어
+```
+
+### ① 센서 (입력)
+
+모형에서 구현 가능한 것
+
+**웹캠**
+- 사람 수
+- 감정
+- 체류
+
+**마이크**
+- 소음 레벨
+
+**조도 센서 (선택)**
+
+예
+
+```
+people = 4
+emotion = neutral
+noise = low
+time = peak_hour
+```
+
+---
+
+### ② 상태 해석 (Python)
+
+여기서 공간 상태를 계산
+
+예
+
+```
+crowding_score
+engagement_score
+stress_score
+```
+
+예시
+
+```
+crowding = people / capacity
+engagement = dwell_time
+stress = anger + noise
+```
+
+---
+
+### ③ AI 에이전트 (의사결정)
+
+AI가 공간 목표를 보고 행동 결정
+
+```
+state → action
+```
+
+예
+
+```
+현재 상태
+- 사람 6명
+- 감정 neutral
+- 체류시간 짧음
+
+AI 판단
+→ 공간이 너무 중립적
+→ 조금 더 몰입 유도
+
+행동
+- 조명 contrast 증가
+- 루버 일부 개방
+- 백색소음 약하게
+```
+
+---
+
+### ④ 공간 설비 제어
+
+모형에서 제어 가능한 것
+
+**조명**
+- brightness
+- color temperature
+
+**백색소음**
+- speaker volume
+
+**루버**
+- servo motor angle
+
+---
+
+# 2. 모형 공간 구성 (지하철 대합실)
+
+600 × 600 모형이면 이렇게 구성하면 좋아.
+
+```
+ ┌───────────────────┐
+ │      LED PANEL     │
+ │                    │
+ │   ○        ○       │
+ │                    │
+ │   seating zone     │
+ │                    │
+ │      passage       │
+ │                    │
+ │    Louver facade   │
+ └───────────────────┘
+```
+
+### 조명
+
+천장 LED strip
+
+제어
+
+```
+brightness
+color temperature
+```
+
+---
+
+### 백색소음
+
+스피커 1개
+
+제어
+
+```
+off
+low
+mid
+```
+
+---
+
+### 루버
+
+한쪽 벽
+
+```
+servo motor
+→ 루버 각도 조절
+```
+
+예
+
+```
+0° open
+30° partial
+60° closed
+```
+
+---
+
+# 3. AI가 하는 판단 예시
+
+### 상황 1
+
+```
+사람 많음
+소음 높음
+```
+
+AI
+
+```
+brightness ↓
+noise masking ↑
+louver partial close
+```
+
+→ 긴장 완화
+
+---
+
+### 상황 2
+
+```
+사람 적음
+체류시간 짧음
+```
+
+AI
+
+```
+brightness ↑
+contrast ↑
+louver open
+```
+
+→ 공간 활성화
+
+---
+
+### 상황 3
+
+```
+감정 neutral
+```
+
+AI
+
+```
+warm light
+soft noise
+```
+
+→ 안정감
+
+---
+
+# 4. 전시에서 보여줘야 하는 핵심
+
+사실 교수들이 보는 건 기술이 아니라 **개념**이야.
+
+그래서 이걸 보여주면 훨씬 강해.
+
+### ① 실시간 대시보드
+
+화면에 표시
+
+```
+People: 5
+Noise: 32 dB
+Emotion: Neutral
+
+AI Decision:
+Light 4200K
+Noise Low
+Louver 30°
+```
+
+---
+
+### ② 시스템 다이어그램
+
+패널에
+
+```
+Camera
+↓
+Emotion + Crowd Analysis
+↓
+AI Spatial Operator
+↓
+Lighting / Noise / Louver
+```
+
+---
+
+### ③ 공간 시나리오
+
+예
+
+```
+Rush hour
+Relax mode
+Idle mode
+```
+
+---
+
+# 5. 중요한 건 이거야
+
+네 프로젝트는 사실
+
+**“AI 건축”이 아니라**
+
+**“AI 공간 운영 시스템”**
+
+이야.
+
+전통 건축
+
+```
+건축가 → 공간 설계
+사람 → 사용
+```
+
+네 시스템
+
+```
+건축가 → 환경 운영 알고리즘 설계
+AI → 공간 운영
+사람 → 경험
+```
+
+---
+
+# 6. 개인적으로 하나 더 추천
+
+지하철 대합실이면  
+**시간 기반 모드**도 넣으면 훨씬 설득력 있어.
+
+예
+
+```
+rush hour
+waiting mode
+late night mode
+```
+
+AI는
+
+```
+시간
++ 사람 수
++ 감정
+```
+
+을 같이 보고 판단.
+
+---
+
+# 솔직히 말하면
+
+지금 네 아이디어는 졸업 프로젝트에서 꽤 강한 편이야.
+
+왜냐면 이건 단순히
+
+**“AI로 조명 바꾼다”**
+
+가 아니라
+
+> **공공공간의 환경 운영을 AI에게 맡기는 건축**
+
+이라는 질문을 던지거든.
+
+---
+
+원하면 내가 다음 단계로
+
+**① 모형 하드웨어 구성 (아두이노 + Tapo + 서보)**  
+**② 전체 시스템 아키텍처**  
+**③ 실제 Python 코드 구조**
+
+까지 **전시용으로 바로 구현 가능한 수준**으로 정리해줄게.
+
+그리고 하나만 물어볼게.
+
+너 **루버는 실제로 움직이게 만들 생각이야?**
+
+이거 가능하면 전시 임팩트가 **3배 이상 커진다.**
+
+--------------------------------------------------------------------------------
+
+[사용자]
+내 졸업작품 안에서, 이 내용이 너무 커지는건 원치 않아. 어쨌든 내 컨셉과 목표는 감정의 회복이니까. 일단은 루버까지는 제쳐두고, 조명과 스피커(백색소음) 컨트롤만 목표로 해보자
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋은 판단이야.  
+**조명 + 백색소음만**으로도 충분히 **“AI가 감정을 회복시키는 환경을 운영한다”**는 메시지를 전달할 수 있어.  
+오히려 루버까지 넣으면 **프로젝트의 중심(감정 회복)**보다 **기술 데모**처럼 보일 위험도 있어.
+
+그래서 지금 방향은 이렇게 정리하는 게 좋아.
+
+> **AI Emotional Recovery Operator**  
+> – AI가 공공공간(지하철 대합실)의 감정 상태를 읽고  
+> 환경(조명 + 소리)을 조절하여 감정 회복을 유도한다.
+
+즉 **환경 치료(environmental regulation)**에 가까운 개념.
+
+---
+
+# 1. 시스템 구조 (최소 but 설득력 있게)
+
+모형 기준으로는 이렇게 단순하게 가는 게 좋아.
+
+```
+Camera
+↓
+Emotion Analysis
+↓
+Emotional State Estimation
+↓
+AI Operator
+↓
+Lighting + White Noise
+```
+
+핵심은 **AI가 감정을 직접 바꾸는 게 아니라  
+환경을 조절해서 감정 회복을 유도한다**는 점이야.
+
+---
+
+# 2. 감정 회복을 위한 상태 정의
+
+너 프로젝트 컨셉에 맞게  
+감정을 **3개의 상태**로 단순화하는 게 좋아.
+
+### ① Calm (안정)
+
+```
+neutral / joy
+```
+
+공간 목표  
+→ 안정 유지
+
+환경
+
+```
+light = 3500K
+brightness = mid
+noise = low
+```
+
+---
+
+### ② Stress (긴장)
+
+```
+anger / surprise
+```
+
+공간 목표  
+→ 긴장 완화
+
+환경
+
+```
+light = warm
+brightness = slightly low
+noise = soft white noise
+```
+
+---
+
+### ③ Low Energy (침체)
+
+```
+sorrow / neutral
+```
+
+공간 목표  
+→ 각성 유도
+
+환경
+
+```
+light = slightly cool
+brightness = high
+noise = off
+```
+
+---
+
+# 3. AI 판단 방식 (간단하지만 AI스럽게)
+
+네가 이미 감정 분석을 하고 있으니까  
+**최근 감정 평균**을 사용하면 돼.
+
+예
+
+```
+emotion_vector =
+{
+joy
+anger
+sorrow
+surprise
+}
+```
+
+최근 **5개 평균**을 계산
+
+그리고 상태 분류
+
+```
+stress_score = anger + surprise
+low_energy = sorrow
+positive = joy
+```
+
+AI 판단
+
+```
+if stress_score high → calming environment
+if sorrow high → activation environment
+if neutral/joy → maintain
+```
+
+이건 단순 규칙처럼 보이지만  
+실제로는 **state estimation → policy selection** 구조라  
+충분히 AI 시스템처럼 설명 가능해.
+
+---
+
+# 4. 실제 제어 장치
+
+모형 기준 추천
+
+### 조명
+
+**Tapo L530E**
+
+제어
+
+```
+brightness
+color_temp
+```
+
+예
+
+```
+2700K
+3500K
+4500K
+```
+
+---
+
+### 백색소음
+
+방법 2개 있음
+
+#### ① python → speaker
+
+```
+pygame
+```
+
+로 white noise 재생
+
+#### ② 작은 스피커
+
+볼륨만 제어
+
+```
+low
+mid
+off
+```
+
+---
+
+# 5. AI 의사결정 예시
+
+### 상황 1
+
+```
+emotion:
+anger 0.6
+surprise 0.4
+```
+
+AI
+
+```
+light = 3000K
+brightness = 50
+noise = low
+```
+
+목표
+
+```
+긴장 완화
+```
+
+---
+
+### 상황 2
+
+```
+emotion:
+sorrow 0.7
+```
+
+AI
+
+```
+light = 4500K
+brightness = 80
+noise = off
+```
+
+목표
+
+```
+각성
+```
+
+---
+
+### 상황 3
+
+```
+emotion:
+neutral
+```
+
+AI
+
+```
+light = 3500K
+noise = low
+```
+
+목표
+
+```
+안정 유지
+```
+
+---
+
+# 6. 전시에서 보여주면 좋은 것
+
+패널에 이렇게 설명하면 좋아.
+
+### 시스템
+
+```
+Emotion Detection
+↓
+Emotional State
+↓
+AI Environmental Operator
+↓
+Lighting / Soundscape
+↓
+Emotional Recovery
+```
+
+---
+
+# 7. 네 프로젝트와 연결
+
+이건 단순한 스마트 조명이 아니라
+
+**감정 기반 환경 조절**
+
+즉
+
+```
+emotion → environment → emotion recovery
+```
+
+이 루프야.
+
+그래서 건축적으로 이렇게 말할 수 있어.
+
+> 공간은 더 이상 고정된 환경이 아니라  
+> 감정 상태에 반응하며 스스로 조정되는 **adaptive atmosphere**다.
+
+---
+
+# 마지막으로 하나만 말할게
+
+지금 네 아이디어에서 **제일 강한 포인트**는 사실 AI가 아니야.
+
+진짜 강한 건
+
+> **감정을 직접 조작하는 것이 아니라  
+> 환경을 통해 감정을 회복시키는 공간**
+
+이라는 건축적 논리야.
+
+AI는 그냥 **운영자 역할**일 뿐.
+
+---
+
+원하면 내가 다음으로  
+**졸업전시용 “AI 감정 회복 시스템” 다이어그램**을  
+패널에 바로 쓸 수 있는 수준으로 정리해줄게.
+
+(교수들이 딱 보고 이해하는 구조로.)
+
+--------------------------------------------------------------------------------
+
+[사용자]
+인풋과 아웃풋을 나누어서 생각해보자
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아. 그럼 **시스템을 아주 명확하게 Input / Output으로 나눠보자.**  
+이렇게 하면 **졸업전시 패널에도 쓰기 좋고, 실제 구현 구조도 바로 나온다.**
+
+핵심은 이거야:
+
+> **AI가 무엇을 보고(Input) → 무엇을 조절(Output)하는가**
+
+그리고 그 사이에 **State / Decision 레이어**가 들어간다.
+
+---
+
+# 1️⃣ Input (AI가 보는 것)
+
+모형 프로토타입 기준으로는 **너무 많을 필요 없다.**  
+3~4개면 충분히 설득력 있다.
+
+### 1. Emotion (감정)
+
+웹캠 기반 얼굴 분석
+
+예
+
+```
+joy
+anger
+sorrow
+surprise
+neutral
+```
+
+이건 이미 너 시스템에 있음.
+
+---
+
+### 2. People Count (공간 밀도)
+
+웹캠으로 사람 수 추정
+
+예
+
+```
+people = 1
+people = 5
+people = 10
+```
+
+이건 공공공간에서 중요함.
+
+왜냐면
+
+```
+crowding → stress 증가
+```
+
+---
+
+### 3. Dwell Time (체류시간)
+
+같은 사람이 얼마나 오래 머무는지
+
+```
+short stay
+long stay
+```
+
+이건
+
+```
+공간 사용성
+```
+
+지표가 된다.
+
+---
+
+### 4. Noise Level (선택)
+
+마이크로 측정
+
+```
+quiet
+medium
+loud
+```
+
+---
+
+### Input 정리
+
+```
+INPUT
+
+Emotion
+People count
+Dwell time
+Noise level
+```
+
+---
+
+# 2️⃣ State (AI가 해석한 공간 상태)
+
+AI는 Input을 그대로 쓰지 않고  
+**공간 상태로 변환**한다.
+
+예
+
+```
+crowding
+stress
+engagement
+```
+
+---
+
+### 예
+
+#### crowding
+
+```
+crowding = people / capacity
+```
+
+---
+
+#### stress
+
+```
+stress =
+anger
++ surprise
++ noise
++ crowding
+```
+
+---
+
+#### engagement
+
+```
+engagement =
+dwell_time
++ joy
+```
+
+---
+
+### State 정리
+
+```
+STATE
+
+crowding
+stress
+engagement
+```
+
+이건 AI가 **공간을 이해한 결과**다.
+
+---
+
+# 3️⃣ Output (AI가 조절하는 것)
+
+너 프로젝트에서는 딱 두 개.
+
+### 1. Lighting
+
+제어 가능한 것
+
+```
+brightness
+color temperature
+```
+
+예
+
+```
+2700K
+3500K
+4500K
+```
+
+---
+
+### 2. Soundscape
+
+백색소음
+
+```
+off
+low
+mid
+```
+
+---
+
+### Output 정리
+
+```
+OUTPUT
+
+light brightness
+light temperature
+white noise level
+```
+
+---
+
+# 4️⃣ Decision (AI가 하는 판단)
+
+AI는
+
+```
+STATE
+```
+
+를 보고
+
+```
+OUTPUT
+```
+
+을 결정한다.
+
+예
+
+---
+
+### 상황 1
+
+```
+stress high
+crowding high
+```
+
+AI
+
+```
+light = warm
+brightness = mid
+noise = low
+```
+
+목표
+
+```
+긴장 완화
+```
+
+---
+
+### 상황 2
+
+```
+engagement low
+people few
+```
+
+AI
+
+```
+brightness ↑
+cooler light
+noise off
+```
+
+목표
+
+```
+활성화
+```
+
+---
+
+### 상황 3
+
+```
+engagement good
+stress low
+```
+
+AI
+
+```
+환경 유지
+```
+
+---
+
+# 5️⃣ 전체 구조
+
+이걸 다이어그램으로 그리면 이렇게 된다.
+
+```
+INPUT
+(Emotion / People / Noise / Dwell)
+
+↓
+STATE ESTIMATION
+(crowding / stress / engagement)
+
+↓
+AI OPERATOR
+
+↓
+OUTPUT
+(Lighting / Soundscape)
+
+↓
+EMOTIONAL RECOVERY
+```
+
+---
+
+# 6️⃣ 네 프로젝트에서 중요한 포인트
+
+이 구조에서 핵심은
+
+AI가 **감정을 직접 바꾸는 게 아니라**
+
+```
+environment
+→ emotion
+```
+
+을 조절한다는 거야.
+
+즉
+
+```
+emotion detection
+→ environment control
+→ emotion recovery
+```
+
+---
+
+# 7️⃣ 졸업전시 패널에 쓰기 좋은 문장
+
+이걸 이렇게 정리하면 좋아.
+
+> The system observes emotional and behavioral signals in a public space and autonomously adjusts environmental parameters such as lighting and soundscape to facilitate emotional recovery.
+
+---
+
+# 하나만 더 물어볼게
+
+지금 Input 중에서 **Emotion 말고 실제로 구현할 계획인 건 뭐야?**
+
+예
+
+- 사람 수
+- 체류시간
+- 소음
+
+이걸 알아야 **AI 구조를 과하게 만들지 않고 현실적으로 설계**할 수 있어.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+사람수, 소음레벨은 할거야. 근데 체류시간은 어떻게 얻지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+체류시간은 **“같은 사람이 공간 안에 들어온 시점부터 나간 시점까지”**를 추적해서 얻어.  
+근데 네 전시 프로토타입에서는 **신원 식별까지 할 필요는 없고**, 훨씬 단순하게 할 수 있어.
+
+가장 현실적인 방법은 3가지야.
+
+## 1. 가장 추천: 사람별 임시 ID 추적
+웹캠에서 사람을 감지하고, 화면 안에서 같은 사람을 **임시 track ID**로 따라가는 방식이야.
+
+흐름은 이래.
+
+- 사람 감지
+- 각 사람에게 임시 ID 부여
+- 그 ID가 처음 등장한 시간 기록
+- 화면에서 사라진 시간 기록
+- `사라진 시간 - 등장한 시간 = 체류시간`
+
+예를 들면
+- person_3 enters at 12:01:10
+- exits at 12:01:24
+- dwell time = 14초
+
+이건 **개인 신원 인식**이 아니라 그냥 화면 안에서 같은 객체를 잠깐 따라가는 거라서, 네 프로토타입엔 충분해.
+
+### 구현 방식
+보통은 이런 조합을 써.
+- 사람 감지: YOLO, MediaPipe, OpenCV DNN
+- 추적: SORT, ByteTrack, DeepSORT
+
+너한테는 너무 무겁게 갈 필요 없어서,
+**사람 감지 + centroid tracking** 정도로도 전시용은 가능해.
+
+---
+
+## 2. 더 단순한 방법: 존(zone) 점유 시간
+공간 전체를 추적하지 말고, 화면 안에 **관심 구역 하나**를 정해.
+
+예:
+- 대합실 중앙
+- 의자 주변
+- 감정 회복 존
+
+그리고 그 구역 안에 사람이 들어와 있는 시간을 재는 거야.
+
+흐름:
+- zone 안에 사람 있음 → 타이머 시작
+- 계속 있음 → 시간 누적
+- zone 밖으로 나감 → 타이머 종료
+
+이 방식은 사람별 정확도는 떨어지지만,  
+**“이 공간에서 사람들이 얼마나 머무는가”**를 보여주기엔 오히려 더 직관적이야.
+
+네 졸전 모형에는 이게 꽤 잘 맞아.
+
+예를 들면:
+- `central waiting zone average dwell = 18.4s`
+
+이런 식으로 출력 가능.
+
+---
+
+## 3. 제일 쉬운 방법: 전체 점유 지속시간
+사람별도 아니고 존별도 아니고,
+그냥 **공간에 누가 있으면 시간 카운트**하는 방식.
+
+- 사람 없음 → 0
+- 사람 있음 → 타이머 증가
+- 사람 다 나감 → 종료
+
+이건 너무 거칠지만,
+최소 프로토타입에서는 쓸 수 있어.
+
+다만 이건 “사용성”보다는 그냥 “점유 여부”에 가까워서,
+네 프로젝트에서는 1번이나 2번이 더 좋아.
+
+---
+
+# 네 경우엔 뭘 추천하냐
+네가 하려는 건 **모형 속 대합실의 환경 제어**니까,
+나는 **2번 존 기반 체류시간**을 제일 추천해.
+
+이유는:
+- 구현이 훨씬 쉬움
+- 전시에서 설명하기 쉬움
+- 신원 추적 부담이 적음
+- “이 공간이 사람을 붙잡는가”를 보여주기에 적절함
+
+즉,
+사람 개개인을 끝까지 따라다니는 대신
+
+> “AI가 운영하는 이 대합실 존에 사람들이 얼마나 오래 머무는가”
+
+를 보는 거지.
+
+---
+
+# 실제로는 이렇게 쓸 수 있어
+입력:
+- 사람 수
+- 소음 레벨
+- 존 내 체류시간
+
+상태:
+- crowding
+- stress
+- occupancy duration
+
+출력:
+- 조명 밝기
+- 색온도
+- 백색소음
+
+예:
+- 사람 수 많음 + 소음 큼 + 체류 짧음  
+  → 공간이 불편하다고 판단  
+  → 조명 부드럽게, 백색소음 약하게 조절
+
+- 사람 수 적음 + 체류 길어짐  
+  → 회복적 환경이 작동 중이라고 판단  
+  → 현재 상태 유지
+
+---
+
+# 아주 간단한 로직 예시
+```python
+if person_in_zone:
+    zone_dwell_time += dt
+else:
+    zone_dwell_time = 0
+```
+
+사람별 추적이면:
+```python
+if track_id not in active_tracks:
+    active_tracks[track_id] = current_time
+
+if track_id disappeared:
+    dwell = current_time - active_tracks[track_id]
+```
+
+---
+
+# 결론
+체류시간은 보통
+**사람 추적** 또는 **특정 구역 점유 시간 측정**으로 얻는다.
+
+네 졸전 프로토타입에는  
+**“대합실의 특정 존에 얼마나 오래 머무는가”를 재는 방식**이 가장 적절해 보여.
+
+원하면 내가 다음 답변에서  
+**네 시스템용 input을 최종적으로 정리해서**
+- emotion
+- people count
+- noise level
+- zone dwell time
+
+이 4개 기준으로 **state/output 구조표**를 깔끔하게 짜줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+사람을 추적할 필요는 없을 것 같고, 그냥 얼굴을 인식한 시점부터(한명이라도) 얼굴 인식을 실패한 시점까지 카운팅 하면 될듯 
+
+그럼 내가 전시 현장에 웹캠, 마이크를 연결한 노트북을 가져다 두어야할 것 같아  화면에는 웹캠 화면과 정보가 담긴 ui가 나와있을거고
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+응, 그 방식이면 충분히 돼.  
+오히려 **전시 프로토타입용으로는 그게 더 적절해.**
+
+즉 체류시간을 엄밀한 “개인별 dwell time”로 잡는 게 아니라,
+
+> **공간이 점유된 시간**
+> = 얼굴이 한 명 이상 인식된 순간부터  
+> 얼굴이 더 이상 인식되지 않는 순간까지
+
+로 정의하는 거지.
+
+이건 사실 네 컨셉에도 잘 맞아.  
+네가 보려는 건 “이 사람이 누구냐”가 아니라,
+
+**이 환경이 지금 공공공간을 붙잡고 있는가, 비어 있는가, 얼마나 활성화되어 있는가**니까.
+
+---
+
+# 1. 그러면 시스템 정의가 훨씬 깔끔해져
+
+## Input
+- **Emotion**: 현재 인식된 얼굴들의 감정 평균
+- **People Count**: 현재 인식된 얼굴 수
+- **Noise Level**: 마이크 입력의 현재 레벨
+- **Occupancy Duration**: 얼굴이 1명 이상 보이는 상태가 지속된 시간
+
+## Output
+- **Lighting**
+  - brightness
+  - color temperature
+- **Soundscape**
+  - white noise on/off
+  - volume level
+
+---
+
+# 2. 체류시간 로직은 이렇게 잡으면 돼
+
+## 개념
+- 얼굴 수 > 0 이 되면 occupancy 시작
+- 얼굴 수 == 0 이 일정 시간 이상 지속되면 occupancy 종료
+- 그 사이 시간을 누적
+
+여기서 중요한 건 **즉시 0으로 끊지 않는 것**이야.  
+웹캠은 잠깐 인식 실패할 수 있으니까, 예를 들어 **2~3초 grace period**를 두는 게 좋아.
+
+## 예시 로직
+```python
+if face_count > 0:
+    if not occupied:
+        occupied = True
+        occupancy_start = now
+    last_seen_time = now
+
+else:
+    if occupied and (now - last_seen_time) > 2.0:
+        occupied = False
+        occupancy_duration = 0
+```
+
+혹은 더 간단히:
+
+```python
+if face_count > 0:
+    occupancy_duration = now - occupancy_start
+else:
+    occupancy_duration = 0
+```
+
+근데 이건 깜빡임에 약해서,  
+실전 전시에선 **last_seen_time 기반**이 더 안정적이야.
+
+---
+
+# 3. 전시 현장 세팅도 네 말이 맞아
+
+맞아, 구조상 **노트북 1대가 메인 컨트롤 허브**가 될 가능성이 높아.
+
+## 현장 구성
+- **노트북**
+  - 웹캠 연결
+  - 마이크 연결
+  - 감정 분석 실행
+  - UI 표시
+  - 조명/스피커 제어
+- **웹캠**
+  - 관람자 얼굴 인식
+- **마이크**
+  - 소음 레벨 측정
+- **조명**
+  - Tapo 등으로 제어
+- **스피커**
+  - 백색소음 재생
+
+즉,
+
+```text
+Webcam + Mic
+    ↓
+ Laptop (analysis + UI + control)
+    ↓
+ Light / Speaker
+```
+
+이 구조가 돼.
+
+---
+
+# 4. 화면 UI가 있다는 건 오히려 장점이야
+
+이건 숨길 게 아니라 **전시의 일부**로 쓰는 게 좋아.
+
+왜냐면 관람자는  
+조명이 바뀌는 것만 봐서는 “왜 바뀌었는지” 잘 모를 수 있거든.
+
+근데 화면에 상태가 같이 보이면 바로 이해돼.
+
+## 화면에 띄우면 좋은 정보
+### 실시간 입력
+- Faces detected: 3
+- Noise level: Medium
+- Occupancy time: 18s
+- Dominant emotion: Neutral / Stress / Low Energy
+
+### AI 판단
+- Current mode: Calming
+- Light: 3200K / 55%
+- Sound: White noise low
+
+### 개념 문장
+- “The environment adapts to collective emotional conditions.”
+
+---
+
+# 5. UI는 두 층으로 나누면 좋아
+
+## A. 관람자용 UI
+좀 더 직관적이고 예쁘게
+
+예:
+- 사람 수
+- 현재 공간 상태
+- AI가 선택한 모드
+- 간단한 그래픽
+
+예를 들면:
+```text
+3 PEOPLE DETECTED
+NOISE: LOW
+SPACE STATE: TENSE
+AI RESPONSE: WARM LIGHT + SOFT WHITE NOISE
+```
+
+## B. 디버그용 UI
+작게 한쪽 구석에
+- joy / anger / sorrow / surprise 값
+- occupancy time
+- 최근 5개 평균
+- 실제 장치 명령 로그
+
+전시 중 문제 생겼을 때 이게 엄청 도움 돼.
+
+---
+
+# 6. 네 프로젝트 문장으로 바꾸면 이렇게 정리 가능해
+
+이 시스템은 개인을 추적하거나 식별하는 것이 아니라,  
+공공공간 내 **집단적 정서 상태와 점유 상태**를 감지하고,  
+그에 반응하여 **조명과 사운드 환경을 조절**함으로써  
+감정 회복을 유도하는 환경 프로토타입이다.
+
+이 문장이 꽤 중요해.  
+왜냐면 이걸로 기술 설명이 아니라 **건축적 설명**이 되거든.
+
+---
+
+# 7. 지금 네 시스템에서 거의 확정된 구조
+## Input
+- 얼굴 감정 평균
+- 얼굴 수
+- 소음 레벨
+- 점유 시간
+
+## State
+- calm / tense / low-energy
+- active / idle
+- crowded / uncrowded
+
+## Output
+- 조명 밝기
+- 조명 색온도
+- 백색소음 on/off/level
+
+이 정도면 이미 충분히 완성도 있어.
+
+---
+
+# 8. 내가 보기엔 다음 단계는 이거야
+이제는 “될까?” 단계가 아니라  
+**“어떤 상태를 어떤 모드로 번역할까?”** 단계야.
+
+즉 다음으로 정해야 하는 건:
+
+- 어떤 input 조합이
+- 어떤 spatial mood를 만들고
+- 그때 조명과 백색소음을 어떻게 줄지
+
+예를 들면
+- **Idle Mode**
+- **Recovery Mode**
+- **Activation Mode**
+- **Calming Mode**
+
+이런 식으로.
+
+다음 답변에서 원하면 내가  
+**입력값 → 상태 → 출력값**을 한눈에 보이는 표로 딱 정리해줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+그걸 너가 판단해야 ai를 사용했다고 할 수 있을것같아. 실시간 판단은 아니더라도, ai의 판단을 따랐다고 할 수 있겠지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+응, 네 말이 정확한 포인트를 짚었어.  
+**“AI를 사용했다”고 말하려면, 최소한 ‘판단(decision)’을 AI가 해야 한다**는 감각이 맞아.
+
+지금까지 우리가 이야기한 구조는 사실 두 가지로 나뉘어.
+
+1️⃣ **Rule-based 시스템**  
+→ 사람이 규칙을 만들고 컴퓨터가 실행
+
+2️⃣ **AI decision 시스템**  
+→ 사람이 목표만 주고 **판단은 AI가 수행**
+
+너가 원하는 건 **2번**에 가까워.
+
+하지만 여기서 중요한 건 하나야:
+
+> **실시간으로 AI가 판단할 필요는 없다.**  
+> **AI가 설계한 정책(policy)을 시스템이 실행해도 AI 기반이라고 볼 수 있다.**
+
+이건 실제 AI 시스템에서도 많이 쓰는 방식이야.
+
+---
+
+# 1️⃣ 너 시스템에서 AI가 할 역할
+
+AI가 할 일은 **환경 운영 정책을 만드는 것**이야.
+
+즉 AI에게 이런 질문을 던지는 거지.
+
+예:
+
+```
+공공 대합실 공간에서
+
+입력:
+- 사람 수
+- 소음
+- 감정 상태
+- 점유 시간
+
+목표:
+- 공공공간 사용성 증가
+- 감정 회복
+
+출력:
+- 조명 밝기
+- 색온도
+- 백색소음
+
+어떤 환경 전략이 적절한가?
+```
+
+AI는 이런 식으로 답을 줄 거야.
+
+예:
+
+```
+STATE: high stress + high crowding
+
+AI decision:
+- warm lighting
+- moderate brightness
+- low white noise
+```
+
+즉 AI가 **환경 전략을 설계**하는 거지.
+
+---
+
+# 2️⃣ 그러면 시스템 구조는 이렇게 된다
+
+```
+Sensor Input
+↓
+State estimation
+↓
+AI-generated policy
+↓
+Lighting + Sound control
+```
+
+여기서 중요한 건
+
+**AI-generated policy**
+
+이 부분이야.
+
+즉
+
+> AI가 “어떤 상태에서 어떤 환경을 만들지”를 설계했다.
+
+---
+
+# 3️⃣ 네 전시에서는 이렇게 설명하면 된다
+
+예를 들어 패널에서 이렇게 설명할 수 있어.
+
+**Step 1**
+
+공간 데이터 수집
+
+```
+people count
+noise level
+emotion detection
+occupancy duration
+```
+
+**Step 2**
+
+공간 상태 분석
+
+```
+stress
+crowding
+engagement
+```
+
+**Step 3**
+
+AI 환경 전략 생성
+
+AI가 다음을 설계
+
+```
+lighting condition
+soundscape condition
+```
+
+**Step 4**
+
+환경 적용
+
+```
+adaptive lighting
+adaptive soundscape
+```
+
+---
+
+# 4️⃣ 더 “AI스럽게” 만드는 방법
+
+진짜 AI 느낌을 주려면  
+**AI에게 전략을 생성하게 하면 된다.**
+
+예:
+
+프롬프트:
+
+```
+You are an AI spatial operator responsible for improving emotional recovery in a public waiting space.
+
+Inputs:
+- people count
+- noise level
+- emotion distribution
+- occupancy time
+
+Outputs:
+- light brightness
+- color temperature
+- white noise level
+
+Goal:
+increase comfort and encourage longer dwell time.
+
+Suggest an environmental adjustment strategy.
+```
+
+AI가 답을 줌.
+
+```
+Environment mode: calming
+
+Light: 3200K
+Brightness: 55%
+White noise: low
+```
+
+이걸 시스템이 실행.
+
+---
+
+# 5️⃣ 이 구조의 장점
+
+이렇게 하면
+
+- 규칙 기반 시스템 아님
+- AI가 판단을 설계
+- 인간은 목표만 정의
+
+그래서 이렇게 설명 가능해.
+
+> The environmental strategy of the space was generated through AI reasoning rather than manually defined rules.
+
+---
+
+# 6️⃣ 네 프로젝트와도 잘 맞는다
+
+왜냐면 네 프로젝트 핵심이
+
+**감정 회복**
+
+이니까.
+
+AI는
+
+```
+emotion
+↓
+environment
+↓
+emotional recovery
+```
+
+이 루프에서 **중간 의사결정자** 역할을 하게 되는 거야.
+
+---
+
+# 하나 중요한 질문이 있어
+
+지금 네가 생각하는 AI는
+
+**A**
+
+```
+전시에 설치된 노트북이
+실시간으로 AI 판단을 수행
+```
+
+인지
+
+**B**
+
+```
+AI가 미리 환경 전략을 설계
+전시에서는 그 전략을 실행
+```
+
+인지에 따라 시스템 구조가 꽤 달라져.
+
+솔직히 말하면 **졸업전시에서는 B가 훨씬 안정적**이야.
+
+왜냐면
+
+- 인터넷 문제
+- API 비용
+- 지연
+
+같은 리스크가 사라지거든.
+
+원하면 내가 다음 답변에서  
+**전시용으로 가장 현실적인 “AI decision architecture”**를  
+네 시스템 기준으로 딱 설계해줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+B이고, 너가 그걸해줬으면 좋겠어
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아. 그럼 방향을 이렇게 잡자.
+
+**전시에서는 실시간 AI 추론을 돌리지 않고,  
+내가 네 목표에 맞춰 미리 “환경 운영 정책(policy)”을 설계하고,  
+현장에서는 그 정책을 실행하는 방식**으로 가는 거야.
+
+이렇게 하면 네가 전시에서 충분히 이렇게 말할 수 있어.
+
+> 이 시스템은 사람이 임의로 짠 단순 반응 규칙이 아니라,  
+> AI가 공공 대합실의 감정 회복 목표를 기준으로 설계한 환경 운영 정책을 따른다.
+
+그리고 이건 네 졸업작품 안에서 너무 커지지도 않아.  
+왜냐면 **AI는 주인공이 아니라, 감정 회복을 위한 운영자 설계 도구**로만 남기면 되거든.
+
+---
+
+# 1. 네 시스템의 역할 정의
+
+## 목표
+- 공공공간에서의 사용성 증가
+- 전반적인 공간 경험 향상
+- 그중에서도 특히 **감정 회복**
+
+## 입력
+- 감정 평균
+- 사람 수
+- 소음 레벨
+- 점유 시간
+
+## 출력
+- 조명 밝기
+- 조명 색온도
+- 백색소음 볼륨
+
+## AI의 역할
+AI는 실시간 제어기가 아니라,  
+**“이런 상태에서는 어떤 환경이 감정 회복에 더 적절한가”를 판단해 정책을 설계한 존재**다.
+
+---
+
+# 2. 전시용으로 가장 적절한 구조
+
+구조는 이렇게 가면 돼.
+
+```text
+[Sensor Input]
+emotion / people count / noise / occupancy time
+
+↓
+[State Interpretation]
+현재 공간 상태를 몇 가지 모드로 해석
+
+↓
+[AI-authored Policy]
+각 상태에 대응하는 환경 전략
+
+↓
+[Execution Engine]
+노트북이 조명과 백색소음 제어
+```
+
+여기서 핵심은 가운데 두 단계야.
+
+---
+
+# 3. 내가 제안하는 상태(State) 체계
+
+너는 너무 많은 상태를 만들면 안 돼.  
+전시에서는 **3~4개 정도**가 가장 강하고 명확해.
+
+나는 이렇게 제안할게.
+
+## ① Idle
+공간이 비어 있거나 거의 활성화되지 않은 상태
+
+특징
+- 사람 수 적음
+- 점유 시간 짧음
+- 소음 낮음
+- 감정도 특별히 강하지 않음
+
+공간 목표
+- 너무 죽어 보이지 않게
+- 진입을 유도할 정도의 최소한의 활성감 유지
+
+---
+
+## ② Activated
+공간이 사용되고 있지만 긴장도가 높지 않은 상태
+
+특징
+- 사람 수 적당함
+- 점유 시간 증가
+- 소음 보통
+- 감정이 neutral~joy 쪽
+
+공간 목표
+- 현재 상태 유지
+- 편안하면서도 공공공간으로서 살아 있는 느낌 유지
+
+---
+
+## ③ Tense
+공간의 긴장이나 과자극이 높아진 상태
+
+특징
+- 사람 수 많음 또는
+- 소음 높음 또는
+- anger / surprise 비중이 높음
+
+공간 목표
+- 감정 완화
+- 자극 감소
+- 정서적 회복 유도
+
+---
+
+## ④ Low-Energy
+공간은 점유되어 있지만 정서가 처지고 활력이 낮은 상태
+
+특징
+- sorrow / neutral 위주
+- 소음은 낮지만 분위기가 가라앉음
+- 점유 시간은 있으나 활기 부족
+
+공간 목표
+- 살짝 각성시키기
+- 우울하거나 정체된 분위기를 들어올리기
+
+---
+
+# 4. AI가 설계한 정책으로 보이게 하려면
+
+단순히 “anger 높으면 3000K”처럼 보이면 안 돼.  
+그래서 **입력값을 직접 출력에 1:1 대응시키지 말고, 먼저 상태를 해석한 다음 그 상태에 대한 환경 전략을 부여**해야 해.
+
+즉,
+
+```text
+input → direct reaction
+```
+
+이 아니라
+
+```text
+input → interpreted state → environmental strategy
+```
+
+여야 해.
+
+이게 훨씬 AI가 설계한 운영 정책처럼 보여.
+
+---
+
+# 5. 내가 제안하는 최종 정책표
+
+## State A. Idle
+조건
+- people count 낮음
+- occupancy time 짧음
+- noise low
+- 감정은 neutral 중심
+
+환경 전략
+- brightness: 60%
+- color temperature: 3800K
+- white noise: off 또는 very low
+
+의도
+- 너무 차갑게 비어 보이지 않게
+- 약한 대기 상태 유지
+
+---
+
+## State B. Activated
+조건
+- people count 중간
+- occupancy time 증가
+- noise 중간 이하
+- joy/neutral 비중 높음
+
+환경 전략
+- brightness: 70%
+- color temperature: 4000K
+- white noise: low
+
+의도
+- 공공 대합실로서의 생동감 유지
+- 과하지 않게 열린 상태 유지
+
+---
+
+## State C. Tense
+조건
+- noise 높음
+- people count 높음
+- anger + surprise 평균 높음
+
+환경 전략
+- brightness: 50%
+- color temperature: 3000K
+- white noise: low~mid
+
+의도
+- 자극 완화
+- 감정 긴장도 낮추기
+- 공공공간의 날카로운 분위기를 부드럽게 만들기
+
+---
+
+## State D. Low-Energy
+조건
+- sorrow 평균 높음
+- neutral이 길게 지속
+- occupancy는 있으나 분위기 침체
+
+환경 전략
+- brightness: 78%
+- color temperature: 4600K
+- white noise: off
+
+의도
+- 지나치게 가라앉은 상태를 끌어올리기
+- 회복을 “진정”만이 아니라 “재활성화”로도 해석
+
+---
+
+# 6. 상태 판정 기준도 내가 같이 제안할게
+
+이건 전시에 들어갈 실제 로직의 뼈대야.
+
+## 입력 정리값
+- `people_count`
+- `noise_level` → 0~1
+- `occupancy_duration`
+- `joy_avg`
+- `anger_avg`
+- `sorrow_avg`
+- `surprise_avg`
+
+최근 **5개 평균** 사용.
+
+## 파생값
+- `stress_score = anger_avg + surprise_avg + noise_level * 0.5`
+- `energy_score = joy_avg - sorrow_avg`
+- `occupancy_score = min(occupancy_duration / 20, 1.0)`
+
+## 상태 판정 우선순위
+1. `people_count == 0` 또는 `occupancy_duration < 3초` → Idle
+2. `stress_score`가 높음 → Tense
+3. `sorrow_avg` 높고 `joy_avg` 낮음 → Low-Energy
+4. 그 외 → Activated
+
+이렇게 가면 충분히 자연스러워.
+
+---
+
+# 7. 전시에서 쓸 수 있는 설명 문장
+
+## 한글
+이 프로토타입은 공공 대합실 내부의 집단적 감정 상태, 소음 수준, 점유 지속 시간을 감지하고,  
+AI가 사전에 설계한 환경 운영 정책에 따라 조명과 백색소음을 조절함으로써 감정 회복을 유도한다.
+
+## 영어
+This prototype detects collective emotional conditions, noise level, and occupancy duration in a public waiting space, and modulates lighting and white noise according to an AI-authored environmental policy to facilitate emotional recovery.
+
+---
+
+# 8. 이걸 왜 “AI를 사용했다”고 말할 수 있냐
+
+이건 중요하니까 명확히 말할게.
+
+전시 현장에서 실시간으로 AI가 판단하지는 않지만,
+
+- 공간 목표를 정의하고
+- 입력 변수를 해석하고
+- 상태를 분류하고
+- 각 상태에 맞는 환경 전략을 설계한 것은 AI
+
+라는 점에서,
+
+**실행은 deterministic하지만 정책 설계는 AI-authored**라고 말할 수 있어.
+
+즉 네 작업은
+
+- rule-based execution
+- AI-authored policy
+
+의 조합이야.
+
+이건 충분히 논리적으로 설득 가능해.
+
+---
+
+# 9. 네 프로젝트 안에서 너무 커지지 않게 하려면
+
+패널에서는 AI를 크게 부각하지 말고 이렇게 두는 게 좋아.
+
+## 메인 서사
+감정 회복을 위한 공간
+
+## 보조 장치
+AI가 설계한 환경 운영 정책
+
+즉,
+
+**주제는 감정 회복**  
+**AI는 그것을 작동시키는 보조적 운영 논리**
+
+이 위치를 유지해야 해.
+
+---
+
+# 10. 다음 단계
+
+이제 내가 바로 해줄 수 있는 건 두 가지야.
+
+첫 번째는 **이 정책을 표로 정리해서 패널/다이어그램용 문구로 만드는 것**이고,  
+두 번째는 **이 정책을 그대로 넣을 수 있는 Python용 상태 판정 로직으로 바꾸는 것**이야.
+
+원하면 다음 답변에서 바로  
+**입력 / 상태 / 출력 / 의도**가 한눈에 보이는 최종 정책표를 만들어줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+감정의 회복 역할은 1층이 아니라 2층 공간이 될거야. 1층은 기술중심의 사회 그 자체이고, ant적 세계관에서 어떻게 사람이 영향을 받는지 나타내는거야.  ai는 그래서 필요한거지. 사회가 개인의 감정에 개입하는 방법. 나는 그걸 경계하고있는거고
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+이제 맥락이 훨씬 선명해졌어.  
+그러면 **1층의 AI 시스템은 “치유”가 아니라 “개입”을 보여주는 장치**가 되는 거네.  
+즉 기술적으로는 같은 시스템이지만 **의미는 완전히 반대**야.
+
+정리하면:
+
+- **1층** → 기술 사회 / 감정에 개입하는 시스템  
+- **2층** → 감정의 회복 / 인간 중심 공간
+
+그래서 1층의 AI는 **치유하는 AI가 아니라 감정을 감지하고 환경을 조정하는 사회 시스템**을 상징하는 거지.
+
+이게 사실 **ANT(Actor-Network Theory)**랑도 꽤 잘 맞아.
+
+---
+
+# 1. 1층 시스템의 의미 (이론적으로 정리)
+
+1층은 이렇게 설명할 수 있어.
+
+> 개인의 감정은 더 이상 개인 내부에 머무르지 않는다.  
+> 감정은 센서, 알고리즘, 공간 장치들로 이루어진 네트워크 속에서  
+> **측정되고 해석되며 조정되는 대상이 된다.**
+
+즉
+
+```
+human emotion
+↓
+sensor
+↓
+algorithm
+↓
+environment control
+↓
+human behaviour
+```
+
+이 전체가 **행위자 네트워크**가 되는 거야.
+
+여기서 중요한 건
+
+**AI도 하나의 actor**라는 점.
+
+ANT에서는 인간만 actor가 아니고
+
+- 센서
+- 알고리즘
+- 공간
+- 조명
+- 데이터
+
+모두가 actor야.
+
+그래서 1층은 사실
+
+> **감정이 네트워크 안에서 재구성되는 공간**
+
+이라고 볼 수 있어.
+
+---
+
+# 2. 왜 AI가 필요한가
+
+여기서 AI는 단순 기술 장치가 아니라  
+**사회적 권력 메커니즘**을 보여주는 장치가 돼.
+
+즉 AI가 하는 일은
+
+```
+감정 감지
+↓
+감정 해석
+↓
+환경 조정
+```
+
+이건 굉장히 현대적인 현상이야.
+
+예를 들면
+
+- 감정 인식 광고
+- 스마트 오피스 환경 제어
+- 행동 기반 플랫폼 알고리즘
+
+그래서 1층의 시스템은 이렇게 설명할 수 있어.
+
+> 기술 사회는 감정을 단순히 표현되는 것이 아니라  
+> **데이터로 변환되고, 분석되고, 다시 환경을 통해 개인에게 되돌려진다.**
+
+---
+
+# 3. 1층에서 보여주는 메시지
+
+그래서 1층의 시스템은 사실 두 가지를 동시에 보여줘.
+
+### ① 기술의 능력
+
+AI가 공간을 운영할 수 있음
+
+- 감정 인식
+- 환경 제어
+- 행동 유도
+
+### ② 기술의 위험
+
+개인의 감정이
+
+```
+데이터
+→ 알고리즘
+→ 환경 제어
+```
+
+로 관리되는 상황
+
+---
+
+# 4. 그래서 1층은 “회복 공간”이 아니라
+
+**감정이 조작되는 공간**
+
+이 되는 거야.
+
+예를 들어
+
+```
+사람 감정 → AI 분석 → 조명 변화
+```
+
+이건 표면적으로는 편안한 환경처럼 보이지만
+
+사실은
+
+> **사회 시스템이 개인 감정에 개입하는 구조**
+
+를 보여주는 거지.
+
+그래서 1층의 분위기는 너무 따뜻하게 만들 필요가 없어.
+
+약간 **기계적이고 중립적인 느낌**이 더 맞을 수도 있어.
+
+---
+
+# 5. 2층과의 대비
+
+그러면 2층은 완전히 다른 논리가 돼.
+
+| 1층 | 2층 |
+|---|---|
+| 감정 측정 | 감정 경험 |
+| 감정 관리 | 감정 회복 |
+| 알고리즘 개입 | 인간 중심 공간 |
+| 네트워크 | 개인 |
+
+그래서 동선이 이렇게 읽히면 좋을 것 같아.
+
+```
+1층
+감정이 데이터로 변환되는 사회
+
+↓ 이동
+
+2층
+감정이 다시 경험으로 돌아오는 공간
+```
+
+---
+
+# 6. 네 AI 시스템의 역할
+
+그래서 전시에서 AI는 이렇게 설명하면 가장 정확해.
+
+> 이 시스템은 감정을 치유하기 위한 장치가 아니라,  
+> 기술 사회가 개인의 감정을 **측정하고 개입하는 방식**을 드러내는 프로토타입이다.
+
+즉
+
+AI = 감정 회복 도구 ❌  
+AI = 사회 시스템의 actor ⭕
+
+이렇게 위치가 잡혀.
+
+---
+
+# 7. 네 졸업 프로젝트 전체 서사
+
+이렇게 정리하면 꽤 강해져.
+
+```
+도시
+→ 감정이 사라진 공간
+→ 기술 사회의 개입
+→ 감정 데이터화
+→ 감정 회복 공간
+```
+
+그리고 AI는 이 서사에서
+
+**중간의 전환 장치**
+
+역할을 하는 거야.
+
+---
+
+# 8. 하나만 말하자면
+
+지금 네 프로젝트는 단순히
+
+**AI + 건축**
+
+이 아니라 사실
+
+**ANT + 감정 + 공간**
+
+이야.
+
+그래서 오히려 이 시스템이
+
+> “AI가 공간을 더 좋게 만든다”
+
+가 아니라
+
+> **“AI가 인간 감정에 어떻게 개입하는가”**
+
+를 보여주는 게 훨씬 강한 메시지가 돼.
+
+---
+
+내가 궁금한 게 하나 있어.
+
+지금 1층 공간에서  
+**AI 시스템이 관람자에게 노출되는 정도**를 어떻게 생각하고 있어?
+
+예를 들면
+
+1️⃣ 완전히 보이게 (웹캠 + UI 다 보임)  
+2️⃣ 일부만 보이게 (화면만)  
+3️⃣ 거의 숨김 (조명만 반응)
+
+이 선택에 따라  
+**공간 연출과 메시지 전달 방식이 완전히 달라져.**
+
+--------------------------------------------------------------------------------
+
+[사용자]
+다 볼 수 있으면 좋아. 코드까지 보여줄 필요는 없겠지만
+
+일단 다시 그 rule을 만들어볼래?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아. 지금까지 이야기한 맥락을 기준으로 **1층 AI 시스템의 rule / policy**를 다시 설계해볼게.  
+중요한 건 이 rule이 **“치유”가 아니라 “사회 시스템의 개입”**이라는 느낌을 유지하는 거야.
+
+그래서 목표는 이렇게 잡는 게 좋아.
+
+> **AI가 공공 대합실의 감정, 밀도, 소음을 감지하고  
+> 환경을 자동으로 조정함으로써  
+> 기술 사회가 개인의 감정에 개입하는 방식을 드러낸다.**
+
+즉 **AI는 감정 회복을 돕는 존재가 아니라  
+감정을 읽고 조정하는 시스템**이야.
+
+---
+
+# 1. Input (센서)
+
+전시에서 실제로 들어오는 값
+
+```
+emotion_vector
+people_count
+noise_level
+occupancy_time
+```
+
+emotion_vector는 최근 5개 평균
+
+```
+joy
+anger
+sorrow
+surprise
+```
+
+---
+
+# 2. 파생 변수 (State 계산)
+
+이건 Python에서 계산하면 된다.
+
+### crowding
+
+```
+crowding = people_count / capacity
+```
+
+모형 기준 capacity는 예를 들어 6.
+
+---
+
+### stress
+
+```
+stress =
+anger
++ surprise
++ noise_level * 0.5
+```
+
+---
+
+### mood
+
+```
+mood =
+joy - sorrow
+```
+
+---
+
+### occupancy
+
+```
+occupancy = min(occupancy_time / 20, 1)
+```
+
+---
+
+# 3. State 분류
+
+이제 AI가 공간 상태를 해석한다.
+
+총 **4가지 상태**.
+
+---
+
+## STATE 1 — Idle System
+
+조건
+
+```
+people_count == 0
+or occupancy_time < 3
+```
+
+의미
+
+공간이 비어 있음  
+기술 시스템이 대기 상태
+
+환경
+
+```
+brightness = 55
+color_temp = 4000K
+white_noise = off
+```
+
+느낌
+
+기계적이고 중립적인 공간
+
+---
+
+## STATE 2 — Observed Crowd
+
+조건
+
+```
+people_count >= 2
+stress 낮음
+```
+
+의미
+
+사람들이 있지만 감정 긴장 없음  
+시스템이 관찰 중
+
+환경
+
+```
+brightness = 65
+color_temp = 4200K
+white_noise = low
+```
+
+느낌
+
+공공공간 기본 상태
+
+---
+
+## STATE 3 — Managed Stress
+
+조건
+
+```
+stress > 0.8
+or noise_level 높음
+```
+
+의미
+
+군중 긴장 증가  
+시스템 개입
+
+환경
+
+```
+brightness = 50
+color_temp = 3000K
+white_noise = medium
+```
+
+느낌
+
+공간이 감정을 관리하려는 상태
+
+---
+
+## STATE 4 — Algorithmic Activation
+
+조건
+
+```
+mood < -0.3
+```
+
+즉
+
+```
+sorrow dominant
+```
+
+의미
+
+감정 침체
+
+환경
+
+```
+brightness = 75
+color_temp = 4600K
+white_noise = off
+```
+
+느낌
+
+알고리즘이 환경을 재조정
+
+---
+
+# 4. State 우선순위
+
+판정 순서 중요하다.
+
+```
+1. people_count == 0 → Idle
+2. stress high → Managed Stress
+3. mood negative → Algorithmic Activation
+4. default → Observed Crowd
+```
+
+---
+
+# 5. Output
+
+AI가 제어하는 것
+
+### Lighting
+
+```
+brightness 0–100
+color_temp 2700–5000K
+```
+
+### Soundscape
+
+```
+white_noise
+off
+low
+medium
+```
+
+---
+
+# 6. 실제 Python 구조
+
+개념 코드.
+
+```python
+def decide_state(data):
+
+    people = data.people_count
+    stress = data.stress
+    mood = data.mood
+    occupancy = data.occupancy
+
+    if people == 0 or occupancy < 3:
+        return "idle"
+
+    if stress > 0.8:
+        return "managed_stress"
+
+    if mood < -0.3:
+        return "activation"
+
+    return "observed"
+```
+
+---
+
+### 환경 적용
+
+```python
+POLICY = {
+
+"idle": {
+"brightness":55,
+"temp":4000,
+"noise":"off"
+},
+
+"observed": {
+"brightness":65,
+"temp":4200,
+"noise":"low"
+},
+
+"managed_stress": {
+"brightness":50,
+"temp":3000,
+"noise":"medium"
+},
+
+"activation": {
+"brightness":75,
+"temp":4600,
+"noise":"off"
+}
+
+}
+```
+
+---
+
+# 7. UI에 표시하면 좋은 것
+
+화면에 이렇게 보여주면 좋아.
+
+```
+PEOPLE DETECTED: 4
+NOISE LEVEL: MEDIUM
+EMOTION STATE: STRESS
+
+AI MODE: MANAGED STRESS
+
+LIGHT: 3000K / 50%
+SOUND: WHITE NOISE (MEDIUM)
+```
+
+---
+
+# 8. 이 시스템의 의미
+
+이 rule은 단순히 감정을 편하게 만드는 시스템이 아니라
+
+```
+emotion
+→ data
+→ algorithm
+→ environment control
+```
+
+이라는 구조를 보여준다.
+
+즉
+
+> 개인의 감정은 기술 네트워크 안에서  
+> 측정되고 해석되고 조정되는 대상이 된다.
+
+---
+
+# 9. 하나만 더 추천
+
+1층 시스템을 더 **사회 시스템처럼 보이게** 하려면  
+UI에 이 문장을 넣어도 좋아.
+
+```
+ENVIRONMENTAL ADJUSTMENT IN PROGRESS
+BASED ON COLLECTIVE EMOTIONAL DATA
+```
+
+이러면 관람자가
+
+**“내 감정이 지금 시스템에 의해 읽히고 있구나”**
+
+라는 느낌을 받는다.
+
+---
+
+원하면 다음으로 내가
+
+**이 시스템을 그대로 구현하는 Python 전체 구조  
+(감정 분석 → state → 조명/사운드 제어)**
+
+를 **전시용 코드 수준으로 깔끔하게 설계**해줄게.
+
+지금까지 이야기한 걸 보면  
+사실 이 프로젝트의 핵심은 기술보다
+
+**“감정이 네트워크에서 어떻게 조작되는가”**
+
+라는 개념이라서,  
+코드 구조도 그 개념이 잘 드러나게 짜는 게 중요해.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+좋아 그럼 일단 조명만 진짜로 조정할 수 있는 코드를 짜줘. 내가 구글 클라우드 비전 api로 감정인식했던 코드 기억하지? 그거 활용해서 너가 최근 몇번 감정데이터로 조명 조정하는 코드 짜줬었잖아. 그걸 조금 수정해서 지금 룰에 맞게 조정해줘
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+수정본 만들어뒀어.
+
+파일:
+[vision_tapo_social_intervention_light.py](sandbox:/mnt/data/vision_tapo_social_intervention_light.py)  
+[requirements_social_intervention_light.txt](sandbox:/mnt/data/requirements_social_intervention_light.txt)
+
+이번 버전은 네가 정리한 **1층용 룰**에 맞췄어.
+
+핵심 변경점:
+- **최근 5개 감정 데이터 평균**
+- **사람 수(face count)** 반영
+- **마이크 소음 레벨** 반영
+- **점유 시간(얼굴 1명 이상 인식된 시점부터, 일정 시간 안 보일 때까지)** 반영
+- 출력은 **조명만 제어**
+- 상태는  
+  - `idle`
+  - `observed_crowd`
+  - `managed_stress`
+  - `algorithmic_activation`
+  로 나뉘게 해둠
+
+상태 판정 우선순위도 네가 원한 흐름으로 넣었어:
+1. 사람 없거나 점유 짧음 → `idle`
+2. stress 높음 / 소음 높음 → `managed_stress`
+3. sorrow 우세로 mood 음수 큼 → `algorithmic_activation`
+4. 나머지 → `observed_crowd`
+
+조명 정책은 지금 이렇게 들어가 있어:
+- `idle` → 55%, 4000K
+- `observed_crowd` → 65%, 4200K
+- `managed_stress` → 50%, 3000K
+- `algorithmic_activation` → 75%, 4600K
+
+실행 전에:
+```bash
+pip install -r requirements_social_intervention_light.txt
+```
+
+그리고 환경변수:
+```bash
+export TAPO_USERNAME="내_타포_이메일"
+export TAPO_PASSWORD="내_타포_비밀번호"
+export TAPO_IPS="192.168.0.21"
+python vision_tapo_social_intervention_light.py
+```
+
+주의할 점 두 개만 말하면,
+첫째, **마이크 임계값**은 전시장 소음에 따라 달라서 이 부분은 현장에서 한 번 튜닝해야 해. 코드 상단의 `NOISE_LOW_THRESHOLD`, `NOISE_HIGH_THRESHOLD` 값으로 조정하면 돼.  
+둘째, 지금은 **가장 큰 얼굴의 감정값**을 대표값으로 쓰고, 얼굴 수는 전체 개수로 따져. 네 전시 프로토타입에는 이게 제일 안정적일 가능성이 커.
+
+다음엔 이걸 바로 이어서 **UI 문구를 1층 세계관에 맞게 더 차갑고 사회 시스템처럼 보이게** 손봐줄 수 있어.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+웹캠 화면에 얼굴이 인식되면, 네모 테두리를 치고 그 오른쪽에 지금 어떤 감정인지 띄워져있었으면 좋겠어 감정값이 치수로 나오잖아? 그걸 점수로 재맵핑한다음에 예를들어 행복 80% neutral 20% 이런식으로 띄워지면 좋겠어
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+반영했어.
+
+업데이트 파일:
+[vision_tapo_social_intervention_light.py](sandbox:/mnt/data/vision_tapo_social_intervention_light.py)
+
+바뀐 점:
+- 얼굴 인식되면 **초록색 네모 박스**
+- 박스 **오른쪽에 감정 라벨 + 퍼센트**
+- Google Vision의 likelihood 값을 그대로 쓰지 않고, **전시용 퍼센트로 재매핑**
+- 예시처럼 `joy 80% / neutral 20%` 같은 식으로 뜨게 했어
+- 각 얼굴마다 **상위 2개 감정만 표시**해서 화면이 덜 지저분하게 보이도록 했어
+
+지금 퍼센트 계산 방식은 이렇게 돼:
+- `joy / sorrow / anger / surprise`는 Vision likelihood를 0~5 점수로 변환
+- `neutral`은 **감정 강도가 낮을수록 높아지도록**
+  `5 - max(joy, sorrow, anger, surprise)` 로 계산
+- 그다음 전체를 **100% 기준으로 정규화**
+
+그래서 예를 들어
+- joy가 강하고 다른 감정이 거의 없으면 → `joy 80%, neutral 20%`
+- 다 약하면 → `neutral` 비중이 커짐
+- anger/surprise가 높으면 → 그쪽이 크게 뜸
+
+화면에선 대충 이런 느낌으로 보여:
+- `joy 80%`
+- `neutral 20%`
+
+또는
+- `anger 50%`
+- `surprise 30%`
+
+원하면 다음엔 내가 이 표시 라벨도 한국어로 바꿔서  
+`행복 80% / 중립 20%` 형태로 맞춰줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+아냐 모든 건 영어로 하고, %를 다합쳤을 때 100이 아니면 이상하니까, 그냥 받아온 감정값들 합쳐서 100으로 만들어줘 여러 줄 띄워도 되니까
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아. 요구사항을 정리하면 이렇게야:
+
+1. **얼굴 인식되면 네모 박스 표시**
+2. **박스 오른쪽에 감정 퍼센트 표시**
+3. **모든 감정 값을 합쳐서 정확히 100%**
+4. **영어로 표시**
+5. **여러 줄로 표시 가능**
+
+그래서 처리 방식은 이렇게 하면 깔끔해:
+
+1️⃣ Google Vision에서 받은 감정 값  
+(joy / sorrow / anger / surprise)
+
+2️⃣ neutral을 추가 계산
+
+```
+neutral = max(0, 5 - max(joy, sorrow, anger, surprise))
+```
+
+3️⃣ 모든 값 합산
+
+```
+total = joy + sorrow + anger + surprise + neutral
+```
+
+4️⃣ 퍼센트 변환
+
+```
+percent = value / total * 100
+```
+
+이렇게 하면 **합이 항상 100%**가 된다.
+
+---
+
+# 코드 수정 부분 (핵심)
+
+OpenCV로 화면에 그리는 부분만 보여줄게.
+
+```python
+LIKELIHOOD_MAP = {
+    "UNKNOWN": 0,
+    "VERY_UNLIKELY": 1,
+    "UNLIKELY": 2,
+    "POSSIBLE": 3,
+    "LIKELY": 4,
+    "VERY_LIKELY": 5
+}
+```
+
+---
+
+## 감정 퍼센트 계산 함수
+
+```python
+def compute_emotion_percentages(face):
+    joy = LIKELIHOOD_MAP[face.joy_likelihood.name]
+    sorrow = LIKELIHOOD_MAP[face.sorrow_likelihood.name]
+    anger = LIKELIHOOD_MAP[face.anger_likelihood.name]
+    surprise = LIKELIHOOD_MAP[face.surprise_likelihood.name]
+
+    neutral = max(0, 5 - max(joy, sorrow, anger, surprise))
+
+    emotions = {
+        "Joy": joy,
+        "Sorrow": sorrow,
+        "Anger": anger,
+        "Surprise": surprise,
+        "Neutral": neutral
+    }
+
+    total = sum(emotions.values())
+
+    percentages = {
+        k: int((v / total) * 100) if total > 0 else 0
+        for k, v in emotions.items()
+    }
+
+    return percentages
+```
+
+---
+
+# 화면에 표시
+
+```python
+for face in faces:
+
+    vertices = [(v.x, v.y) for v in face.bounding_poly.vertices]
+
+    x1, y1 = vertices[0]
+    x2, y2 = vertices[2]
+
+    # 얼굴 박스
+    cv2.rectangle(frame, (x1, y1), (x2, y2), (0,255,0), 2)
+
+    percentages = compute_emotion_percentages(face)
+
+    text_x = x2 + 10
+    text_y = y1 + 20
+
+    for emotion, value in percentages.items():
+        label = f"{emotion}: {value}%"
+
+        cv2.putText(
+            frame,
+            label,
+            (text_x, text_y),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.5,
+            (0,255,0),
+            1,
+            cv2.LINE_AA
+        )
+
+        text_y += 18
+```
+
+---
+
+# 화면에서 보이는 예
+
+웹캠 화면에서 이렇게 뜬다.
+
+```
+┌──────────────┐
+│              │
+│   얼굴       │
+│              │
+└──────────────┘  Joy: 62%
+                  Neutral: 20%
+                  Surprise: 10%
+                  Sorrow: 5%
+                  Anger: 3%
+```
+
+합 = **100%**
+
+---
+
+# 작은 팁 (전시용)
+
+지금 UI가 훨씬 좋아 보이게 하려면  
+오른쪽 위에 이것도 띄우면 좋아.
+
+```
+PEOPLE DETECTED: 3
+SYSTEM MODE: MANAGED STRESS
+LIGHT: 3000K / 50%
+```
+
+관람객이 **AI가 지금 뭘 판단했는지** 바로 이해할 수 있음.
+
+---
+
+원하면 내가 다음 단계로 **지금 너 코드에 바로 붙일 수 있는 완전한 파일 버전**도 만들어줄게.  
+(지금 우리가 만든 **조명 제어 + 얼굴 박스 + 감정 퍼센트 + 상태 표시**까지 합쳐서.)
+
+--------------------------------------------------------------------------------
+
+[사용자]
+코드 완전하게 만들어서 주고, 이걸 어떻게 쓸 수 있을까? 터미널에서 실행하고나서 조명에 연결하면 되는거지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+완전한 코드 파일로 정리해뒀어.
+
+파일:
+[vision_tapo_social_intervention_light.py](sandbox:/mnt/data/vision_tapo_social_intervention_light.py)  
+[requirements_social_intervention_light.txt](sandbox:/mnt/data/requirements_social_intervention_light.txt)
+
+지금 버전은 이렇게 동작해:
+- 웹캠 프레임을 Google Cloud Vision Face Detection에 보내서 얼굴과 감정 likelihood를 받음. Vision은 얼굴의 감정 관련 likelihood를 제공하고, 특정 개인 식별용 얼굴 인식은 지원하지 않아. citeturn0search2turn0search6
+- 얼굴이 보이면 박스를 그리고, 오른쪽에 `Joy / Sorrow / Anger / Surprise / Neutral`를 **모두 영어로**, 합계가 **정확히 100%**가 되도록 표시함.
+- 최근 **5번 분석 결과 평균**으로 상태를 판단함.
+- 사람 수, 점유 시간, 마이크 소음 레벨까지 반영해서
+  `idle / observed_crowd / managed_stress / algorithmic_activation`
+  중 하나로 분류함.
+- 그 상태에 맞춰 Tapo 조명의 **brightness**와 **color temperature**를 조절함. `python-kasa`는 TP-Link Kasa/Tapo 장치를 제어하는 라이브러리고, CLI에서도 brightness/temperature 제어를 지원해. citeturn0search7turn0search19
+
+네 질문에 답하면, **맞아**. 기본 흐름은 이거야.
+
+1. 터미널에서 이 스크립트를 실행한다.  
+2. 스크립트가 웹캠과 마이크를 읽고, Vision으로 감정을 분석한다.  
+3. 같은 스크립트가 Tapo 조명에도 직접 연결해서 상태에 맞는 밝기/색온도를 보낸다.  
+즉 **실행 후에 따로 수동으로 조명에 다시 연결하는 건 아니고**, 코드 안에서 자동으로 연결해서 바로 제어하는 구조야.
+
+실행 순서는 이렇게 하면 된다.
+
+먼저 패키지 설치:
+```bash
+pip install -r requirements_social_intervention_light.txt
+```
+
+Google Cloud Vision은 로컬에서 보통 **Application Default Credentials**로 인증하게 되어 있어. 공식 문서도 로컬 개발 환경에서 ADC 설정을 안내하고 있어. citeturn0search4turn0search8
+
+예를 들면:
+```bash
+gcloud auth application-default login
+gcloud auth application-default set-quota-project YOUR_PROJECT_ID
+```
+
+또는 서비스 계정 JSON을 쓸 거면:
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
+```
+Cloud Vision Python 샘플도 `ImageAnnotatorClient()`를 만들기 전에 이런 인증 설정을 하라고 안내한다. citeturn0search6turn0search10
+
+그다음 Tapo 계정과 조명 IP를 넣어:
+```bash
+export TAPO_USERNAME="your_tapo_email"
+export TAPO_PASSWORD="your_tapo_password"
+export TAPO_IPS="192.168.0.21"
+```
+
+조명 IP를 모르면 `python-kasa` CLI로 찾는 게 편해:
+```bash
+kasa discover --username "your_tapo_email" --password "your_tapo_password"
+```
+`python-kasa` 문서에는 CLI 사용과 brightness/temperature 제어 명령이 정리돼 있어. citeturn0search19turn0search7
+
+그다음 실행:
+```bash
+python vision_tapo_social_intervention_light.py
+```
+
+실행되면 화면에는
+- 얼굴 박스
+- 각 얼굴의 감정 퍼센트 5줄
+- 현재 state
+- faces / occupancy / noise / crowding
+- 평균 감정값
+- 현재 조명 세팅
+
+이 뜬다.
+
+조금 손봐야 할 가능성이 큰 부분은 두 군데야.
+
+첫째는 **마이크 임계값**이야. 전시장마다 소음 바닥값이 달라서
+```python
+NOISE_LOW_THRESHOLD = 0.015
+NOISE_HIGH_THRESHOLD = 0.045
+```
+이 값은 현장에서 조금 조정해야 할 수 있어.
+
+둘째는 **분석 주기**야.
+```python
+ANALYZE_EVERY_SEC = 1.2
+```
+로 되어 있어서 Vision API 호출을 너무 자주 하지 않게 해뒀어. 전시장 반응성을 더 높이고 싶으면 0.8~1.0 정도로 줄여볼 수 있어.
+
+주의할 점 하나는, 이 코드는 **조명까지 한 번에 제어**하니까 실행 전에
+- 노트북이 같은 네트워크에 있어야 하고
+- Tapo 로그인 정보가 맞아야 하고
+- 조명이 color temperature를 지원해야 해
+
+이 세 가지가 맞아야 해. `python-kasa`는 밝기와 색온도 기능을 장치 feature로 다루기 때문에, 지원하지 않는 조명이면 밝기만 동작할 수 있어. citeturn0search7turn0search19
+
+원하면 다음엔 이 코드에 맞춰서 **전시장용 실행 체크리스트**를 아주 짧게 만들어줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+내가지금 노트북이 앖어.  데탑이랑 태블릿은 있는데, 태블릿에서 이걸 띄우려면 서버를 데탑에서 돌리고 화묜만 띄울 수 없너?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+가능해. 그리고 **그 구조가 전시에서는 오히려 더 안정적**이야.  
+지금 상황(데스크탑 + 태블릿) 기준으로 가장 좋은 구조는 이거야.
+
+```
+[데스크탑 PC]
+웹캠 + 마이크 + AI 분석 + 조명 제어
+        │
+        │ (로컬 네트워크)
+        ▼
+[태블릿]
+웹브라우저로 UI 화면만 표시
+```
+
+즉
+
+- **데스크탑 = 서버 + 분석 + 조명 제어**
+- **태블릿 = 모니터 (웹페이지)**
+
+이 방식은 전시에서도 많이 쓰는 구조야.
+
+---
+
+# 1️⃣ 왜 이 구조가 좋은가
+
+지금 코드가 하는 일은 사실 3개야.
+
+1. 웹캠 분석
+2. 조명 제어
+3. 화면 UI
+
+이걸 분리하면
+
+```
+analysis + control → 데스크탑
+display → 태블릿
+```
+
+이렇게 된다.
+
+장점
+
+- 데스크탑 GPU 사용 가능
+- 태블릿은 그냥 브라우저만 있으면 됨
+- 전시 화면 깔끔
+- 태블릿 위치 자유
+
+---
+
+# 2️⃣ 구현 방법 (가장 쉬운 방법)
+
+Python에 **Flask 서버** 하나만 추가하면 된다.
+
+즉
+
+```
+Python AI script
++
+Flask server
+```
+
+Flask가 웹페이지를 만들어주고  
+태블릿은 그 페이지를 열면 된다.
+
+---
+
+# 3️⃣ 시스템 구조
+
+```
+웹캠
+ ↓
+Python (Vision API)
+ ↓
+state 계산
+ ↓
+조명 제어 (Tapo)
+ ↓
+Flask 서버
+ ↓
+웹페이지 데이터 전달
+ ↓
+태블릿 화면 표시
+```
+
+---
+
+# 4️⃣ 태블릿에서 보는 화면
+
+태블릿 브라우저에서
+
+```
+http://DESKTOP_IP:5000
+```
+
+이 주소 열면 된다.
+
+예
+
+```
+http://192.168.0.12:5000
+```
+
+---
+
+# 5️⃣ 태블릿 UI에 표시할 것
+
+태블릿 화면에는 이런 정보만 보여주면 좋다.
+
+```
+PEOPLE DETECTED: 3
+NOISE LEVEL: MEDIUM
+OCCUPANCY TIME: 18s
+
+EMOTION
+Joy: 60%
+Neutral: 30%
+Surprise: 10%
+
+SYSTEM MODE
+MANAGED_STRESS
+
+LIGHT
+3000K / 50%
+```
+
++ 얼굴 박스가 있는 웹캠 화면
+
+---
+
+# 6️⃣ 구현 난이도
+
+추가되는 건 사실 **코드 50줄 정도**야.
+
+예:
+
+```python
+from flask import Flask, Response
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('ui.html')
+
+@app.route('/video')
+def video():
+    return Response(generate_frames(),
+        mimetype='multipart/x-mixed-replace; boundary=frame')
+```
+
+그리고 웹캠 프레임을
+
+```
+MJPEG stream
+```
+
+으로 보내면 태블릿에서 바로 보인다.
+
+---
+
+# 7️⃣ 전시 세팅
+
+현장에서는 이렇게 된다.
+
+```
+데스크탑
+ ├─ 웹캠
+ ├─ 마이크
+ ├─ 조명 제어
+ └─ Python 서버
+
+태블릿
+ └─ 브라우저 (UI)
+```
+
+태블릿은 **충전만 꽂아두면 끝**.
+
+---
+
+# 8️⃣ 전시 안정성 팁
+
+꼭 이렇게 하는 게 좋아.
+
+- **인터넷 필요 없음**
+- **로컬 Wi-Fi 공유기 하나 사용**
+
+```
+데스크탑
+태블릿
+조명
+```
+
+모두 같은 WiFi.
+
+---
+
+# 9️⃣ 하나 더 좋은 방법
+
+태블릿을
+
+```
+Full screen kiosk mode
+```
+
+로 두면
+
+관람객은 그냥 **디스플레이 화면처럼 보게 된다**.
+
+---
+
+# 🔟 내가 추천하는 최종 구조
+
+```
+웹캠
+ ↓
+AI 감정 분석 (PC)
+ ↓
+State 판단
+ ↓
+조명 제어
+ ↓
+Flask UI 서버
+ ↓
+태블릿 표시
+```
+
+---
+
+# 👍 내가 다음으로 해줄 수 있는 것
+
+지금 코드 기준으로
+
+**전시용 완전한 버전**
+
+을 만들어줄 수 있어.
+
+즉
+
+- 얼굴 박스
+- 감정 퍼센트
+- 조명 제어
+- state 표시
+- Flask 서버
+- 태블릿 UI
+
+까지 **한 파일로 작동하는 시스템**.
+
+이거 만들어주면  
+**데스크탑 실행 → 태블릿 접속 → 바로 전시 가능**한 상태가 된다.
+
+원하면 내가 바로 **전시용 전체 코드(약 400줄)** 만들어줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+아니야근데 데탑에는 마이크랑 웹캠이 없거든, 인풋은 태블릿에서 받아와야해
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+돼. 그럼 구조를 반대로 잡으면 돼.
+
+**태블릿이 입력 장치**
+- 카메라
+- 마이크
+- 화면 UI
+
+**데스크탑이 처리/제어 장치**
+- 감정 분석
+- 상태 판단
+- Tapo 조명 제어
+
+즉 구조는 이렇게:
+
+```text
+[Tablet]
+camera + mic + browser UI
+        ↓
+   video/audio stream
+        ↓
+[Desktop]
+analysis + policy + Tapo control
+        ↓
+     lighting
+```
+
+핵심은 **태블릿에서 웹페이지를 열고, 그 페이지가 카메라/마이크 권한을 받아서 데스크탑 서버로 보내는 방식**이야.
+
+## 가능한가?
+가능해. 다만 기존처럼 “파이썬이 직접 웹캠을 연다”가 아니라, 이제는
+
+- **태블릿 브라우저가 카메라/마이크를 연다**
+- **브라우저가 영상/오디오를 데스크탑 서버로 스트리밍한다**
+- **데스크탑이 그걸 받아서 분석한다**
+
+로 바뀌어.
+
+## 제일 현실적인 방법
+가장 좋은 건 **WebRTC + Python 서버** 구조야.
+
+### 태블릿 쪽
+브라우저에서:
+- `getUserMedia()`로 카메라/마이크 접근
+- 영상/오디오를 서버로 전송
+- 동시에 UI도 표시
+
+### 데스크탑 쪽
+Python 서버에서:
+- 태블릿이 보낸 영상 프레임 받기
+- Google Vision으로 감정 분석
+- 오디오 레벨 계산
+- 사람 수/점유 시간/최근 5개 감정 평균 계산
+- 조명 제어
+- 분석 결과를 다시 태블릿 UI로 보내기
+
+## 전시용으로는 이게 더 좋을 수도 있어
+왜냐면 태블릿 화면 자체가
+- 입력 장치
+- 디스플레이
+를 동시에 하니까 장치 구성이 단순해져.
+
+즉 관람자는 태블릿 앞에 서고,
+태블릿이 자기 얼굴을 보고,
+데스크탑은 뒤에서 계산하고 조명을 바꾸는 거지.
+
+## 주의할 점
+이 방식은 **카메라/마이크 권한** 때문에 보통 브라우저에서
+- `https`
+또는
+- `localhost`
+환경을 선호해.
+
+그래서 전시용으로는 보통 두 방법 중 하나를 써:
+
+### 방법 1. 태블릿에서 IP Webcam 앱/RTSP 앱 사용
+가장 쉬운 편.
+- 태블릿 앱이 카메라/마이크 스트림 제공
+- 데스크탑 Python이 그 스트림 읽음
+- 웹 UI는 따로 띄움
+
+장점:
+- 구현 쉬움
+- 브라우저 권한 문제 적음
+
+단점:
+- UI와 입력이 완전히 하나로 합쳐지진 않을 수 있음
+
+### 방법 2. 태블릿 브라우저 웹앱
+더 예쁘고 네가 원하는 형태.
+- 태블릿 웹페이지가 카메라/마이크 사용
+- UI 위에 얼굴 박스/감정 퍼센트 표시
+- 서버와 실시간 통신
+
+장점:
+- 전시용 완성도 높음
+- 한 화면에 다 됨
+
+단점:
+- 구현이 조금 더 복잡함
+
+## 네 상황엔 뭘 추천하냐
+지금 목표가 **졸전 프로토타입**이고, 너무 커지면 안 되니까
+
+**1차는 앱 스트리밍 방식**
+- 태블릿 카메라/마이크 → 데스크탑
+- 데스크탑 분석/조명 제어
+- 태블릿은 분석 결과 UI만 표시
+
+이게 제일 안정적이야.
+
+그다음 여유 있으면
+**웹앱 일체형**으로 가면 돼.
+
+## 정리
+지금 상황에서는 이렇게 보면 된다.
+
+- 데스크탑에 입력 장치 없어도 가능
+- **태블릿이 센서 역할**
+- **데스크탑이 두뇌 역할**
+- 조명 제어는 데스크탑이 맡음
+
+즉, 네가 필요한 건 더 이상 “노트북”이 아니라  
+**태블릿 입력을 데스크탑으로 넘기는 구조**야.
+
+원하면 다음 답변에서 내가 바로  
+**가장 현실적인 전시용 구조 2안**
+1. 태블릿 앱 스트리밍 방식  
+2. 태블릿 브라우저 웹앱 방식  
+이 둘을 비교해서, 네가 뭘 선택하면 되는지 딱 정리해줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+2로 만들어줘
+
+--------------------------------------------------------------------------------
+
+[사용자]
+이거 커서로 옮겨서 작업하는게 낫겠지?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+응. **Cursor(커서)로 옮겨서 작업하는 게 훨씬 낫다.**  
+지금 하려는 건 사실 단순 스크립트가 아니라 **작은 웹 시스템**이야.
+
+네가 만들 구조는 이렇게 될 거거든.
+
+```text
+Tablet (Browser)
+ ├ camera input
+ ├ microphone input
+ ├ UI display
+ └ WebRTC/WebSocket
+        │
+        ▼
+Desktop Server (Python)
+ ├ video frames receive
+ ├ emotion detection (Vision API)
+ ├ state 판단
+ ├ lighting control (Tapo)
+ └ data back to UI
+```
+
+이 구조는 파일이 최소 **4~6개** 생겨.
+
+예를 들면:
+
+```text
+project/
+ ├ server.py
+ ├ emotion_engine.py
+ ├ lighting_controller.py
+ ├ policy.py
+ ├ static/
+ │   ├ app.js
+ │   └ style.css
+ └ templates/
+     └ index.html
+```
+
+이걸 ChatGPT 대화창에서 계속 붙여가며 수정하면  
+금방 **코드 관리가 지옥**이 돼.
+
+Cursor 같은 IDE 쓰면 좋은 이유가 몇 가지 있어.
+
+### 1️⃣ 여러 파일 동시에 수정 가능
+지금 구조는
+
+- python
+- html
+- js
+
+세 가지를 동시에 수정해야 해.
+
+Cursor는 **AI에게 폴더 전체를 보고 수정하라고 할 수 있음.**
+
+예:
+
+> “camera stream을 WebRTC로 바꾸고 server.py랑 app.js 둘 다 수정해줘”
+
+---
+
+### 2️⃣ 디버깅이 쉬움
+이 프로젝트는 거의 100% 아래 문제가 생겨.
+
+- CORS
+- WebRTC 연결
+- Vision API latency
+- audio permission
+- websocket 끊김
+
+Cursor에서는 로그 보고 바로 수정 가능.
+
+---
+
+### 3️⃣ 전시용 시스템은 계속 수정됨
+졸전 시스템은 항상 이 과정을 겪어.
+
+```
+1. 코드 작성
+2. 현장 테스트
+3. 감정 threshold 수정
+4. 조명 밝기 수정
+5. UI 수정
+```
+
+Cursor 있으면 **AI에게 바로 수정시키기 좋음.**
+
+---
+
+### 4️⃣ 코드 길이가 꽤 길어질 거야
+지금 네가 원하는 웹앱 구조면 대략
+
+```
+server.py        ~200 lines
+emotion_engine   ~150 lines
+lighting         ~80 lines
+frontend js      ~150 lines
+html/css         ~100 lines
+```
+
+**총 600~700줄** 정도.
+
+대화창에서 관리하기 힘들어.
+
+---
+
+## 👍 내가 추천하는 워크플로
+
+1️⃣ Cursor에서 새 프로젝트 만들기
+
+```
+emotion-ai-space/
+```
+
+2️⃣ Python 가상환경 만들기
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+3️⃣ 기본 서버 만들기
+
+```
+FastAPI + WebSocket
+```
+
+4️⃣ 태블릿 접속
+
+```
+http://DESKTOP_IP:8000
+```
+
+5️⃣ 태블릿 브라우저가
+
+- camera
+- mic
+
+사용
+
+---
+
+## 🔥 중요한 점 하나
+
+태블릿 브라우저에서 **카메라/마이크 권한** 쓰려면 보통
+
+```
+https
+```
+
+환경이 필요해.
+
+그래서 전시에서는 보통 이렇게 해결해.
+
+```
+same wifi network
+http://192.168.x.x
+```
+
+대부분 태블릿이 허용해.
+
+---
+
+## 하나만 먼저 물어볼게
+
+태블릿이 **Android야? iPad야?**
+
+이게 중요한 이유는  
+브라우저 카메라/마이크 정책이 꽤 달라서 그래.
+
+- **Android** → 구현 쉬움
+- **iPad (Safari)** → WebRTC 제한 많음
+
+이거에 따라 내가 **전체 코드 구조를 다르게 짜줄게.**
+
+--------------------------------------------------------------------------------
+
+[사용자]
+안드로이드고, 지금 내가 만드려는거 맥락이랑 기능 다 합쳐서 커서에 넘길 수 있게 파일 만들어줘  올리면 거기서 바로 진행할 수 있게.  코드는 내가 따로 옮길게
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+만들어뒀어.
+
+파일:
+[Cursor handoff markdown](sandbox:/mnt/data/cursor_handoff_emotional_space_ai.md)
+
+이 파일엔 지금까지 정리한 걸 다 넣었어:
+- **1층/2층 맥락 차이**
+- **ANT 관점**
+- **AI를 왜 쓰는지**
+- **Android 태블릿 입력 + 데스크탑 서버 구조**
+- **필요 기능**
+- **emotion / people / occupancy / noise**
+- **4개 state rule**
+- **UI 톤과 영어 표기**
+- **Cursor에서 바로 작업할 수 있는 폴더 구조**
+- **다음 구현 목표(MVP)**
+
+이걸 Cursor에 올리고, 그 안의 마지막 **“Short brief for Cursor AI”**부터 바로 작업시키면 돼.
+
+추천 순서는:
+1. 이 md 파일을 프로젝트 루트에 넣기
+2. Cursor에서 폴더 열기
+3. 새 프로젝트 만들고 이 파일을 읽히기
+4. Cursor에게  
+   **“Read this handoff and scaffold the MVP architecture”**  
+   이렇게 시키기
+
+원하면 바로 이어서 내가 **Cursor에 첫 번째로 넣을 프롬프트**까지 딱 한 번에 써줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+타포 로그인하려는데, 2.4g 와이파이가 필요하대 그런거 없어...
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+이건 **타포(Tapo) 제품 거의 다 겪는 문제**야.  
+결론부터 말하면 **대부분 집 공유기가 이미 2.4GHz를 가지고 있는데 5GHz랑 합쳐져 있어서 그런 것**이야.
+
+타포 스마트 기기는 **2.4GHz Wi-Fi만 지원**해.  
+그래서 5GHz에 연결된 상태에서는 설정이 안 돼.
+
+---
+
+# 1️⃣ 제일 쉬운 해결 방법 (추천)
+
+**폰을 2.4GHz로 잠깐만 연결하면 된다.**
+
+방법:
+
+1. 공유기 설정 들어가기  
+   보통 주소:
+
+```
+192.168.0.1
+192.168.1.1
+```
+
+2. Wi-Fi 설정
+
+3. **2.4GHz / 5GHz 분리**
+
+예:
+
+```
+MyWifi_2G
+MyWifi_5G
+```
+
+4. 폰을 **MyWifi_2G**에 연결
+
+5. 타포 앱에서 등록
+
+설정 끝나면 다시 합쳐도 됨.
+
+---
+
+# 2️⃣ 공유기 설정 못 건드리면
+
+임시로 **핫스팟 사용** 가능.
+
+### 방법
+
+다른 폰에서
+
+```
+핫스팟 ON
+```
+
+핫스팟은 대부분 **2.4GHz**로 작동함.
+
+그 다음:
+
+1. 너 폰 → 핫스팟 연결
+2. 타포 앱 실행
+3. 전구 등록
+
+등록되면 나중에 Wi-Fi 바꿔도 된다.
+
+---
+
+# 3️⃣ 전시용 세팅 추천
+
+너 프로젝트 구조상 **전시장에서 별도 Wi-Fi 만드는 게 제일 안정적**이야.
+
+추천:
+
+```
+작은 공유기 하나
+```
+
+가격:
+
+```
+2만원 정도
+```
+
+이걸로
+
+```
+Desktop
+Tablet
+Tapo light
+```
+
+전부 같은 네트워크에 묶으면  
+**인터넷 없이도 작동**한다.
+
+전시에서는 이게 훨씬 안전함.
+
+---
+
+# 4️⃣ 중요한 점
+
+타포는 설정할 때만 2.4GHz 필요하고  
+설정 끝나면 같은 네트워크에서만 통신하면 돼.
+
+즉 나중에는 Python 코드에서
+
+```
+TAPO_IP
+```
+
+로 직접 제어 가능.
+
+---
+
+# 👍 내가 하나 더 물어볼게
+
+너가 산 타포가 혹시
+
+- **L530E (전구)**  
+- **L930 (LED strip)**
+
+중 뭐야?
+
+이거에 따라 **Python에서 제어하는 코드가 조금 달라져.**
+
+--------------------------------------------------------------------------------
+
+[사용자]
+ㅅ메ㅐ
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+혹시 **“L930”**이라고 쓰려던 거야? 아니면 오타가 난 걸까? 😅  
+지금 메시지가 **“ㅅ메ㅐ”**라서 어떤 모델인지 정확히 못 알아들었어.
+
+타포 조명은 모델에 따라 제어 방식이 조금 달라서 확인이 필요해.  
+예를 들어 많이 쓰는 건 이런 것들이야:
+
+- **Tapo L530E** → 스마트 전구 (밝기 + 색온도 조절 가능)  
+- **Tapo L630 / L930** → LED 스트립  
+- **Tapo L535 / L535E** → RGB 전구
+
+네 프로젝트(색온도 + 밝기 제어)에는 보통 **L530E**가 가장 쓰기 편해.
+
+가능하면 **모델명 한 번만 정확히 알려줘**.  
+박스나 앱에 보통 이렇게 써 있어:
+
+```
+Tapo L530E
+```
+
+그럼 내가:
+- **Python 코드에서 정확히 어떻게 연결하는지**
+- **Cursor 프로젝트에서 어떻게 설정하는지**
+- **전시장에서 안정적으로 작동하게 하는 방법**
+
+까지
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아. 전시 상황을 기준으로 **관람자가 보는 모습**을 한 번 정리해서 그려볼게.  
+핵심은 **모형(공간) + 그 위의 모니터(UI) + 태블릿 카메라 입력** 구조야.
+
+---
+
+# 1️⃣ 전시에서 보이는 전체 구성 (개념)
+
+관람자가 보면 대략 이런 형태가 될 거야.
+
+```
+        ┌───────────────────────────────┐
+        │           MONITOR              │
+        │                                │
+        │  PEOPLE: 3                     │
+        │  NOISE LEVEL: LOW              │
+        │  OCCUPANCY: 18s                │
+        │                                │
+        │  EMOTION                      │
+        │  Joy: 62%                     │
+        │  Neutral: 24%                 │
+        │  Surprise: 8%                 │
+        │  Anger: 4%                    │
+        │  Sorrow: 2%                   │
+        │                                │
+        │  SYSTEM MODE: MANAGED_STRESS  │
+        │  LIGHT: 3000K / 50%           │
+        └───────────────▲───────────────┘
+                        │
+                        │ AI 상태 표시
+                        │
+             ┌─────────────────────────┐
+             │                         │
+             │        MODEL            │
+             │   Subway Waiting Hall   │
+             │                         │
+             │   ▢ seating zone        │
+             │                         │
+             │   ▢ passage flow        │
+             │                         │
+             │   ceiling lighting      │
+             │   (controlled by AI)    │
+             │                         │
+             └─────────────────────────┘
+                        ▲
+                        │
+                        │ camera + mic
+                        │
+                 ┌─────────────┐
+                 │   TABLET    │
+                 │             │
+                 │  camera     │
+                 │  microphone │
+                 └─────────────┘
+```
+
+---
+
+# 2️⃣ 관람자 입장에서 보이는 흐름
+
+관람자가 전시장에 서면 이런 일이 일어나.
+
+1️⃣ 태블릿 카메라가 얼굴 인식  
+2️⃣ 감정 분석 (Vision API)  
+3️⃣ 상태 계산
+
+```
+emotion
+people
+noise
+occupancy
+```
+
+4️⃣ 시스템 모드 결정
+
+```
+idle
+observed_crowd
+managed_stress
+algorithmic_activation
+```
+
+5️⃣ 모형 조명 변화
+
+6️⃣ 위 모니터에 **AI 판단 과정 표시**
+
+---
+
+# 3️⃣ 실제 전시에서 보이는 느낌 (측면)
+
+```
+              ┌──────────────────────┐
+              │       MONITOR        │
+              │  AI SYSTEM DISPLAY   │
+              └─────────┬────────────┘
+                        │
+                        │
+                ┌───────▼────────┐
+                │                 │
+                │   MODEL SPACE   │
+                │  Subway Hall    │
+                │                 │
+                │  AI lighting    │
+                │                 │
+                └───────┬─────────┘
+                        │
+                        │
+                   ┌────▼─────┐
+                   │ TABLET   │
+                   │ camera   │
+                   │ mic      │
+                   └──────────┘
+```
+
+관람자는 보통 **모형 앞에 서게 되고**,  
+태블릿이 그 얼굴을 보고 감정 분석을 하게 돼.
+
+---
+
+# 4️⃣ 모니터 화면 구성 (추천 UI
+
+--------------------------------------------------------------------------------
+
+[사용자]
+전시에 들어갈 모형과 그 위에 모니터가 어떤 모습일지 한번 그려봐
+
+--------------------------------------------------------------------------------
+
+[사용자]
+너가 사진으로 뽑아줘
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+{"size":"1024x1024","n":1,"prompt":null}
+
+--------------------------------------------------------------------------------

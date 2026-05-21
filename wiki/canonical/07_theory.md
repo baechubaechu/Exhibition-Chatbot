@@ -1,11 +1,106 @@
 # 이론·레퍼런스
 
-## 방법론 키워드
+이 문서는 “이 프로젝트가 어떤 이론 위에 서 있는가”를 정리한다. 핵심은 다음 두 가지다.
 
-- **Inside-out**: 외관 조형(Form)보다 **내부 경험·프로그램·단면·평면·타이폴로지**에서 실마리를 찾는 접근.
-- **Section / Plan / Typology** 를 설계 도구로 명시적으로 사용한다.
+- 이론은 **장식이 아니라 진단의 도구**다. 금정역의 단절·감각 결핍·통과 행동 같은 진단 자체가 이론적이고, 그 진단을 공간·동선·매싱으로 옮기는 일이 이 프로젝트다.
+- 그래서 이 문서의 이론들은 **공간 결정의 근거로 쓰이는 것**과 **참고만 한 것**을 명시적으로 나눈다.
 
-## 건축가·작품 (대화에서 발췌)
+상위 정의는 `02_extra_space.md`, 매싱과의 연결은 `06_massing.md`, 진단의 적용은 `03_site_analysis.md`.
+
+## 1. 연구 출발점 — 「감정의 물성」과 Carroll Izard
+
+### 김초엽 「감정의 물성」
+
+프로젝트의 문학적 출발점은 김초엽의 단편 「감정의 물성」이다. 감정을 **만질 수 있는 물체**로 상상하는 설정은 비현실적이지만, 오히려 **현실의 공간을 다시 보게 하는 장치**로 작용한다.
+
+- 상업·브랜드 공간은 감각을 쓰되 **소비·표준화·조절**을 위해 쓴다.
+- 공공 인프라(환승역 등)에서는 감정이 설계의 중심 언어가 되기 어렵다.
+- 이 프로젝트의 질문: 건축이 감정을 **소비 대상이 아니라 공공적 경험의 조건**으로 다룰 수 있는가.
+
+「감정을 이용하는 건축」이 아니라, **감정이 드러나고 순환할 여백을 만드는 건축**으로 이어진다 (`02_extra_space.md`).
+
+### Carroll Izard — 감정은 생존의 언어
+
+Izard(2009)는 감정을 단순한 기분이 아니라 **인지·행동·생존을 매개하는 과정**으로 본다.
+
+- Emotion feelings are **motivational and informational mediators** — 인간 적응·생존에 필수.
+- 각 기본 감정은 감각·인지·행동에 **서로 다른 적응적 기능**을 가진다.
+- 부정적 감정도 제거 대상이 아니라, **경고·조절·관계 설정**의 언어다.
+
+이 프로젝트에서 Izard는 “왜 감정을 건축해야 하는가”에 대한 **과학적 출발점**이다. 금정역의 무감각은 감정이 없는 것이 아니라, **발현·축적의 틈이 없는 것**으로 읽힌다. Extra Space는 그 틈을 건축적으로 되돌려 놓는 시도다.
+
+## 2. 건축현상학으로 들어가기 — 세잔·메를로-퐁티
+
+### 지각의 예술 — 세잔과 메를로-퐁티
+
+폴 세잔은 자연을 “있는 그대로 본다”는 것이 **객관적 재현이 아니라, 눈과 몸이 세계를 지각하는 방식을 탐구**하는 일이었다. 메를로-퐁티는 이를 **“세계는 우리와 함께 태어난다”** 로 확장했다 — 지각은 주체와 객체가 교차하는 **살아 있는 장(chiasm)** 이다.
+
+핵심 키워드: **몸(le corps)**, **지각(perception)**, **살(la chair)**.
+
+### 예술에서 건축으로
+
+건축현상학(노르베르그-슐츠, Pallasmaa, Zumthor)은 세잔이 캔버스에서 한 일을 **공간·재료·빛**으로 확장한다.
+
+| 건축가 | 핵심 | 이 프로젝트와의 연결 |
+|--------|------|---------------------|
+| Norberg-Schulz | 장소 = 기하가 아니라 **거주 경험의 의미** | 금정역을 다시 “장소”로 |
+| Pallasmaa | 건축 = **다감각적 지각**의 예술 | Extra Space의 5가지 형식 |
+| Zumthor | **Atmosphere** = 재료·빛·소리·온도의 관계 | 소멸–재생성–공명 시퀀스 |
+
+> 세잔이 지각의 순간을 색으로 드러냈다면, 이 프로젝트는 **감정이 물질(빛·천장·재료·소리)을 통해 체험되는 현상학적 순간**을 건축 언어로 번역한다.
+
+이 흐름이 아래 §4의 후설·Pallasmaa·Zumthor 논의의 **서두**가 된다. 신경건축학(§4)은 “무엇이 효과적인 변수인가”를, 현상학은 “왜 그것이 경험으로 느껴지는가”를 담당한다.
+
+## 3. 방법론 키워드
+
+- **Inside-out** — 외관 조형(Form)에서 출발하지 않는다. 내부 경험·프로그램·단면·평면·타이폴로지에서 실마리를 찾는다.
+- **Section / Plan / Typology** — 단면·평면·타이폴로지를 명시적 설계 도구로 사용한다. 이 프로젝트에서 단면은 “장식적 다이어그램”이 아니라 1차 의사결정 도구다.
+- **흐름 → 시야축 → 곡률 → 매스** — 형태는 동선과 시점의 합성. (상세 `05_nodes.md`, `06_massing.md`)
+- **단면적 감정 시퀀스** — 감정의 변화(소멸–재생성–공명)를 단면의 빛·재료·층고 변화로 옮긴다.
+
+## 4. 핵심 이론 계보 — 이 프로젝트가 “설계의 근거”로 쓰는 것
+
+### 후설(Edmund Husserl) — 감정 현상학
+
+- 감정은 단순한 반응이 아니라 **세계와의 지향적 관계 안에서 발생하는 체험**이다.
+- 그는 감정을 **“수동적 지향성(passive intention)”** 으로 보았다. 의식이 세계를 구성하는 방식 자체에 감정이 포함된다.
+- → **이 프로젝트의 입장:** 건축은 감정을 “일으키는” 것이 아니라, **감정이 공간을 통해 세계를 다시 경험하게 하는 구조**가 되어야 한다. 그래서 Extra Space는 감정을 ‘조절’하지 않고 **‘드러나게’** 둔다. (정의: `02_extra_space.md` §“조절이 아니라 드러남과 순환”)
+
+### Juhani Pallasmaa — *The Eyes of the Skin*
+
+- 시각 중심(ocularcentrism)에 대한 비판. 인간은 눈만으로 건축을 경험하지 않는다. **피부·귀·근육·기억**으로 경험한다.
+- “Sight isolates, sound incorporates.” — 시각은 분리하고, 소리는 내면으로 스며든다.
+- 그림자·잔향·재료의 촉감·시간의 흔적이 공간의 감정 깊이를 만든다.
+- → **이 프로젝트의 입장:** Extra Space의 형식 다섯 가지(under-programmed, 감각의 변화로 구획, 단면적 속도 저감, 동선의 두께, 시간성 표면)는 이 다중 감각 원칙을 그대로 옮긴 것이다(`02_extra_space.md` §“형식”).
+
+### Peter Zumthor — *Atmospheres / Thinking Architecture*
+
+- 공간의 분위기는 순간적으로 감지되지만, **연속된 경험의 축적에서 형성**된다.
+- 빛·재질·소리·온도·근접성이 만든 “Atmosphere”가 곧 건축의 본질.
+- Therme Vals, Bruder Klaus Chapel — 기능보다 감각·시퀀스가 공간을 정의하는 사례.
+- → **이 프로젝트의 입장:** 소멸–재생성–공명 시퀀스는 Zumthor의 “Atmosphere의 단면적 축적”을 시간축에 펼친 것에 가깝다. 단면 한 컷이 곧 분위기의 한 단계.
+
+### Bruno Latour — ANT (Actor-Network Theory)
+
+- **감정은 인간 내부에 있는 것이 아니라, 인간 + 비인간 행위자가 함께 만드는 관계의 효과**다.
+- “감정은 중재자(mediator)들이 네트워크를 변형시키는 과정에서 발생하는 효과.”
+- → **이 프로젝트의 입장:** 금정역의 감정 소멸은 사용자 때문이 아니라 **복개 산본천·환승 동선·계획도시 조닝·GTX 환승 구조라는 비인간 행위자들의 네트워크 때문**이다. 따라서 이 프로젝트의 설계 개입은 “좋은 감정을 주입하는 일”이 아니라, **새로운 비인간 행위자(곡면 매스·보이드·아가미 천창·산본천 시각축)를 도입해 네트워크의 감정 효과를 재배열**하는 일이다. (자세히는 `02_extra_space.md` §“ANT의 시선”)
+
+### 신경건축학·감각조절 연구
+
+- **Imageability & Brain Health (Maestre, 2025)** — 인지 가능성(imageability)이 높은 공간은 정서 안정·사회적 유대·뇌 건강에 긍정적 영향을 준다.
+- **Architecture and Emotions (Khuzam, 2025)** — 조명·거리감·형태 왜곡 같은 물리적 조작이 비의식적 감정 반응을 직접적으로 자극한다. 비대칭 형태가 적정 수준에서는 탐색 욕구와 몰입을 유도한다는 결과 포함.
+- **Sensory Emotion Regulation (Rodriguez & Kross, 2023)** — 오감 자극은 “가장 빠르고 무의식적으로 감정을 안정시키는 경로”다.
+- **fMRI 기반 공간 반응 연구** — 일관성 없는 공간 → 부정 감정 활성·회피 행동 증가 / 연속성 있는 공간 → 안정·체류 증가.
+- → **이 프로젝트의 입장:** 환승 노드(`05_nodes.md`)에서 조절하는 다섯 변수(층고·구조 밀도·빛·재질·시야)는 이 연구들이 “감정 반응이 가장 강하게 일어나는 변수”로 지목한 것들이다. 즉, 노드 단위 변수 조정 자체가 신경건축학적으로 정합적인 개입이다.
+
+### Norberg-Schulz — *Genius Loci*
+
+- 장소는 단순히 좌표가 아니라, **거주(dwelling)** 가 일어나기 위한 **분위기·맥락·기억의 총체**다.
+- 환승역처럼 거주가 거의 일어나지 않는 자리는 “장소성 상실(loss of place)”의 전형.
+- → **이 프로젝트의 입장:** 금정역을 “통과만 하는 곳”에서 다시 **머무를 수 있는 ‘장소’로 회복**한다는 목표(`01_why_geumjeong.md`)는 Norberg-Schulz의 거주 개념과 직접 닿는다.
+
+## 5. 건축가·작품 레퍼런스
 
 | 이름 | 포인트 |
 |------|--------|
@@ -18,41 +113,98 @@
 | Steven Holl | Linked Hybrid — 공중 연결체에 **프로그램이 실린** 브릿지 |
 | FOA | Yokohama Ferry Terminal — 겉은 연속 표면, 속은 **오리가미적 구조** |
 | Morphosis | 겉은 단단한 덩어리, 단면은 void·계단·노출 MEP가 얽힌 내부 |
-| Renzo Piano | Kansai Airport — 거대 **일체 지붕** 아래 복합 동선·구조 |
-| Santiago Calatrava | Brookfield Place(Toronto), Liège-Guillemins, Reggio Emilia bridges — **리브·아치**로 감성·도시 연결 |
-| Zaha Hadid | Napoli Afragola 등 — 육교·역 경계를 흐리는 **유동 볼륨** |
+| Renzo Piano | Kansai Airport — 거대 **일체 지붕** 아래 복합 동선·구조 + 북향 톱라이트 |
+| Santiago Calatrava | Brookfield Place (Toronto), Lyon Saint-Exupéry TGV, Stadelhofen, Liège-Guillemins — **리브·아치**로 감성·도시 연결 |
+| Zaha Hadid | Napoli Afragola 등 — 육교·역의 경계를 흐리는 **유동 볼륨** |
+| Kengo Kuma | Asakusa Culture Center 등 — 북향 루버 + 도시 경관 프레이밍 |
+| Charles Correa | Jawahar Kala Kendra — 북향 라이트밴드 + 경관 방향 천창 |
+| Tadao Ando | Church of Light, Water Temple — 빛·그림자·물성으로 사유의 경험 |
+| Daniel Libeskind | Jewish Museum Berlin — 감정의 구조를 기하학으로 표현, “Void”·“Absence” |
+| Hiroshi Naito | Sea of Trees Pavilion — 존재감·물성·시간성을 전면에 |
 
-## 도서
+이 중 **이 프로젝트의 매싱·단면 결정에 직접 작동하는 핵심 4명**은: **Zumthor(분위기)·Pallasmaa(다감각)·Calatrava(구조 미·역사 형식)·FOA(일체형 + 오리가미)**.
 
-- *Manual of Section* (LTL) — 단면 타입롤로지(Extrusion, Stack, Shear, Hole 등).
-- *Operative Design: A Catalog of Spatial Verbs* (Di Mari) — 공간 **동사**(Fold, Lift, Carve…)로 출발.
-- *Elements of Architecture* (Koolhaas) — 계단·바닥·벽 등 요소사.
+## 6. 도서·자료 (방법론용)
 
-## 영상·시각화 채널 (대화에서)
+- *Manual of Section* (LTL) — 단면 타이폴로지(Extrusion, Stack, Shear, Hole 등). 단면을 1차 도구로 쓰기 위한 카탈로그.
+- *Operative Design: A Catalog of Spatial Verbs* (Di Mari) — 공간을 **동사**(Fold, Lift, Carve…)로 출발. 매스 생성 동사를 표준화.
+- *Elements of Architecture* (Koolhaas) — 계단·바닥·벽 등 요소사. 입구·노드 디테일 결정의 참고.
 
-- **Stewart Hicks** — 타이폴로지·단면 논리, 다이어그램 설명.
-- **Show It Better / Upstairs** — 다이어그램·보드 표현.
+## 7. 영상·시각화 채널 (다이어그램·발표 톤 참고)
 
-## 연결 문서
+- **Stewart Hicks** — 타이폴로지·단면 논리, 다이어그램 설명. 발표 톤 참고.
+- **Show It Better / Upstairs** — 다이어그램·보드 표현 톤 참고.
+- **Peter Zumthor 강연 (Brussels, 2010 등)** — 추상적 개념을 감각으로 전달하는 발표 톤. 도면보다 재료·빛·분위기 중심 슬라이드 구성의 레퍼런스.
 
-- 매스 전략: `06_massing.md`
-- Extra Space 정의: `02_extra_space.md`
+## 8. “추상적 건축의 발표 톤” 참고
 
-## 참고만 한 이론 (설계·최종작과 무관)
+두 번째 교수가 “기능이 없는 건축, 추상적 개념을 다루는 건축가들의 프레젠테이션을 보라”고 한 크리틱에 대한 응답으로, 다음 발표 톤을 참고한다.
 
-- 대화로 훑어본 **ANT**(행위자-네트워크), **전체론(Holism)**, **OOO**(사물지향 존재론) 등 — 글·비교용 배경일 뿐, 전시·설계 주장의 근거로 쓰지 않음.
-- 원문: `wiki/sources/conversations/gemini-ANT-OOO.txt`
+- Zumthor / Ando — 슬라이드 한 장에 **빛이 떨어지는 사진 한 장 + 단어 한 줄**.
+- Libeskind — 도면 대신 “Void / Absence / Dislocation” 같은 **단어 조각**을 시각으로 배열.
+- SANAA — 스케일 없는 다이어그램, 빛이 번지는 렌더링으로 “느낌”을 강조.
+- Hiroshi Naito — 풍경 속 건축이 사라지는 장면을 이미지로.
 
-## 감각·현상학 도서 메모 (대화 정리)
+공통점:
+
+| 요소 | 특징 | 목적 |
+|------|------|------|
+| 언어 | 논리적 설명보다 시적 문장 | 개념이 아니라 정서 전달 |
+| 이미지 | 도면보다 빛·재료·감각 중심 | 느낌을 직접 체험하게 |
+| 순서 | 논리적 전개보다 감정의 흐름 | 공간 시퀀스로 감정 유도 |
+| 매체 | 영상·소리·질감 등 감각적 매체 | 추상적 개념을 몸으로 느끼게 |
+
+이 톤은 이 프로젝트의 **전시 텍스트·도면 캡션·발표 슬라이드**의 1차 언어로 채택된다. (관련 응답 가이드: `09_critic_faq.md`)
+
+## 9. 참고만 한 이론 — 설계 결정의 근거로는 쓰지 않음
+
+다음은 글·비교·배경 차원에서만 훑은 이론들이다. 전시·설계의 주장 근거로는 쓰지 않는다.
+
+- **OOO (Object-Oriented Ontology)** — 사물·비인간의 동등성. ANT와 일부 겹치지만 이 프로젝트에서는 ANT만 활용.
+- **전체론(Holism)** — 부분의 합 이상으로서의 전체. 시스템 사고에 가까워 이 프로젝트의 단면 중심 의사결정과는 결이 다름.
+- **Paul Virilio (속도학)** — 환승·이동·속도와 관련해서는 흥미롭지만, 이 프로젝트는 “속도의 비판”보다는 “속도의 일시적 어긋남”을 다룬다. 따라서 직접적 근거로는 사용하지 않음.
+- **감정 조작·AI 통제 서사** — 별도 보류 메모로 분리(`uncertain.md`). 현재 설계 결정에는 반영하지 않음.
+
+## 10. 감각·현상학 도서 메모 (배경 정리)
 
 | 저자 | 책·노트 | 키워드 |
 |------|---------|--------|
 | Juhani Pallasmaa | *The Eyes of the Skin* (『건축과 감각』) | 시각 중심 비판, 다중 감각, 몸 |
-| Christian Norberg-Schulz | *Genius Loci*, *Existence, Space and Architecture* 등 | 장소, 현상학, 실존·거주 |
-| Peter Zumthor | *Thinking Architecture* | 분위기(Atmosphere), 물질성, 빛 |
+| Christian Norberg-Schulz | *Genius Loci*, *Existence, Space and Architecture* | 장소, 현상학, 실존·거주 |
+| Peter Zumthor | *Thinking Architecture*, *Atmospheres* | 분위기, 물질성, 빛 |
 | Steven Holl | 저서·논문 다수 | 현상학적 공간, 빛·시선·움직임 |
-| Louis Kahn | 강연·글 (단일 이론서라기보다는) | 형·빛, 재료의 진실성, 정서적 깊이 |
+| Louis Kahn | 강연·글 | 형·빛, 재료의 진실성, 정서적 깊이 |
 | Tadao Ando | 작품·발언 위주 | 자연·빛, 몸으로 읽는 공간 |
+| Edmund Husserl | 감정 현상학 | 지향성·수동적 감정 |
+| Bruno Latour | *Reassembling the Social* | ANT, 비인간 행위자 |
 
-리베스킨드·시자·니마이어 등은 **이론서보다 작품·드로잉**으로 감각·기억·곡선을 읽는 편이 낫다는 정도만 대화에 있었음.  
-원문: `wiki/sources/conversations/concept and thoery.txt` (파일명 철자 그대로)
+Libeskind·Siza·Niemeyer는 **이론서보다 작품·드로잉**으로 감각·기억·곡선을 읽는 편이 낫다.
+
+## 11. 자주 묻는 질문
+
+**Q. 이론을 너무 많이 들고 다니는 것 아닌가?**  
+이 프로젝트에서 이론은 “인용 카탈로그”가 아니라 **진단의 도구**다. 후설·Pallasmaa·Zumthor·ANT·신경건축학 다섯이 동시에 들어가는 이유는 “감정 회복”이라는 개념을 한 학문만으로는 설명할 수 없기 때문이다. 다섯은 같은 현상을 서로 다른 언어로 검증해 준다.
+
+**Q. 그러면 이론끼리 충돌하지 않는가? (예: 후설의 ‘드러남’ vs ANT의 ‘네트워크 효과’)**  
+충돌하지 않는다. 후설은 **사용자 내부에서 감정이 어떻게 발현되는가**를 설명하고, ANT는 **그 발현이 어떤 외부 네트워크 위에서 일어나는가**를 설명한다. 같은 사건의 두 면이다.
+
+**Q. 발표·전시에서는 어떤 이론을 1순위로 말해야 하나?**  
+1순위는 **사용자 경험 서사**(소멸–재생성–공명)다. 이론은 그 뒤를 받치는 후행 프레임으로 둔다. §1–§2(출발점·현상학 도입)는 발표 **서두**에, §4(후설·ANT 등)는 **한 슬라이드**로 압축한다(`09_critic_faq.md`).
+
+## 연결 문서
+
+- 공간 정의(이론의 적용): `02_extra_space.md`
+- 진단의 적용: `03_site_analysis.md`
+- 매싱(이론이 형태로 옮겨질 때): `06_massing.md`
+- 발표·크리틱 응답: `09_critic_faq.md`
+
+## 출처와 추가 자료
+
+- 「감정의 물성」소설·발제 연결: `wiki/sources/chatgpt/크리틱_피드백_및_설계_방향_대화추출.txt`, `wiki/sources/chatgpt/프로젝트_설명_구조_대화추출.txt`
+- Carroll Izard 감정 중요성·원문: `wiki/sources/chatgpt/아이저드_감정_중요성_대화추출.txt`
+- 세잔–메를로-퐁티 → 건축현상학 도입: `wiki/sources/chatgpt/건축현상학_연결점_찾기_대화추출.txt`
+- 후설 감정 현상학·Pallasmaa·Zumthor·신경건축학의 종합적 활용: `wiki/sources/chatgpt/legacy/감정과_건축_현상학_대화추출.txt`
+- ANT의 감정 정의, 비인간 행위자, 라투르 5줄 요약: `wiki/sources/chatgpt/legacy/감정_정의_ANT_이론_대화추출.txt`
+- 환승센터를 감정 회복 장치로 보는 4가지 근거(imageability·neuroarchitecture·everyday life·현상학): `wiki/sources/chatgpt/legacy/금정역_환승_근거_대화추출.txt`
+- 추상적 건축가들의 발표 톤(Zumthor·Ando·Libeskind·SANAA·Naito 등): `wiki/sources/chatgpt/legacy/추상적_건축_프레젠테이션_대화추출.txt`
+- 건축 현상학·신경건축 자료의 종합적 분석(졸업 프로젝트 진행상황): `wiki/sources/chatgpt/legacy/졸업프로젝트_진행상황_정리_대화추출.txt`

@@ -1,5 +1,6 @@
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 import { embedText } from "@/lib/embeddings";
+import { formatConversationDate } from "@/lib/sourceMeta";
 
 export type RetrievedChunk = {
   id: number;
@@ -247,11 +248,45 @@ export async function twoStageRetrieve(
   };
 }
 
-export function buildContextBlock(chunks: RetrievedChunk[]): string {
+export function buildContextBlock(chunks: RetrievedChunk[], locale: "ko" | "en" = "ko"): string {
   return chunks
     .map((c, i) => {
       const path = c.sectionPath ? `${c.title} / ${c.sectionPath}` : c.title;
-      return `[#${i + 1} source=${c.source} id=${c.id} path="${path}"]\n${c.content}`;
+      const meta = c.metadata ?? {};
+      const dateIso =
+        typeof meta.conversationDate === "string" ? meta.conversationDate : undefined;
+      const dateLine =
+        c.source === "raw" && dateIso
+          ? ` conversation_date="${formatConversationDate(dateIso, locale)}"`
+          : "";
+      const titleHint =
+        c.source === "raw" && typeof meta.conversationTitle === "string"
+          ? ` conversation_title="${meta.conversationTitle}"`
+          : "";
+      return `[#${i + 1} source=${c.source} id=${c.id} path="${path}"${dateLine}${titleHint}]\n${c.content}`;
     })
     .join("\n\n---\n\n");
+}
+
+/** 원문(raw) 근거를 쓸 때 답변에 대화 시점을 밝히도록 하는 시스템 지시 */
+export function rawSourceCitationHint(locale: "ko" | "en", usesRaw: boolean): string {
+  if (!usesRaw) return "";
+  if (locale === "en") {
+    return [
+      "CONTEXT includes source=raw excerpts (original chat logs).",
+      "RULE: Every sentence or paragraph that draws on a raw excerpt MUST cite that excerpt's conversation_date in natural prose (e.g. \"According to the March 17, 2026 chat log, …\" or \"In the April 6, 2026 conversation, …\").",
+      "If multiple raw excerpts with different dates back the same point, mention each date you used.",
+      "If a raw excerpt has no conversation_date, write \"in an earlier conversation\" (or the conversation_title if present) instead.",
+      "Sentences grounded only in source=wiki excerpts do not need a date.",
+      "Still avoid citation numbers, bullet source lists, #n markers, and meta field names like conversation_date in the answer.",
+    ].join(" ");
+  }
+  return [
+    "CONTEXT에는 source=raw(원문 대화 로그) 발췌가 포함되어 있습니다.",
+    "규칙: raw 발췌에 근거한 모든 문장/문단에는 해당 발췌의 conversation_date를 반드시 자연스러운 문장으로 인용하세요. 예) 「2026년 3월 17일 대화 기록에 따르면 …」, 「4월 6일 대화에서는 …」.",
+    "서로 다른 날짜의 raw 발췌를 함께 인용했다면, 사용한 날짜를 각각 함께 언급하세요.",
+    "conversation_date가 없는 raw 발췌라면 「이전 대화 기록에 따르면」 또는 conversation_title을 자연스럽게 풀어 쓰세요.",
+    "source=wiki(정리 위키)에만 근거한 문장에는 날짜를 붙이지 않아도 됩니다.",
+    "출처 번호, 근거 목록, #n 표기, conversation_date 같은 메타 필드명은 답변에 그대로 노출하지 마세요.",
+  ].join(" ");
 }

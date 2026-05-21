@@ -5,6 +5,7 @@ import { getSupabaseAdmin } from "../src/lib/supabaseAdmin";
 import { embedTexts } from "../src/lib/embeddings";
 import { chunkByParagraphs } from "../src/lib/chunk";
 import { lightScrubPII } from "../src/lib/pii";
+import { parseConversationHeader } from "../src/lib/sourceMeta";
 import { walkTextFiles } from "./walkSourceFiles";
 
 loadEnv();
@@ -26,20 +27,28 @@ async function main() {
     const withoutExt = rel.replace(/\.[^.]+$/, "");
     const docId = `raw:${withoutExt.replace(/^wiki\/sources\//, "sources/")}`;
     const rawText = lightScrubPII(await readFile(abs, "utf8"));
+    const header = parseConversationHeader(rawText);
     const chunks = chunkByParagraphs(rawText, { maxChars: MAX_CHARS, overlapChars: OVERLAP });
     if (!chunks.length) continue;
     const { error: delErr } = await supabase.from("raw_chunks").delete().eq("doc_id", docId);
     if (delErr) throw delErr;
     const embeddings = await embedTexts(chunks);
     const baseName = abs.split(/[/\\]/).pop() ?? docId;
+    const displayTitle = header.title ?? baseName.replace(/\.[^.]+$/, "");
     const rows = chunks.map((content, i) => ({
       doc_id: docId,
-      title: baseName,
+      title: displayTitle,
       section_path: `segment-${i + 1}`,
       content,
       tags: [] as string[],
       lang: "ko",
-      metadata: { path: rel, chunkIndex: i, layer: "sources" },
+      metadata: {
+        path: rel,
+        chunkIndex: i,
+        layer: "sources",
+        ...(header.createdAt ? { conversationDate: header.createdAt } : {}),
+        ...(header.title ? { conversationTitle: header.title } : {}),
+      },
       embedding: embeddings[i]!,
     }));
     const { error } = await supabase.from("raw_chunks").insert(rows);

@@ -1,0 +1,596 @@
+================================================================================
+제목: 3rd review 발표 목차
+생성 시각: 2025-12-03 16:53:50 KST
+================================================================================
+
+[사용자]
+[이미지 첨부]
+
+이번에 3차마감때 들어갈 내용들이야
+참고해서 발표자료 목차 영어로 작성해줘
+크게 site analysis와 mass 이렇게 두개로 나눠서 세부내용 만들어봐
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아, 너가 정리한 매스 형성 논리를 그대로 반영해서, **3차 마감 발표용 목차(영문)**을 **Site Analysis**와 **Mass Strategy** 두 축으로 깔끔하게 구성해줄게.   
+(교수님들이 원하는 “논리적 흐름 → 근거 → 설계 전략” 3단계를 자연스럽게 타도록 구성함)
+
+---
+
+# **📌 3rd Review Presentation Outline (English Version)**  
+*(Site Analysis + Mass Strategy 중심)*
+
+---
+
+# **I. SITE ANALYSIS**
+
+## **1. Regional Context: Gunpo & Sanbon**
+- **Urban Positioning of Gunpo City**  
+  - Relationship with surrounding cities  
+  - Commuter dynamics toward Seoul  
+  - Role as a *bedroom town*  
+- **Formation of Sanbon New Town**  
+  - Population distribution & demographic shifts  
+  - Topography & road network  
+  - Birth of Sanbon commercial district around the stream  
+- **Urban Problems Identified**  
+  - Functional imbalance in building uses  
+  - Lack of public facilities / weak cultural infrastructure  
+  - Possible demographic vulnerabilities (e.g., aging, foreign population clusters)  
+- **Why Intervention Is Needed** *(→ 교수님이 강조한 부분)*  
+  - How these urban conditions justify a new emotional-urban anchor  
+  - Need for an alternative spatial typology around Geumjeong Station  
+
+---
+
+## **2. Local Context: Geumjeong Station**
+- **Definition of Major Circulation Systems**  
+  - Pedestrian flows  
+  - Subway (Line 1/4)  
+  - GTX connection (future)  
+  - Bus transfers  
+- **Flow-Based User Analysis**  
+  - Daily ridership numbers (by line & exit)  
+  - Peak-hour distribution  
+  - User behavior patterns (pass-through vs. stay)  
+- **Existing Station Envelope Study**  
+  - Original structural form  
+  - Sectional characteristics  
+  - Sunlight, visibility, height constraints  
+- **Site Issues & Potentials**  
+  - Where emotion is "muted" → the *erased* qualities of the current station  
+  - Surrounding programs: What’s lacking? What’s over-saturated?  
+
+---
+
+## **3. Synthesized Diagram Set**
+- **Topographic / Flow / Program Mapping**  
+- **Access & Exit Prioritization**  
+- **Emotional Landscape Diagram**  
+  - *Where emotions diminish* vs. *Where emotions regenerate*  
+- **Opportunity Zones for New Extra-Spaces**  
+  - Spatial voids  
+  - Transitional gaps  
+  - Latent pedestrian anchor points  
+
+---
+
+# **II. MASS STRATEGY**
+
+## **4. Massing Logic**
+- **1) Origination: Circulation-Based Forming**  
+  - Mass shaped by pedestrian vectors  
+  - Station–GTX axis as primary generating line  
+  - Integration with existing station concourse  
+- **2) Sectional Transformation**  
+  - Mass as a vertical sequence:  
+    - *Dissolution → Regeneration → Resonance*  
+  - Use of sectional voids & plate insertions  
+- **3) Spatial Typologies for Extra-Space**  
+  - Spaces shaped *not by function*, but by *emotional intention*  
+  - Return-worthy atmospheres  
+  - Sensory-based spatial envelopes (light, material, sound)  
+
+---
+
+## **5. Mass Plan & Section Development**
+- **Plan Generation**  
+  - Vectors merging at key emotional nodes  
+  - Program plates inserted into circulation seams  
+- **Sectional Strategy**  
+  - Light-capture geometries (north-facing apertures, mountain-oriented gills)  
+  - Height variation responding to user speed  
+- **Three Mass Types (Based on your previous naming)**  
+  - **Void-Type (비움)**: Opening space between buildings  
+  - **Insert-Type (끼움)**: Inserted plates forming community decks  
+  - **Vertical Merge-Type**: Two buildings joined vertically forming emotional core  
+
+---
+
+## **6. Emotional "Extra Space" as Design Driver**
+- **Concept Definition**  
+  - A space people *want to return to*, despite being a transit place  
+  - Emotional regulation through sensory design  
+- **Atmospheric Tools**  
+  - Light gradients  
+  - Material tactility  
+  - Sound & openness  
+  - Shadow architecture (Pallasmaa influence)  
+- **How Mass Strategy Delivers These Spaces**  
+  - Where emotional resonance is maximized  
+  - How the mass creates new “everyday rituals”  
+
+---
+
+## **7. Closing: Why This Proposal Matters**
+- **Urban**: Restoring the broken pedestrian ecology of Gunpo-Sanbon  
+- **Architectural**: Reintroducing emotional agency into infrastructure  
+- **Social**: Providing daily regenerative spaces in a commuter city  
+- **Phenomenological**: Designing for lived experience, not just movement  
+
+---
+
+# ✔️ 이 목차의 특징
+- “원경 → 근경 → 건물 → 감정” 흐름을 그대로 따라감  
+- 교수님이 말한 **형상과 동선의 필연성**이 완전히 녹아있음  
+- “왜 필요한가?”에 대한 질문에 초점  
+- 네 프로젝트의 핵심 테마인 **Extra Space**와 **Emotional Sequence**가 중심축으로 등장함  
+
+---
+
+원하면 **각 목차별 1–2 슬라이드씩 상세 구성도** 만들어줄게.  
+혹은 **한글 버전**도 바로 만들어줄까?
+
+--------------------------------------------------------------------------------
+
+[사용자]
+원경 근경에서 분석하는 대지조사를 영ㅇ어로 보통 어떻게 나눠?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+건축·도시 설계에서 **원경 / 중경 / 근경**을 영어로 표현할 때는 보통 아래 세 가지 체계를 사용해.  
+(국제 스튜디오, 실제 설계보고서, 경쟁안 모두 공통적으로 쓰는 용어들)
+
+---
+
+# ✅ **1) 가장 표준적인 구분 (건축·도시계획 분야에서 가장 많이 씀)**  
+### **Macro / Meso / Micro Scale Analysis**
+
+| 한국어 | 영어 | 설명 |
+|-------|--------|-------|
+| **원경** | **Macro-scale Analysis** | 도시권, 주변 도시와의 관계, 광역 교통망, 인구구조 등 |
+| **중경** | **Meso-scale Analysis** | 주변 블록, 상권, 도로망, 지구 조닝, 주요 보행 흐름 |
+| **근경** | **Micro-scale Analysis** | 대지 자체, 경사, 일조, 출입구, 프로그램 흐름, 이용자 움직임 |
+
+→ **가장 universally accepted** 되고 심사위원/교수 모두 바로 이해하는 용어.
+
+---
+
+# ✅ **2) 도시디자인 쪽에서 자주 쓰는 구분 (Context–Neighborhood–Site)**
+
+| 한국어 | 영어 | 설명 |
+|-------|--------|-------|
+| 원경 | **Context Analysis** | 도시 레벨 전체의 맥락: 기능, 도시조직, 교통, 인구 |
+| 중경 | **Neighborhood Analysis** | 금정역 주변 보행로, 근린 상권, 블록 구조 |
+| 근경 | **Site Analysis** | 대지 레벨의 물리적 특성, 출입구, 레벨, 시각축 |
+
+→ 도시문제를 강조할 때 유리.
+
+---
+
+# ✅ **3) 건축 스튜디오에서 자주 쓰는 직관적 모델 (Regional / Urban / Site)**
+
+| 한국어 | 영어 | 설명 |
+|-------|--------|-------|
+| 원경 | **Regional Scale** | 광역 도시권 분석, 서울–군포 관계, 통근 패턴 |
+| 중경 | **Urban Scale** | 산본 상권, 금정역 광장, 블록 패턴, 환승 구조 |
+| 근경 | **Site Scale** | 대지 레벨의 물리/감성분석, 동선, 소음, 감정밀도 |
+
+→ 발표 때 지도나 다이어그램 레이어 구분할 때 깔끔하게 보임.
+
+---
+
+# ⭐ 너 프로젝트에 가장 적합한 구분 추천
+
+지금 너 작업이 **도시조직 → 금정역 동선 → Extra Space 공간구조**로 내려오는 흐름이니까,  
+아래 구분이 **가장 설득력 있고 자연스럽게 연결돼**:
+
+# 👉 **Macro (City) / Meso (Station Area) / Micro (Site & User Flow)**
+
+이렇게 쓰면 교수님이 요구한 “원경–근경의 논리적 레이어링”도 깔끔하게 들어가.
+
+---
+
+원하면  
+🔸 각 Scale마다 들어갈 **다이어그램 리스트**  
+🔸 발표 슬라이드 제목/문구  
+🔸 3차 마감용 영어 문장까지  
+전부 만들어줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+군포시가 서울의존적, 안양의존적이라는 사실을 어떻게 표현할까?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+아주 중요한 포인트야.  
+“군포시가 서울·안양에 의존적이다”는 사실은 **단순한 문장**이 아니라,  
+**도시 구조의 근본적 문제**를 보여주는 *데이터 기반 내러티브*로 표현해야 설득력이 생겨.  
+
+아래는 실제 도시계획 보고서·학술논문·국제 공모전에서 쓰는 방식 그대로 정리한 **표현 프레임 + 다이어그램 아이디어**야.
+
+---
+
+# ✅ 1) **용어 선택부터 정확히 해야 함**  
+군포시(특히 금정·산본)는 ‘침상도시(Bedroom Town)’이자 ‘종속적 통근도시(Commute-dependent City)’로 분류할 수 있어.
+
+영어 표현은 다음 중 선택:
+
+### **· Commuter-dependent city**  
+### **· Bedroom town / bedroom community**  
+### **· Functionally dependent on Seoul / Anyang**  
+### **· A satellite city with limited economic autonomy**  
+
+예시 문장:  
+> **Gunpo functions as a commuter-dependent satellite city, relying heavily on Seoul and Anyang for employment, culture, and major services.**
+
+---
+
+# ✅ 2) **핵심 논리 구조 (3-Step Narrative)**
+
+### **Step 1. 인구 흐름으로 의존성 설명**  
+- 서울·안양으로의 통근/통학 비율  
+- 군포 내부 고용률 vs 외부 고용률  
+- 출퇴근 시간대 인구유출이 높은 도시 = 기능적 종속
+
+표현 예시:  
+> **A significant portion of Gunpo’s population leaves the city every morning, indicating a structural dependence on neighboring metropolitan cores.**
+
+---
+
+### **Step 2. 산업·상업 기능 부재를 통계적으로 표현**  
+- 군포 내 일자리 대비 거주자 수 불일치  
+- 상업·문화시설이 대도시에 비해 약함  
+- 서비스·문화·행정 기능의 외부 의존
+
+표현 예시:  
+> **The city lacks high-level commercial and cultural infrastructure, forcing residents to rely on Seoul and Anyang for key amenities.**
+
+---
+
+### **Step 3. 도시조직 자체가 ‘연결 거점’ 중심으로 설계됨을 지적**  
+- 금정역/산본역이 도시생활의 거의 모든 중심을 대체  
+- 직주근접이 아닌 ‘직주분리형’ 도시  
+- 철도 중심의 일방향 흐름 → 자족성이 낮음
+
+표현 예시:  
+> **Gunpo’s urban structure prioritizes outbound connectivity rather than internal vitality, reinforcing its role as a passage rather than a destination.**
+
+---
+
+# ✅ 3) **설득력 있는 다이어그램 표현 방법 5가지**
+
+### **① 인구 이동 Sankey Diagram (가장 직관적)**
+- 군포 → 서울 / 안양으로 굵은 흐름  
+- 서울·안양 → 군포는 얇은 흐름  
+→ **일방향 의존성 시각화**
+
+문구:  
+> **Unbalanced commuter flows reveal Gunpo’s structural dependency.**
+
+---
+
+### **② Time–Population Graph (출근이면 텅 비는 도시)**  
+- 오전 7–9시: 인구 대량 유출  
+- 오후 6–8시: 인구 급반입  
+→ 침상도시 패턴 강조
+
+문구:  
+> **Gunpo empties out during the day, demonstrating its role as a bedroom town.**
+
+---
+
+### **③ Economic Activity Map (일자리 vs 거주지)**  
+- 군포 일자리 수↓  
+- 서울/안양 일자리 수↑  
+→ 색 대비로 표현
+
+문구:  
+> **A mismatch between population and employment leads to external economic reliance.**
+
+---
+
+### **④ Transit Dependency Map (철도 중심 도시)**  
+- “도시의 구조 = 철로를 따라 외부로 향하는 구조”  
+- 금정역이 도시 내부보다 외부 연결을 강화하는 역할
+
+문구:  
+> **A rail-oriented city structure channels daily flows outward, not inward.**
+
+---
+
+### **⑤ Urban Feature Comparison (군포 vs 서울/안양)**  
+항목 비교표  
+- 문화시설 수  
+- 상업시설 규모  
+- 고용밀도  
+- 유입 관광/이용객
+
+문구:  
+> **Gunpo’s urban services remain secondary, reinforcing a dependent relationship with nearby cities.**
+
+---
+
+# ✅ 4) 발표용 최종 문장 패키지 (그대로 슬라이드에 넣어도 됨)
+
+### **한 문장 버전**
+> **Gunpo is a commuter-dependent satellite city whose daily life, employment, and culture rely heavily on Seoul and Anyang.**
+
+### **두 문장 버전**
+> **Gunpo lacks sufficient employment and cultural infrastructure, causing a large portion of its population to commute outward every day.  
+> The city’s structure reinforces this dependency, functioning more as a passage than a destination.**
+
+### **강한 크리틱 버전**
+> **Gunpo’s identity has long been defined by what it connects to, not what it contains.  
+> This structural dependency has produced an emotionally muted urban condition — especially around Geumjeong Station.**
+
+---
+
+# 👉 너 프로젝트에선 이렇게 연결하면 완벽해
+**“의존적 도시 구조 → 금정역의 무감각함 → Extra Space 필요성”**
+
+즉,
+**군포의 의존성은 금정역이 ‘지나가는 곳’이 된 원인 →  
+그러므로 금정역 주변에 ‘머물고 싶은 감정적 공간’이 필요하다.**
+
+이 연결 논리는 교수님들이 정말 좋아하는 구조야.
+
+---
+
+원하면 지금 내용 바탕으로 **사이트 분석 슬라이드 3장짜리 세트** 바로 만들어줄까?
+
+--------------------------------------------------------------------------------
+
+[사용자]
+매크로 메소 마이크로 형식으로 가져가려면, 녹지 축은 언제 설명하면 될까?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋은 질문이다.  
+**녹지 축(Green Axis)**은 “원경–근경” 단계 어디에 넣느냐에 따라 **프로젝트의 서사가 완전히 달라진다.**  
+너 프로젝트의 구조(도시의 단절 → 금정역의 무감각 → Extra Space 필요성)를 감안하면, **녹지 축은 ‘메소(Meso)’에서 설명하는 것이 가장 효과적**이야.
+
+왜 그런지 단계별로 정확하게 설명해줄게.
+
+---
+
+# ✅ **1. Macro / Meso / Micro에 따른 녹지 축의 적절한 위치**
+
+## **📌 Macro Scale (도시·권역)**  
+- 서울–안양–군포의 광역 흐름  
+- 통근 패턴  
+- 도시 간 의존성  
+- 광역 교통 축(Line 1/4, GTX)
+
+👉 이 단계에서는 녹지 축을 넣기엔 너무 작고 지역적이야.  
+**Macro는 경제·교통·권역적 구조를 다루는 단계.**
+
+---
+
+## **📌 Meso Scale (도시 조직 / 금정역–산본 일대)**  
+→ **녹지 축은 여기서 설명하는 것이 베스트.**
+
+이유는 다음과 같아:
+
+### ✔ 녹지 축은 ‘도시적 조직의 뼈대’에 해당한다  
+- 산본천(복개 구간 포함)  
+- 산본 중심 상권과 녹지 흐름  
+- 도시 내부의 자연축이 어떻게 단절되었는지  
+- 금정역에서 녹지 축이 끊기면서 ‘도시적 감정’이 소멸되는 지점  
+- 그 단절이 너의 “Extra Space” 전략의 기반이 됨  
+
+즉, **녹지 축은 도시의 중간 스케일에서 작동하는 구조적 요소**이기 때문에 Meso에 들어간다.
+
+### ✔ 특히 너 프로젝트에서 녹지 축은 “단절–연결”의 핵심 근거  
+- Macro: 군포–안양–서울 관계  
+- **Meso: 산본–금정 간 단절된 녹지 흐름 → 핵심 문제 제기**  
+- Micro: 그 단절을 건축 매스로 어떻게 재해석할 것인가  
+
+> 즉, Meso에서 문제를 던지고 → Micro에서 해법을 제시하는 구조가 가장 논리적.
+
+---
+
+## **📌 Micro Scale (대지 / 출입구 / 동선 / 매스)**  
+Micro에서는 녹지 축이 아니라 **“녹지 축이 건물 내부에서 감정·공간으로 어떻게 변환되는가”**를 설명해야 한다.
+
+예시:
+- 녹지의 흐름을 “빛의 흐름”으로 재해석  
+- 복개된 하천이 건축 단면 속에서 “공명 공간”으로 재구성  
+- 자연 축이 건물 내부 Extra Space의 감정적 시퀀스로 번역됨  
+
+즉, Micro에서는 녹지축 자체가 아니라 **녹지축 → 감정공간으로의 변환**을 설명하는 단계.
+
+---
+
+# ✅ **정리: 녹지 축은 Meso에 넣어야 논리적·서사적으로 가장 강하다**
+
+### **MACRO**  
+도시 구조 · 교통 · 인구 · 의존성 설명
+
+### **MESO (녹지 축 설명 위치)**  
+- 산본천–금정 축  
+- 녹지 단절  
+- 도시적 흐름의 불연속  
+- 금정역이 왜 “감정이 소멸되는 지점”이 되었는가
+
+### **MICRO**  
+녹지 축의 단절을  
+→ 매스  
+→ 단면  
+→ 동선  
+→ Extra Space로  
+어떻게 재구성하는가 설명
+
+---
+
+# ⭐ PPT에서 실제로 이렇게 배치하는 걸 추천해
+
+## **Slide 1 — Macro: Regional Dynamics**  
+(서울–안양–군포, 통근 패턴, 철도축)
+
+## **Slide 2 — Meso: Urban Structure & Green Axis**  
+- 산본천 & 녹지 흐름 지도  
+- 단절 지점(금정역) 표시  
+- “도시의 감정이 끊기는 지점”이라는 메시지
+
+## **Slide 3 — Micro: Site & Emotional Reinterpretation**  
+- 녹지축이 건물 내부 시퀀스로 변환되는 다이어그램  
+- Extra Space 전략 연결  
+
+---
+
+필요하면 **각 슬라이드 다이어그램 초안** 바로 그려줄게.
+
+--------------------------------------------------------------------------------
+
+[사용자]
+마이크로 스케일에서는 뭘 넣어야 하지,,?
+
+--------------------------------------------------------------------------------
+
+[Assistant]
+좋아, **Micro Scale(근경 분석)**은 대부분의 학생들이 애매하게 넘어가지만, 실제로 **가장 설득력을 만들어주는 핵심 단계**야.  
+특히 너 프로젝트는 “감정 시퀀스(소멸–재생성–공명)”과 “Extra Space”가 중요하니까, Micro 단계에서 그 **근거와 충분 조건**을 명확히 보여줘야 해.
+
+아래 내용 그대로 구성하면, Micro 슬라이드는 교수님들에게 **“아 이 설계는 그냥 감성적인 게 아니라, 실제 대지 분석 기반으로 나온 매스구나”** 라는 확신을 줄 수 있어.
+
+---
+
+# ✅ **💡 Micro Scale에서 반드시 다루어야 할 6가지 요소**
+
+---
+
+# **1) Site Boundaries & Physical Constraints (대지 경계 + 물리적 제약)**
+- 대지 경계, 레벨 차, 경사  
+- 도로와의 레벨 관계  
+- 소음, 진동(철도 위 구조물이므로 중요)  
+- 일조/차광 조건  
+
+👉 이건 **왜 특정 형상이 나올 수밖에 없는가**의 기초 조건.
+
+---
+
+# **2) Pedestrian Flow & Desire Lines (보행 흐름 + 최단 동선 분석)**  
+이 부분이 너 프로젝트에서 매우 중요해.
+
+- 금정역 기존 출입구들의 실제 보행 패턴  
+- 지하철/버스/보행이 만나는 지점  
+- Desire line 분석 → 사람들이 자연스럽게 걷는 선  
+- 속도 차이(환승 vs 머무는 사람)
+
+👉 **매스를 보행 흐름에 맞춰 조각해야 한다는 근거**가 Micro에 있어야 한다.
+
+---
+
+# **3) Entrance Strategy (출입구 전략)**  
+교수님이 “출입구와 동선이 먼저다”라고 했지? → 바로 여기서 해결.
+
+- 어떤 출입구를 **주출입** / **부출입**으로 설정하는가  
+- 접근 동선별로 어떤 감정 시퀀스를 제공할 것인가  
+- 주출입구 = ‘소멸 → 재생성’ 시퀀스의 시작점이 되는 이유
+
+👉 출입구 위치는 Micro 스케일에서 가장 중요한 분석요소.
+
+---
+
+# **4) Light & View Axes (빛, 조망 축 분석)**  
+특히 **너의 Extra space 개념**과 연결됨.
+
+- 북향에서 들어오는 빛 (수리산 방향의 빛 축)  
+- 금정역에서 “막혀 있는 시선”을 어떻게 열어줄 것인가?  
+- 지하/반지하일 경우, 빛을 끌어오는 section logic  
+- 복개하천 방향으로 열리는 틈(틈새 공간)
+
+👉 *“빛의 축이 감정의 축이 된다”*는 논리를 강조할 수 있어.
+
+---
+
+# **5) Program Touch Points (프로그램이 대지와 접촉하는 방식)**  
+Micro는 프로그램을 확정하는 게 아니라  
+“**프로그램이 놓일 수밖에 없는 조건**”을 설명하는 단계야.
+
+- 사람들이 오래 머무르는 지점: bench point, pause point  
+- 자연스럽게 커뮤니티가 생기는 nodes  
+- 속도 변화가 일어나는 공간  
+- 감정이 회복되는 ‘여유–틈’이 필요한 spot
+
+👉 여기에 Extra Space가 생기는 이유가 자연스럽게 연결됨.
+
+---
+
+# **6) Emotional Landscape (감정 지도 – 너 프로젝트만의 스페셜)**  
+너 프로젝트의 핵심 차별점.
+
+- 사람들이 감정적으로 무감각해지는 구간 (특히 환승구간)  
+- 스트레스 레벨이 높은 지점  
+- 잠시 쉬고 싶은데 공간이 없는 지점  
+- 빛, 소음, 밀도의 변화에 따라 감정이 크게 흔들리는 곳
+
+👉 이 분석이 있어야만 “왜 이 자리에서 감정 공간을 만드는지”가 납득됨.
+
+---
+
+# 🔥 **정리하면 Micro Scale에서 해야 할 말은 이거야**:
+
+> **“이 대지의 물리·심리 조건을 보면, 특정 위치에서 공간이 필요하고, 그 공간은 감정 시퀀스와 연결될 수밖에 없다.”**
+
+---
+
+# 📌 **Micro Scale PPT Slide 구성 예시 (너 프로젝트 기준)**
+
+---
+
+### **Slide 1. Site Conditions & Constraints**  
+- 레벨, 소음, 빛, 경계  
+- 단면 스케치 2–3개
+
+### **Slide 2. Pedestrian Flow & Entrance Strategy**  
+- 보행 패턴 heatmap  
+- desire line  
+- 출입구 hierarchy
+
+### **Slide 3. Light–View Axes & Emotional Nodes**  
+- 빛 축, 조망 축  
+- 감정 변화 지점  
+- Extra Space 후보 노드
+
+### **Slide 4. Micro → Mass Logic**  
+- 위 분석이 어떻게 매스 변형으로 이어지는가  
+- 소멸–재생성–공명 시퀀스가 대지 분석에서 어떻게 태어났는가
+
+---
+
+# ⭐ 너 프로젝트에 가장 최적화된 Micro Scale 내러티브
+네 설계 개념과 정확히 연결시키면 이렇게 말할 수 있어:
+
+> **금정역 부근의 미세한 레벨 차, 보행 흐름의 단절, 빛의 부족, 소음의 집중 등  
+대지의 미시적 조건들이 ‘감정의 소멸’을 유발하고 있었다.**  
+> **따라서 Micro 분석은 자연스럽게  
+‘Extra Space’를 어디에 어떻게 배치해야 하는지를 결정하게 만들었다.**
+
+이렇게 말하면 정말 강력하다.
+
+---
+
+원하면 위 Micro 내용을 기반으로  
+✔ **실제 슬라이드 레이아웃**  
+✔ **다이어그램 구성**  
+✔ **표현 문장(영어/한국어)**  
+바로 만들어줄게.
+
+--------------------------------------------------------------------------------

@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { createDataStreamResponse, streamText, type CoreMessage } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { z } from "zod";
-import { twoStageRetrieve, buildContextBlock } from "@/lib/rag";
+import { twoStageRetrieve, buildContextBlock, rawSourceCitationHint } from "@/lib/rag";
 import { rateLimitOrThrow } from "@/lib/rateLimit";
 import { faqCacheGet, faqCacheSet } from "@/lib/faqCache";
 import { tryStaticFaqMatch } from "@/lib/staticFaq";
@@ -358,7 +358,9 @@ async function handleChatPost(req: NextRequest): Promise<Response> {
             ? []
             : rawChunks;
       const contextChunks = [...usedWiki, ...usedRaw];
-      const context = buildContextBlock(contextChunks);
+      const usesRaw = usedRaw.length > 0;
+      const context = buildContextBlock(contextChunks, locale);
+      const rawHint = rawSourceCitationHint(locale, usesRaw);
 
       const systemContent =
         locale === "en"
@@ -367,18 +369,24 @@ async function handleChatPost(req: NextRequest): Promise<Response> {
               "CONTEXT may be in Korean (curated wiki and raw logs). The visitor may write in Korean.",
               "Answer in clear, natural English only, strictly grounded in CONTEXT. Do not invent facts.",
               "Do not include citation numbers, 'Sources:' lists, #n markers, or wiki/raw meta labels in the answer. Use natural sentences only.",
+              rawHint,
               "",
               "CONTEXT:",
               context,
-            ].join("\n")
+            ]
+              .filter(Boolean)
+              .join("\n")
           : [
               "당신은 졸업전시 안내 도우미입니다.",
               "반드시 CONTEXT에 근거해 한국어로 답하세요. CONTEXT에 없는 사실은 만들지 마세요.",
               "답변 본문에 출처 번호, '근거:' 목록, #n 표기, wiki/raw 같은 메타 표기를 넣지 마세요. 자연스러운 문장만 사용하세요.",
+              rawHint,
               "",
               "CONTEXT:",
               context,
-            ].join("\n");
+            ]
+              .filter(Boolean)
+              .join("\n");
 
       const coreMessages: CoreMessage[] = [
         { role: "system", content: systemContent },
