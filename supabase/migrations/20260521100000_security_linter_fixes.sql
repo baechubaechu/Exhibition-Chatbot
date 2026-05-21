@@ -1,65 +1,23 @@
--- pgvector + 전시용 RAG 스키마
--- Supabase 대시보드 → SQL Editor에서 이 파일 전체를 붙여넣고 Run 해도 됩니다(Migration과 동일, idempotent).
--- 임베딩: text-embedding-3-small 기본 차원 1536
+-- Supabase Database Linter: security hardening
+-- Run in SQL Editor on the live project (idempotent).
 
+-- 1) pgvector: move extension out of public (if still in public)
 create schema if not exists extensions;
-create extension if not exists vector with schema extensions;
 
-create table if not exists public.wiki_chunks (
-  id bigserial primary key,
-  doc_id text not null,
-  title text not null,
-  section_path text,
-  content text not null,
-  tags text[] default '{}',
-  lang text default 'ko',
-  metadata jsonb default '{}'::jsonb,
-  embedding extensions.vector(1536) not null,
-  created_at timestamptz not null default now()
-);
+do $$
+begin
+  if exists (
+    select 1
+    from pg_extension e
+    join pg_namespace n on n.oid = e.extnamespace
+    where e.extname = 'vector'
+      and n.nspname = 'public'
+  ) then
+    alter extension vector set schema extensions;
+  end if;
+end $$;
 
-create table if not exists public.raw_chunks (
-  id bigserial primary key,
-  doc_id text not null,
-  title text,
-  section_path text,
-  content text not null,
-  tags text[] default '{}',
-  lang text default 'ko',
-  metadata jsonb default '{}'::jsonb,
-  embedding extensions.vector(1536) not null,
-  created_at timestamptz not null default now()
-);
-
-create index if not exists wiki_chunks_embedding_idx
-  on public.wiki_chunks using hnsw (embedding vector_cosine_ops);
-
-create index if not exists raw_chunks_embedding_idx
-  on public.raw_chunks using hnsw (embedding vector_cosine_ops);
-
-create index if not exists wiki_chunks_doc_id_idx on public.wiki_chunks (doc_id);
-create index if not exists raw_chunks_doc_id_idx on public.raw_chunks (doc_id);
-
-create table if not exists public.chat_turns (
-  id uuid primary key default gen_random_uuid(),
-  created_at timestamptz not null default now(),
-  exhibition_day date not null,
-  session_id text not null,
-  user_message text not null,
-  assistant_message text not null default '',
-  outcome text not null check (outcome in ('answered', 'refused', 'low_confidence')),
-  gap_candidate boolean not null default false,
-  retrieval_debug jsonb not null default '{}'::jsonb,
-  review_status text not null default 'pending' check (review_status in ('pending', 'resolved')),
-  notes text
-);
-
-create index if not exists chat_turns_day_review_idx
-  on public.chat_turns (exhibition_day, review_status);
-create index if not exists chat_turns_gap_idx
-  on public.chat_turns (gap_candidate, exhibition_day);
-
--- 코사인 거리: 유사도 ≈ 1 - (embedding <=> query_embedding)
+-- 2) RPC: fixed search_path (mutable search_path linter)
 create or replace function public.match_wiki_chunks (
   query_embedding extensions.vector(1536),
   match_threshold float,
@@ -126,25 +84,44 @@ as $$
   limit greatest(match_count, 1);
 $$;
 
-comment on table public.wiki_chunks is '전시용 정리 위키 청크 (1차 검색)';
-comment on table public.raw_chunks is '대화 원문 전처리 청크 (2차 검색)';
-comment on table public.chat_turns is '질의 로그 및 일일 gap 후보';
-
--- Data API grants (see also 20260521100000_security_linter_fixes.sql on existing DBs)
+-- 3) Data API grants — service_role only (replaces 20260521000000_data_api_grants.sql)
 grant select, insert, update, delete on table public.wiki_chunks to service_role;
 grant select, insert, update, delete on table public.raw_chunks to service_role;
 grant select, insert, update, delete on table public.chat_turns to service_role;
 revoke all on table public.wiki_chunks from anon, authenticated;
 revoke all on table public.raw_chunks from anon, authenticated;
 revoke all on table public.chat_turns from anon, authenticated;
+
 grant usage, select on sequence public.wiki_chunks_id_seq to service_role;
 grant usage, select on sequence public.raw_chunks_id_seq to service_role;
 revoke all on sequence public.wiki_chunks_id_seq from anon, authenticated;
 revoke all on sequence public.raw_chunks_id_seq from anon, authenticated;
+
 grant execute on function public.match_wiki_chunks(extensions.vector, double precision, integer) to service_role;
 grant execute on function public.match_raw_chunks(extensions.vector, double precision, integer) to service_role;
 revoke execute on function public.match_wiki_chunks(extensions.vector, double precision, integer) from anon, authenticated, public;
 revoke execute on function public.match_raw_chunks(extensions.vector, double precision, integer) from anon, authenticated, public;
+
 alter table public.wiki_chunks enable row level security;
 alter table public.raw_chunks enable row level security;
 alter table public.chat_turns enable row level security;
+
+-- 4) Supabase platform helper: not used by this app — block Data API callers
+do $$
+declare
+  fn record;
+begin
+  for fn in
+    select p.oid,
+      pg_get_function_identity_arguments(p.oid) as args
+    from pg_proc p
+    join pg_namespace n on n.oid = p.pronamespace
+    where n.nspname = 'public'
+      and p.proname = 'rls_auto_enable'
+  loop
+    execute format(
+      'revoke execute on function public.rls_auto_enable(%s) from public, anon, authenticated',
+      fn.args
+    );
+  end loop;
+end $$;

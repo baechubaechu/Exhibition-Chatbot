@@ -59,10 +59,13 @@ npx vercel --prod # 프로덕션
 Supabase가 `public` 스키마 기본 노출을 없애는 정책에 맞춰, 아래 마이그레이션을 **운영 DB에 한 번** 실행하세요.
 
 1. Supabase 대시보드 → **SQL Editor**
-2. 저장소의 `supabase/migrations/20260521000000_data_api_grants.sql` 내용을 붙여넣고 **Run**
+2. 저장소의 `supabase/migrations/20260521100000_security_linter_fixes.sql` 내용을 붙여넣고 **Run**  
+   (Data API 권한 + Linter 보안 수정을 한 파일에 포함)
 3. (선택) `npx tsx scripts/verify-ingest.ts` 로 ingest·조회가 되는지 확인
 
 `anon` / `authenticated`에는 RAG·채팅 로그 테이블 권한을 주지 않습니다. 브라우저에 `anon` 키를 넣지 마세요.
+
+포함 내용: pgvector → `extensions` 스키마, RPC `search_path` 고정, `service_role` 전용 GRANT·RLS, `rls_auto_enable` 호출 차단.
 
 ## 7. 자주 나는 문제
 
