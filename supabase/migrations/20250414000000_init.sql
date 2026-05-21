@@ -124,3 +124,22 @@ $$;
 comment on table public.wiki_chunks is '전시용 정리 위키 청크 (1차 검색)';
 comment on table public.raw_chunks is '대화 원문 전처리 청크 (2차 검색)';
 comment on table public.chat_turns is '질의 로그 및 일일 gap 후보';
+
+-- Data API grants (see also 20260521000000_data_api_grants.sql)
+grant select, insert, update, delete on table public.wiki_chunks to service_role;
+grant select, insert, update, delete on table public.raw_chunks to service_role;
+grant select, insert, update, delete on table public.chat_turns to service_role;
+revoke all on table public.wiki_chunks from anon, authenticated;
+revoke all on table public.raw_chunks from anon, authenticated;
+revoke all on table public.chat_turns from anon, authenticated;
+grant usage, select on sequence public.wiki_chunks_id_seq to service_role;
+grant usage, select on sequence public.raw_chunks_id_seq to service_role;
+revoke all on sequence public.wiki_chunks_id_seq from anon, authenticated;
+revoke all on sequence public.raw_chunks_id_seq from anon, authenticated;
+grant execute on function public.match_wiki_chunks(vector, double precision, integer) to service_role;
+grant execute on function public.match_raw_chunks(vector, double precision, integer) to service_role;
+revoke execute on function public.match_wiki_chunks(vector, double precision, integer) from anon, authenticated;
+revoke execute on function public.match_raw_chunks(vector, double precision, integer) from anon, authenticated;
+alter table public.wiki_chunks enable row level security;
+alter table public.raw_chunks enable row level security;
+alter table public.chat_turns enable row level security;

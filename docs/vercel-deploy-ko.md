@@ -53,13 +53,24 @@ npx vercel        # 첫 연결·환경 변수 안내
 npx vercel --prod # 프로덕션
 ```
 
-## 6. 자주 나는 문제
+## 6. Supabase Data API 권한 (2026-05 / 2026-10 적용)
+
+이 앱은 **서버에서만** `SUPABASE_SERVICE_ROLE_KEY`로 Data API를 씁니다.  
+Supabase가 `public` 스키마 기본 노출을 없애는 정책에 맞춰, 아래 마이그레이션을 **운영 DB에 한 번** 실행하세요.
+
+1. Supabase 대시보드 → **SQL Editor**
+2. 저장소의 `supabase/migrations/20260521000000_data_api_grants.sql` 내용을 붙여넣고 **Run**
+3. (선택) `npx tsx scripts/verify-ingest.ts` 로 ingest·조회가 되는지 확인
+
+`anon` / `authenticated`에는 RAG·채팅 로그 테이블 권한을 주지 않습니다. 브라우저에 `anon` 키를 넣지 마세요.
+
+## 7. 자주 나는 문제
 
 - **500 / Supabase 오류**: 환경 변수 이름 오타, `service_role` 키가 아닌 `anon` 키를 넣은 경우.
 - **채팅은 되는데 답이 빈약함**: DB에 `wiki_chunks` / `raw_chunks`가 비어 있음 → 로컬에서 `ingest` 후 재시도.
 - **관리자 페이지 401**: `ADMIN_SECRET`이 Vercel에 없거나 다름.
 
-## 7. 전시장에서
+## 8. 전시장에서
 
 - 배포 URL만 크롬 등에 띄우면 되고, **집 PC를 켜 둘 필요는 없습니다.**
 - 안정적으로 쓰려면 Vercel **Pro** 여부·OpenAI **결제 한도**만 전시 전에 한 번 확인하세요.
