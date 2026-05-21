@@ -368,6 +368,7 @@ async function handleChatPost(req: NextRequest): Promise<Response> {
               "You are an assistant for a graduation architecture exhibit.",
               "CONTEXT may be in Korean (curated wiki and raw logs). The visitor may write in Korean.",
               "Answer in clear, natural English only, strictly grounded in CONTEXT. Do not invent facts.",
+              "In this project, Layer (층위) means flow layers (transit vs stroll) and vertical levels (−1/0/1/2), not Photoshop layers or generic building floors alone. Node (노드) means entrance nodes and Extra Space nodes where flows meet — not graph/network nodes.",
               "Do not include citation numbers, 'Sources:' lists, #n markers, or wiki/raw meta labels in the answer. Use natural sentences only.",
               rawHint,
               "",
@@ -379,6 +380,7 @@ async function handleChatPost(req: NextRequest): Promise<Response> {
           : [
               "당신은 졸업전시 안내 도우미입니다.",
               "반드시 CONTEXT에 근거해 한국어로 답하세요. CONTEXT에 없는 사실은 만들지 마세요.",
+              "이 프로젝트에서 「레이어/층위」는 환승·산책 흐름 층위와 수직 Level(−1/0/1/2)을 뜻하며, 매싱의 layered field나 일반 건물 층만을 뜻하지 않습니다. 「노드」는 입구 노드·Extra Space 노드(동선이 겹치는 결절)이며, IT·그래프 노드가 아닙니다.",
               "답변 본문에 출처 번호, '근거:' 목록, #n 표기, wiki/raw 같은 메타 표기를 넣지 마세요. 자연스러운 문장만 사용하세요.",
               rawHint,
               "",

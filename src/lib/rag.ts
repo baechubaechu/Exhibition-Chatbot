@@ -66,6 +66,17 @@ export function augmentQueryForRetrieval(query: string): string {
   if (short && soundsLikeWhatIsThis && !alreadySpecific) {
     return `${t}\n\n## 프로젝트 한 줄 요약\n금정역 일대 extra space 공공공간 전시 개요 졸업설계`;
   }
+
+  const wantsLayer = /레이어|층위|환승\s*동선|산책\s*동선|transit\s*layer|stroll\s*layer/i.test(t);
+  const wantsNode = /노드|입구\s*노드|extra\s*space\s*노드|결절/i.test(t);
+  if (t.length <= 90 && wantsLayer && !/layered\s*field|split.?weave|매싱|마싱/i.test(t)) {
+    const nodeHint = wantsNode ? " 노드 Nodes 입구 노드 Extra Space 노드" : "";
+    return `${t}\n\n층위 Layers 환승 동선 Transit Layer 산책 동선 Stroll Layer 수직 층위 Level 0 1 2${nodeHint}`;
+  }
+  if (t.length <= 90 && wantsNode && !wantsLayer) {
+    return `${t}\n\n노드 Nodes 입구 노드 Extra Space 노드 시야축 Flow Axis`;
+  }
+
   return t;
 }
 
@@ -139,6 +150,39 @@ function applyOverviewIntroBoost(query: string, chunks: RetrievedChunk[]): Retri
     .sort((a, b) => b.similarity - a.similarity);
 }
 
+const LAYER_DOC_ID = "canonical/04_layers";
+const NODE_DOC_ID = "canonical/05_nodes";
+
+/**
+ * 「레이어/층위」가 매싱(layered field)·현장 분석(Sensory Layer) 등과 벡터 혼동되는 경우,
+ * 정리 위키 `04_layers`·`05_nodes` 청크에 가산.
+ */
+function applyTopicDocBoost(query: string, chunks: RetrievedChunk[]): RetrievedChunk[] {
+  const q = query.trim();
+  const wantsLayer =
+    /레이어|층위|환승\s*레이어|산책\s*레이어|수직\s*층|level\s*[-+]?\d|transit\s*layer|stroll\s*layer/i.test(
+      q,
+    ) && !/layered\s*field|split.?weave|매싱|마싱/i.test(q);
+  const wantsNode = /노드|입구\s*노드|extra\s*space\s*노드|결절점/i.test(q);
+  if (!wantsLayer && !wantsNode) return chunks;
+
+  const boost = envNum("WIKI_TOPIC_DOC_BOOST", 0.14);
+
+  return chunks
+    .map((c) => {
+      let add = 0;
+      if (wantsLayer && c.docId === LAYER_DOC_ID) add = boost;
+      if (wantsNode && c.docId === NODE_DOC_ID) add = boost;
+      if (!add) return c;
+      return {
+        ...c,
+        similarity: Math.min(1, c.similarity + add),
+        metadata: { ...c.metadata, topicDocBoost: c.docId },
+      };
+    })
+    .sort((a, b) => b.similarity - a.similarity);
+}
+
 export async function twoStageRetrieve(
   query: string,
   hooks?: TwoStageRetrieveHooks,
@@ -203,7 +247,10 @@ export async function twoStageRetrieve(
     wikiRows = (wRes.data ?? []) as WikiRpcRow[];
   }
 
-  const wikiChunks = applyOverviewIntroBoost(trimmed, rowsToWikiChunks(wikiRows));
+  const wikiChunks = applyTopicDocBoost(
+    trimmed,
+    applyOverviewIntroBoost(trimmed, rowsToWikiChunks(wikiRows)),
+  );
 
   const top1 = wikiChunks[0]?.similarity ?? 0;
   const top2 = wikiChunks[1]?.similarity ?? 0;
@@ -213,8 +260,22 @@ export async function twoStageRetrieve(
   const marginMinEff = sameDocTop2 ? marginMin * 0.55 : marginMin;
   const secondIsNotCompetitive =
     wikiChunks.length < 2 || top2 < wikiThreshold - 0.06 || top2 < top1 - 0.035;
+
+  const q = trimmed;
+  const wantsLayerTopic =
+    /레이어|층위|환승\s*레이어|산책\s*레이어/i.test(q) && !/layered\s*field|매싱|마싱/i.test(q);
+  const wantsNodeTopic = /노드|입구\s*노드|extra\s*space\s*노드/i.test(q);
+  const layerNodePairOK =
+    wantsLayerTopic &&
+    wantsNodeTopic &&
+    top1 >= wikiThreshold &&
+    wikiChunks.length >= 2 &&
+    [LAYER_DOC_ID, NODE_DOC_ID].includes(wikiChunks[0]!.docId) &&
+    [LAYER_DOC_ID, NODE_DOC_ID].includes(wikiChunks[1]!.docId);
+
   const wikiConfidenceOK =
-    top1 >= wikiThreshold && (secondIsNotCompetitive || margin >= marginMinEff);
+    layerNodePairOK ||
+    (top1 >= wikiThreshold && (secondIsNotCompetitive || margin >= marginMinEff));
 
   let rawChunks: RetrievedChunk[] = [];
   let rawTop = 0;
