@@ -4,7 +4,7 @@ import { useChat } from "@ai-sdk/react";
 import Image from "next/image";
 import type { FormEvent, KeyboardEvent } from "react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import logoTitle from "../../logo2.png";
+import logoImage from "../../logo.png";
 
 function newSessionId(): string {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
@@ -241,7 +241,7 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
         <header className="es-header">
           <p className="es-kicker">{t.kicker}</p>
           <h1 className="es-title">
-            <Image src={logoTitle} alt={t.title} className="es-title-logo" priority={false} />
+            <Image src={logoImage} alt={t.title} className="es-title-logo" priority={false} />
           </h1>
           <p className="es-sub">{t.sub}</p>
         </header>

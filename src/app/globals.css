@@ -91,9 +91,8 @@ a:hover {
 }
 
 .es-splash-logo-image {
-  width: min(calc(58vw * 0.7), calc(340px * 0.7));
+  width: min(88vw, 520px);
   height: auto;
-  background: #fbf8f2;
 }
 
 /* --- 챗 패널 --- */
@@ -199,7 +198,7 @@ a:hover {
 
 .es-title-logo {
   display: block;
-  width: min(62vw, 250px);
+  width: min(78vw, 320px);
   height: auto;
 }
 
