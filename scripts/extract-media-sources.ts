@@ -2,10 +2,12 @@
  * wiki/sources 아래 PDF·이미지 → OpenAI(텍스트·비전)로 설명·텍스트 추출 후
  * wiki/sources/_media_extracts/ 아래에 .md 로 저장 → digest / ingest:raw 가 그대로 소화·인제스트.
  *
+ * 도면 권장: 같은 폴더에 `plan.pdf`(텍스트 레이어) + `plan.png`(고해상도) → 한 md로 병합.
+ *
  * 사용: npx tsx scripts/extract-media-sources.ts [--force] [--only pdf|image|all]
  */
 import { promises as fs } from "fs";
-import { mkdir, readFile, stat, writeFile } from "fs/promises";
+import { mkdir, readFile, stat, unlink, writeFile } from "fs/promises";
 import { basename, dirname, extname, join, relative } from "path";
 import OpenAI from "openai";
 import pdfParse from "pdf-parse";
@@ -15,7 +17,11 @@ loadEnv();
 
 const SOURCES_ROOT = join(process.cwd(), "wiki", "sources");
 const EXTRACT_ROOT = join(SOURCES_ROOT, "_media_extracts");
-const MEDIA_EXT = new Set([".pdf", ".png", ".jpg", ".jpeg", ".webp", ".gif"]);
+const PDF_EXT = ".pdf";
+const IMAGE_EXT = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif"]);
+const MEDIA_EXT = new Set([PDF_EXT, ...IMAGE_EXT]);
+
+const DEFAULT_DIAGRAM_DIRS = ["diagrams", "drawings", "plans", "도면"];
 
 const IMAGE_PROMPT = [
   "이 이미지는 건축 졸업전시용 자료(렌더, 다이어그램, 도면, 사진, 스크린샷 등)일 수 있다.",
@@ -26,6 +32,16 @@ const IMAGE_PROMPT = [
   "4) 이미지에 없는 정보는 지어내지 말 것.",
 ].join("\n");
 
+const DIAGRAM_IMAGE_PROMPT = [
+  "이 이미지는 건축 도면(평면·단면·배치·다이어그램) PNG일 수 있다.",
+  "한국어로 다음을 작성하라.",
+  "1) 도면 종류(평면/단면/배치 등)와 축척·방향이 보이면 적기",
+  "2) 공간 구획, 동선, 레이어·노드·매스 관계가 보이면 설명",
+  "3) 범례·주석·치수·라벨·방호·재료 표기는 읽을 수 있는 것만 그대로 옮기기 (추측 금지)",
+  "4) 확실하지 않은 해석·숫자는 [불확실] 접두어",
+  "5) 이미지에 없는 프로그램·수치는 만들지 말 것.",
+].join("\n");
+
 const PDF_VISION_PROMPT = [
   "첨부 PDF는 건축 도면·전시 자료일 수 있다(텍스트 레이어가 없을 수 있음).",
   "한국어로 다음을 작성하라.",
@@ -34,6 +50,11 @@ const PDF_VISION_PROMPT = [
   "3) 확실하지 않은 부분은 [불확실]로 표시",
   "4) PDF에 없는 내용은 만들지 말 것.",
 ].join("\n");
+
+type MediaJob =
+  | { kind: "pair"; pdf: string; image: string; relFromSources: string }
+  | { kind: "pdf"; path: string }
+  | { kind: "image"; path: string };
 
 let openai: OpenAI | null = null;
 function client(): OpenAI {
@@ -56,6 +77,19 @@ function parseArgs() {
     }
   }
   return { force, only };
+}
+
+function diagramDirNames(): string[] {
+  const raw = process.env.DIAGRAM_SOURCE_DIRS?.trim();
+  if (!raw) return DEFAULT_DIAGRAM_DIRS;
+  return raw.split(/[,;]/).map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+
+function isDiagramPath(abs: string): boolean {
+  const rel = relative(SOURCES_ROOT, abs).replace(/\\/g, "/").toLowerCase();
+  const parts = rel.split("/");
+  const dirs = diagramDirNames();
+  return parts.some((p) => dirs.includes(p));
 }
 
 async function walkMediaFiles(root: string): Promise<string[]> {
@@ -81,10 +115,59 @@ async function walkMediaFiles(root: string): Promise<string[]> {
   return out.sort();
 }
 
+/** 단일 입력 파일용 (레거시 per-file 출력) */
 function outputMdPath(inputAbs: string): string {
   const rel = relative(SOURCES_ROOT, inputAbs).replace(/\\/g, "/");
   const safe = rel.replace(/\//g, "__");
   return join(EXTRACT_ROOT, `${safe}.md`);
+}
+
+/** PDF+PNG 페어: 확장자 없이 stem 하나로 통합 md */
+function outputMdPathForPair(relFromSources: string): string {
+  const safe = relFromSources.replace(/\//g, "__");
+  return join(EXTRACT_ROOT, `${safe}.md`);
+}
+
+function pickPairImage(images: string[]): string | null {
+  const order = [".png", ".jpg", ".jpeg", ".webp", ".gif"];
+  for (const ext of order) {
+    const hit = images.find((p) => extname(p).toLowerCase() === ext);
+    if (hit) return hit;
+  }
+  return images[0] ?? null;
+}
+
+function buildMediaJobs(files: string[]): MediaJob[] {
+  const byStem = new Map<string, { pdf?: string; images: string[] }>();
+
+  for (const abs of files) {
+    const rel = relative(SOURCES_ROOT, abs).replace(/\\/g, "/");
+    const dir = dirname(rel);
+    const stem = basename(abs, extname(abs));
+    const key = dir === "." ? stem : `${dir}/${stem}`;
+    const bucket = byStem.get(key) ?? { images: [] };
+    const ext = extname(abs).toLowerCase();
+    if (ext === PDF_EXT) bucket.pdf = abs;
+    else bucket.images.push(abs);
+    byStem.set(key, bucket);
+  }
+
+  const jobs: MediaJob[] = [];
+
+  for (const [relFromSources, bucket] of byStem) {
+    const image = bucket.pdf && bucket.images.length ? pickPairImage(bucket.images) : null;
+    if (bucket.pdf && image) {
+      jobs.push({ kind: "pair", pdf: bucket.pdf, image, relFromSources });
+      for (const img of bucket.images) {
+        if (img !== image) jobs.push({ kind: "image", path: img });
+      }
+      continue;
+    }
+    if (bucket.pdf) jobs.push({ kind: "pdf", path: bucket.pdf });
+    for (const img of bucket.images) jobs.push({ kind: "image", path: img });
+  }
+
+  return jobs;
 }
 
 function mimeForImage(ext: string): string {
@@ -96,7 +179,12 @@ function mimeForImage(ext: string): string {
   return "application/octet-stream";
 }
 
-async function extractImage(inputAbs: string, model: string): Promise<string> {
+async function extractImage(
+  inputAbs: string,
+  model: string,
+  prompt: string,
+  maxTokens = 2500,
+): Promise<string> {
   const buf = await readFile(inputAbs);
   if (buf.length > 18 * 1024 * 1024) {
     return `[오류] 파일이 18MB를 넘어 Vision API 제한에 걸릴 수 있습니다. 해상도를 줄인 뒤 다시 시도하세요.`;
@@ -107,12 +195,12 @@ async function extractImage(inputAbs: string, model: string): Promise<string> {
   const res = await client().chat.completions.create({
     model,
     temperature: 0.2,
-    max_tokens: 2500,
+    max_tokens: maxTokens,
     messages: [
       {
         role: "user",
         content: [
-          { type: "text", text: IMAGE_PROMPT },
+          { type: "text", text: prompt },
           { type: "image_url", image_url: { url: `data:${mime};base64,${b64}`, detail: "high" } },
         ],
       },
@@ -143,10 +231,7 @@ async function extractPdfWithVision(inputAbs: string, model: string): Promise<st
         role: "user",
         content: [
           { type: "text", text: PDF_VISION_PROMPT },
-          {
-            type: "file",
-            file: { filename: name, file_data: b64 },
-          },
+          { type: "file", file: { filename: name, file_data: b64 } },
         ],
       },
     ],
@@ -154,11 +239,16 @@ async function extractPdfWithVision(inputAbs: string, model: string): Promise<st
   return res.choices[0]?.message?.content?.trim() || "(빈 응답)";
 }
 
-async function shouldSkip(inputAbs: string, outAbs: string, force: boolean): Promise<boolean> {
+async function shouldSkip(sources: string[], outAbs: string, force: boolean): Promise<boolean> {
   if (force) return false;
   try {
-    const [inSt, outSt] = await Promise.all([stat(inputAbs), stat(outAbs)]);
-    return outSt.mtimeMs >= inSt.mtimeMs;
+    const outSt = await stat(outAbs);
+    let newestIn = 0;
+    for (const src of sources) {
+      const st = await stat(src);
+      if (st.mtimeMs > newestIn) newestIn = st.mtimeMs;
+    }
+    return outSt.mtimeMs >= newestIn;
   } catch {
     return false;
   }
@@ -173,101 +263,287 @@ function buildMarkdown(meta: Record<string, string>, body: string): string {
   return lines.join("\n");
 }
 
+async function removeStalePerFileExtracts(paths: string[]): Promise<void> {
+  for (const p of paths) {
+    const legacy = outputMdPath(p);
+    try {
+      await unlink(legacy);
+      console.log(`[extract:media] removed legacy ${relative(process.cwd(), legacy)}`);
+    } catch {
+      /* 없으면 무시 */
+    }
+  }
+}
+
+async function processPair(
+  job: Extract<MediaJob, { kind: "pair" }>,
+  opts: {
+    force: boolean;
+    only: "pdf" | "image" | "all";
+    diagramModel: string;
+    pdfMinChars: number;
+  },
+): Promise<{ done: boolean; skipped: boolean }> {
+  const { pdf, image, relFromSources } = job;
+  const outAbs = outputMdPathForPair(relFromSources);
+  await mkdir(dirname(outAbs), { recursive: true });
+
+  if (await shouldSkip([pdf, image], outAbs, opts.force)) {
+    console.log(`[extract:media] skip (최신) pair ${relFromSources}`);
+    return { done: false, skipped: true };
+  }
+
+  const pdfRel = relative(process.cwd(), pdf).replace(/\\/g, "/");
+  const imgRel = relative(process.cwd(), image).replace(/\\/g, "/");
+
+  try {
+    const { text, pages } = await extractPdfText(pdf);
+    const parts: string[] = [];
+    let kind = "diagram-pair";
+
+    if (text.length > 0) {
+      parts.push(`## PDF 텍스트 레이어 (${pages}페이지)`, "", text);
+    } else {
+      parts.push(`## PDF 텍스트 레이어 (${pages}페이지)`, "", "(추출된 텍스트 없음 — PNG 시각 해석에 의존)");
+    }
+
+    if (opts.only !== "pdf") {
+      console.log(`[extract:media] pair png → ${opts.diagramModel} … ${imgRel}`);
+      const vision = await extractImage(image, opts.diagramModel, DIAGRAM_IMAGE_PROMPT, 3500);
+      parts.push("", "---", "", `## 도면 시각 해석 (PNG, 검수 필요)`, "", vision);
+      kind = text.length >= opts.pdfMinChars ? "diagram-pair-text+vision" : "diagram-pair-vision";
+    } else {
+      kind = "diagram-pair-text-only";
+    }
+
+    const meta = {
+      source_files: `${pdfRel}; ${imgRel}`,
+      extraction_kind: kind,
+      extracted_at: new Date().toISOString(),
+      pdf_text_chars: String(text.length),
+      vision_model: opts.only === "pdf" ? "pdf-parse" : opts.diagramModel,
+    };
+
+    await writeFile(outAbs, buildMarkdown(meta, parts.join("\n")), "utf8");
+    await removeStalePerFileExtracts([pdf, image]);
+    console.log(`[extract:media] wrote pair ${relative(process.cwd(), outAbs)}`);
+    return { done: true, skipped: false };
+  } catch (e) {
+    const err = e instanceof Error ? e.message : String(e);
+    await writeFile(
+      outAbs,
+      buildMarkdown(
+        {
+          source_files: `${pdfRel}; ${imgRel}`,
+          extraction_kind: "error",
+          extracted_at: new Date().toISOString(),
+          error: err.slice(0, 500),
+        },
+        `## 추출 실패\n\n\`\`\`\n${err}\n\`\`\`\n`,
+      ),
+      "utf8",
+    );
+    console.error(`[extract:media] ERROR pair ${relFromSources}:`, err);
+    return { done: true, skipped: false };
+  }
+}
+
+async function processPdf(
+  abs: string,
+  opts: {
+    force: boolean;
+    pdfVisionModel: string;
+    pdfMinChars: number;
+  },
+): Promise<{ done: boolean; skipped: boolean }> {
+  const outAbs = outputMdPath(abs);
+  await mkdir(dirname(outAbs), { recursive: true });
+
+  if (await shouldSkip([abs], outAbs, opts.force)) {
+    console.log(`[extract:media] skip (최신) ${relative(process.cwd(), abs)}`);
+    return { done: false, skipped: true };
+  }
+
+  const rel = relative(process.cwd(), abs).replace(/\\/g, "/");
+  const diagram = isDiagramPath(abs);
+
+  try {
+    const { text, pages } = await extractPdfText(abs);
+    let body = "";
+    let kind = "";
+
+    if (diagram) {
+      console.warn(
+        `[extract:media] 도면 PDF 단독(${basename(abs)}): 같은 이름 PNG 페어링 권장 (예: ${basename(abs, PDF_EXT)}.png)`,
+      );
+    }
+
+    if (text.length >= opts.pdfMinChars) {
+      kind = "pdf-text";
+      console.log(`[extract:media] pdf text (${pages}p, ${text.length}자) … ${rel}`);
+      body = [`## PDF 텍스트 추출 (${pages}페이지)`, "", text].join("\n");
+    } else {
+      kind = "pdf-vision";
+      console.log(
+        `[extract:media] pdf 텍스트 부족(${text.length}자) → ${opts.pdfVisionModel} … ${rel}`,
+      );
+      const visionPart = await extractPdfWithVision(abs, opts.pdfVisionModel);
+      const head =
+        text.length > 0
+          ? `## PDF 텍스트 레이어(짧음, ${pages}페이지)\n\n${text}\n\n---\n\n## PDF 시각 해석 (검수 필요)\n\n`
+          : `## PDF 시각 해석 (텍스트 레이어 없음, 검수 필요)\n\n`;
+      body = head + visionPart;
+    }
+
+    await writeFile(
+      outAbs,
+      buildMarkdown(
+        {
+          source_file: rel,
+          extraction_kind: kind,
+          extracted_at: new Date().toISOString(),
+          vision_model: kind === "pdf-text" ? "pdf-parse" : opts.pdfVisionModel,
+        },
+        body,
+      ),
+      "utf8",
+    );
+    console.log(`[extract:media] wrote ${relative(process.cwd(), outAbs)}`);
+    return { done: true, skipped: false };
+  } catch (e) {
+    const err = e instanceof Error ? e.message : String(e);
+    await writeFile(
+      outAbs,
+      buildMarkdown(
+        {
+          source_file: rel,
+          extraction_kind: "error",
+          extracted_at: new Date().toISOString(),
+          error: err.slice(0, 500),
+        },
+        `## 추출 실패\n\n\`\`\`\n${err}\n\`\`\`\n\n원본: \`${rel}\`\n`,
+      ),
+      "utf8",
+    );
+    console.error(`[extract:media] ERROR ${rel}:`, err);
+    return { done: true, skipped: false };
+  }
+}
+
+async function processImage(
+  abs: string,
+  opts: {
+    force: boolean;
+    visionModel: string;
+    diagramModel: string;
+  },
+): Promise<{ done: boolean; skipped: boolean }> {
+  const outAbs = outputMdPath(abs);
+  await mkdir(dirname(outAbs), { recursive: true });
+
+  if (await shouldSkip([abs], outAbs, opts.force)) {
+    console.log(`[extract:media] skip (최신) ${relative(process.cwd(), abs)}`);
+    return { done: false, skipped: true };
+  }
+
+  const rel = relative(process.cwd(), abs).replace(/\\/g, "/");
+  const diagram = isDiagramPath(abs);
+  const model = diagram ? opts.diagramModel : opts.visionModel;
+  const prompt = diagram ? DIAGRAM_IMAGE_PROMPT : IMAGE_PROMPT;
+  const maxTokens = diagram ? 3500 : 2500;
+  const kind = diagram ? "diagram-image-vision" : "image-vision";
+
+  try {
+    console.log(`[extract:media] image → ${model} … ${rel}`);
+    const body = await extractImage(abs, model, prompt, maxTokens);
+    await writeFile(
+      outAbs,
+      buildMarkdown(
+        {
+          source_file: rel,
+          extraction_kind: kind,
+          extracted_at: new Date().toISOString(),
+          vision_model: model,
+        },
+        body,
+      ),
+      "utf8",
+    );
+    console.log(`[extract:media] wrote ${relative(process.cwd(), outAbs)}`);
+    return { done: true, skipped: false };
+  } catch (e) {
+    const err = e instanceof Error ? e.message : String(e);
+    await writeFile(
+      outAbs,
+      buildMarkdown(
+        {
+          source_file: rel,
+          extraction_kind: "error",
+          extracted_at: new Date().toISOString(),
+          error: err.slice(0, 500),
+        },
+        `## 추출 실패\n\n\`\`\`\n${err}\n\`\`\`\n\n원본: \`${rel}\`\n`,
+      ),
+      "utf8",
+    );
+    console.error(`[extract:media] ERROR ${rel}:`, err);
+    return { done: true, skipped: false };
+  }
+}
+
 async function main() {
   const { force, only } = parseArgs();
   const visionModel = process.env.OPENAI_VISION_MODEL ?? "gpt-4o-mini";
-  const pdfVisionModel = process.env.OPENAI_PDF_VISION_MODEL ?? process.env.OPENAI_VISION_MODEL ?? "gpt-4o";
+  const diagramModel =
+    process.env.OPENAI_DIAGRAM_VISION_MODEL ??
+    process.env.OPENAI_PDF_VISION_MODEL ??
+    "gpt-4o";
+  const pdfVisionModel = process.env.OPENAI_PDF_VISION_MODEL ?? diagramModel;
+  const pdfMinChars = Math.max(50, Number(process.env.PDF_TEXT_MIN_CHARS ?? "200"));
 
-  let inputs: string[] = [];
+  let files: string[] = [];
   try {
-    inputs = await walkMediaFiles(SOURCES_ROOT);
+    files = await walkMediaFiles(SOURCES_ROOT);
   } catch {
     console.warn("[extract:media] wiki/sources 가 없거나 읽을 수 없습니다. 건너뜁니다.");
     process.exit(0);
   }
-  const pdfMinChars = Math.max(50, Number(process.env.PDF_TEXT_MIN_CHARS ?? "200"));
 
+  const jobs = buildMediaJobs(files);
   let done = 0;
   let skipped = 0;
 
-  for (const abs of inputs) {
-    const ext = extname(abs).toLowerCase();
-    const isPdf = ext === ".pdf";
-    const isImage = !isPdf;
-
-    if (only === "pdf" && !isPdf) continue;
-    if (only === "image" && !isImage) continue;
-
-    const outAbs = outputMdPath(abs);
-    await mkdir(dirname(outAbs), { recursive: true });
-
-    if (await shouldSkip(abs, outAbs, force)) {
-      skipped++;
-      console.log(`[extract:media] skip (최신) ${relative(process.cwd(), abs)}`);
+  for (const job of jobs) {
+    if (job.kind === "pair") {
+      if (only === "image" || only === "pdf" || only === "all") {
+        const r = await processPair(job, { force, only, diagramModel, pdfMinChars });
+        if (r.done) done++;
+        if (r.skipped) skipped++;
+      }
       continue;
     }
 
-    const rel = relative(process.cwd(), abs).replace(/\\/g, "/");
-    let body = "";
-    let kind = "";
-
-    try {
-      if (isImage) {
-        kind = "image-vision";
-        console.log(`[extract:media] image → ${visionModel} … ${rel}`);
-        body = await extractImage(abs, visionModel);
-      } else {
-        const { text, pages } = await extractPdfText(abs);
-        if (text.length >= pdfMinChars) {
-          kind = "pdf-text";
-          console.log(`[extract:media] pdf text (${pages}p, ${text.length}자) … ${rel}`);
-          body = [`## PDF 텍스트 추출 (${pages}페이지)`, "", text].join("\n");
-        } else {
-          kind = "pdf-vision";
-          console.log(
-            `[extract:media] pdf 텍스트 부족(${text.length}자 < ${pdfMinChars}) → ${pdfVisionModel} … ${rel}`,
-          );
-          const visionPart = await extractPdfWithVision(abs, pdfVisionModel);
-          const head =
-            text.length > 0
-              ? `## PDF 텍스트 레이어(짧음, ${pages}페이지)\n\n${text}\n\n---\n\n## PDF 시각 해석 (모델, 검수 필요)\n\n`
-              : `## PDF 시각 해석 (텍스트 레이어 없음 또는 스캔본 추정, 검수 필요)\n\n`;
-          body = head + visionPart;
-        }
+    if (job.kind === "pdf") {
+      if (only === "pdf" || only === "all") {
+        const r = await processPdf(job.path, { force, pdfVisionModel, pdfMinChars });
+        if (r.done) done++;
+        if (r.skipped) skipped++;
       }
+      continue;
+    }
 
-      const meta = {
-        source_file: rel,
-        extraction_kind: kind,
-        extracted_at: new Date().toISOString(),
-        vision_model: isImage ? visionModel : kind === "pdf-text" ? "pdf-parse" : pdfVisionModel,
-      };
-
-      await writeFile(outAbs, buildMarkdown(meta, body), "utf8");
-      done++;
-      console.log(`[extract:media] wrote ${relative(process.cwd(), outAbs)}`);
-    } catch (e) {
-      const err = e instanceof Error ? e.message : String(e);
-      const failBody = `## 추출 실패\n\n\`\`\`\n${err}\n\`\`\`\n\n원본: \`${rel}\`\n`;
-      await writeFile(
-        outAbs,
-        buildMarkdown(
-          {
-            source_file: rel,
-            extraction_kind: "error",
-            extracted_at: new Date().toISOString(),
-            error: err.slice(0, 500),
-          },
-          failBody,
-        ),
-        "utf8",
-      );
-      done++;
-      console.error(`[extract:media] ERROR ${rel}:`, err);
+    if (job.kind === "image") {
+      if (only === "image" || only === "all") {
+        const r = await processImage(job.path, { force, visionModel, diagramModel });
+        if (r.done) done++;
+        if (r.skipped) skipped++;
+      }
     }
   }
 
-  console.log(`[extract:media] 완료: 신규/갱신 ${done}건, 건너뜀 ${skipped}건 → ${relative(process.cwd(), EXTRACT_ROOT)}`);
+  console.log(
+    `[extract:media] 완료: 신규/갱신 ${done}건, 건너뜀 ${skipped}건 → ${relative(process.cwd(), EXTRACT_ROOT)}`,
+  );
 }
 
 main().catch((e) => {

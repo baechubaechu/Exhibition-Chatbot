@@ -48,8 +48,22 @@
 
 ## PDF·이미지(렌더·도면 등)
 
-1. 파일을 `wiki/sources/` 아래 원하는 폴더에 둡니다 (예: `wiki/sources/diagrams/plan.pdf`).
-2. `npm run extract:media` 실행 → `wiki/sources/_media_extracts/`에 `.md`가 생성됩니다. (이미지는 Vision, PDF는 텍스트 레이어 우선·부족 시 PDF 비전)
-3. 이후 기존과 동일하게 `npm run digest:canonical …` 또는 배치 파일로 소화·`ingest` 하면 됩니다. 한 번에 돌리려면 `npm run sync:knowledge:with-media`.
+### 도면 (권장: PNG + PDF 페어)
 
-옵션: `--force` (항상 다시 추출), `--only=pdf` / `--only=image`. 모델은 `.env`의 `OPENAI_VISION_MODEL`, `OPENAI_PDF_VISION_MODEL`로 조절합니다.
+`wiki/sources/diagrams/` 에 **같은 이름**으로 둡니다.
+
+```
+plan_floor1.pdf   ← 텍스트 레이어 (pdf-parse)
+plan_floor1.png   ← 직접 export한 고해상도 도면
+site_plan.png     ← PDF 없이 PNG만도 OK
+```
+
+`npm run extract:media` → 페어는 **한 md**로 병합 (PDF 텍스트 + PNG Vision). 도면 폴더는 `OPENAI_DIAGRAM_VISION_MODEL`(기본 `gpt-4o`) 사용.
+
+### 일반 미디어
+
+1. `wiki/sources/` 아래 폴더에 PDF·이미지 배치
+2. `npm run extract:media` → `wiki/sources/_media_extracts/*.md`
+3. `npm run ingest:raw` 또는 `npm run sync:knowledge:with-media`
+
+옵션: `--force`, `--only=pdf` / `--only=image`. `.env.example`의 `OPENAI_VISION_MODEL`, `OPENAI_DIAGRAM_VISION_MODEL` 참고.
