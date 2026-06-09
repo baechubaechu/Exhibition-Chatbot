@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import Image from "next/image";
-import type { FormEvent, KeyboardEvent } from "react";
+import type { FormEvent, KeyboardEvent, RefObject } from "react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import logoImage from "../../logo.png";
 
@@ -43,9 +43,11 @@ export type ChatPanelVariant = "default" | "kiosk";
 
 type ChatPanelProps = {
   variant?: ChatPanelVariant;
+  hideHeaderLogo?: boolean;
+  headerLogoRef?: RefObject<HTMLSpanElement | null>;
 };
 
-export function ChatPanel({ variant = "default" }: ChatPanelProps) {
+export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerLogoRef }: ChatPanelProps) {
   const [sessionId, setSessionId] = useState(newSessionId);
   const [lang, setLang] = useState<UiLang>("ko");
   const [rawSearching, setRawSearching] = useState(false);
@@ -241,7 +243,12 @@ export function ChatPanel({ variant = "default" }: ChatPanelProps) {
         <header className="es-header">
           <p className="es-kicker">{t.kicker}</p>
           <h1 className="es-title">
-            <Image src={logoImage} alt={t.title} className="es-title-logo" priority={false} />
+            <span
+              ref={headerLogoRef}
+              className={`es-title-logo-slot${hideHeaderLogo ? " es-title-logo-slot--hidden" : ""}`}
+            >
+              <Image src={logoImage} alt={t.title} className="es-title-logo" priority={false} />
+            </span>
           </h1>
           <p className="es-sub">{t.sub}</p>
         </header>
