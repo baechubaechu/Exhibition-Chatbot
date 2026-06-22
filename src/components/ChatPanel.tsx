@@ -25,13 +25,46 @@ function messageText(m: { content?: string; parts?: Array<{ type: string; text?:
 type UiLang = "ko" | "en";
 
 const EXAMPLE_PROMPTS: { labelKo: string; labelEn: string; question: string }[] = [
-  { labelKo: "이 작품 한 줄 소개", labelEn: "One-line intro", question: "이 작품을 한 줄로 소개해 줘." },
-  { labelKo: "왜 금정역인가요?", labelEn: "Why Geumjeong Station?", question: "왜 금정역을 입지로 택했어?" },
-  { labelKo: "X-tra Space가 뭐예요?", labelEn: "What is X-tra Space?", question: "X-tra Space가 뭔지 쉽게 설명해 줘." },
-  { labelKo: "산본천과 설계", labelEn: "Sanboncheon & design", question: "산본천이 이 설계에서 어떤 역할이야?" },
-  { labelKo: "레이어와 노드", labelEn: "Layers & nodes", question: "여기서 레이어와 노드는 각각 무슨 뜻이야?" },
-  { labelKo: "전시에서 뭘 보나요?", labelEn: "What to see at the exhibit", question: "전시에서 어떤 자료나 내용을 볼 수 있어?" },
-  { labelKo: "금정역 맥락 한눈에", labelEn: "Geumjeong context at a glance", question: "금정역 맥락을 한 번에 이해할 수 있게 설명해 줘." },
+  {
+    labelKo: "졸업전시 한 줄",
+    labelEn: "Exhibit in one line",
+    question: "홍익대 건축학과 졸업전시 부스를 한 줄로 소개해 줘.",
+  },
+  {
+    labelKo: "전시 언제·어디?",
+    labelEn: "When & where",
+    question: "졸업전시는 언제 어디서 하나요? 부스에서 무엇을 보면 되나요?",
+  },
+  {
+    labelKo: "인터랙션 체험",
+    labelEn: "Try the interaction",
+    question: "이 전시가 설계 전시와 뭐가 다른지, 태블릿·모니터 인터랙션은 어떻게 체험하나요?",
+  },
+  {
+    labelKo: "벽 패널 2·3·4",
+    labelEn: "Wall panels 2–4",
+    question: "벽에 붙은 패널 2, 3, 4번 다이어그램이 각각 무엇을 말하는 거예요?",
+  },
+  {
+    labelKo: "모형 두 개 차이",
+    labelEn: "Two models",
+    question: "테이블 위 전체 모형과 상세 모형의 차이, 크기, 역할을 알려 줘.",
+  },
+  {
+    labelKo: "태블릿·모니터",
+    labelEn: "Tablet & monitor",
+    question: "태블릿에서 환승·산책·X-tra Space를 고르면 모니터에 어떤 설명이 나와요?",
+  },
+  {
+    labelKo: "X-tra Space",
+    labelEn: "What is X-tra Space?",
+    question: "X-tra Space가 뭔지 쉽게 설명해 줘.",
+  },
+  {
+    labelKo: "관람 순서",
+    labelEn: "Suggested tour",
+    question: "전시장에 처음 왔을 때 벽·모형·태블릿을 어떤 순서로 보면 좋아요?",
+  },
 ];
 
 function readStoredLang(): UiLang {
