@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import Image from "next/image";
-import type { FormEvent, KeyboardEvent, RefObject } from "react";
+import type { FormEvent, KeyboardEvent, PointerEvent, RefObject } from "react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import logoImage from "../../logo.png";
 
@@ -25,46 +25,14 @@ function messageText(m: { content?: string; parts?: Array<{ type: string; text?:
 type UiLang = "ko" | "en";
 
 const EXAMPLE_PROMPTS: { labelKo: string; labelEn: string; question: string }[] = [
-  {
-    labelKo: "졸업전시 한 줄",
-    labelEn: "Exhibit in one line",
-    question: "홍익대 건축학과 졸업전시 부스를 한 줄로 소개해 줘.",
-  },
-  {
-    labelKo: "전시 언제·어디?",
-    labelEn: "When & where",
-    question: "졸업전시는 언제 어디서 하나요? 부스에서 무엇을 보면 되나요?",
-  },
-  {
-    labelKo: "인터랙션 체험",
-    labelEn: "Try the interaction",
-    question: "이 전시가 설계 전시와 뭐가 다른지, 태블릿·모니터 인터랙션은 어떻게 체험하나요?",
-  },
-  {
-    labelKo: "벽 패널 2·3·4",
-    labelEn: "Wall panels 2–4",
-    question: "벽에 붙은 패널 2, 3, 4번 다이어그램이 각각 무엇을 말하는 거예요?",
-  },
-  {
-    labelKo: "모형 두 개 차이",
-    labelEn: "Two models",
-    question: "테이블 위 전체 모형과 상세 모형의 차이, 크기, 역할을 알려 줘.",
-  },
-  {
-    labelKo: "태블릿·모니터",
-    labelEn: "Tablet & monitor",
-    question: "태블릿에서 환승·산책·X-tra Space를 고르면 모니터에 어떤 설명이 나와요?",
-  },
-  {
-    labelKo: "X-tra Space",
-    labelEn: "What is X-tra Space?",
-    question: "X-tra Space가 뭔지 쉽게 설명해 줘.",
-  },
-  {
-    labelKo: "관람 순서",
-    labelEn: "Suggested tour",
-    question: "전시장에 처음 왔을 때 벽·모형·태블릿을 어떤 순서로 보면 좋아요?",
-  },
+  { labelKo: "관람 순서", labelEn: "Viewing order", question: "전시 부스 관람 순서를 추천해 줘." },
+  { labelKo: "이 작품 한 줄 소개", labelEn: "One-line intro", question: "이 작품을 한 줄로 소개해 줘." },
+  { labelKo: "왜 금정역인가요?", labelEn: "Why Geumjeong Station?", question: "왜 금정역을 입지로 택했어?" },
+  { labelKo: "X-tra Space가 뭐예요?", labelEn: "What is X-tra Space?", question: "X-tra Space가 뭔지 쉽게 설명해 줘." },
+  { labelKo: "산본천과 설계", labelEn: "Sanboncheon & design", question: "산본천이 이 설계에서 어떤 역할이야?" },
+  { labelKo: "레이어와 노드", labelEn: "Layers & nodes", question: "여기서 레이어와 노드는 각각 무슨 뜻이야?" },
+  { labelKo: "전시에서 뭘 보나요?", labelEn: "What to see at the exhibit", question: "전시에서 어떤 자료나 내용을 볼 수 있어?" },
+  { labelKo: "금정역 맥락 한눈에", labelEn: "Geumjeong context at a glance", question: "금정역 맥락을 한 번에 이해할 수 있게 설명해 줘." },
 ];
 
 function readStoredLang(): UiLang {
@@ -85,6 +53,11 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
   const [lang, setLang] = useState<UiLang>("ko");
   const [rawSearching, setRawSearching] = useState(false);
   const submitIdRef = useRef("");
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const hintsViewportRef = useRef<HTMLDivElement>(null);
+  const hintsDragRef = useRef({ active: false, startX: 0, startScroll: 0, dragged: false });
+  const hintsAutoPauseRef = useRef(false);
 
   useLayoutEffect(() => {
     setLang(readStoredLang());
@@ -180,7 +153,7 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
         kicker: "Graduation exhibit",
         title: "X-tra Space",
         sub: "Ask about the project and exhibit.",
-        empty: "Your conversation shows up here. Try a sample below, or write your own.",
+        empty: "Your conversation shows up here. Tap a sample above the input, or type below.",
         visitor: "You",
         guide: "Guide",
         generating: "Generating a reply…",
@@ -200,7 +173,7 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
       kicker: "Graduation exhibit",
       title: "X-tra Space",
       sub: "작품이나 전시 이야기, 편하게 물어보세요.",
-      empty: "대화가 여기에 쌓입니다. 아래 예시 질문들을 누르거나 직접 입력할 수 있어요.",
+      empty: "대화가 여기에 쌓입니다. 입력창 위 예시를 누르거나 직접 입력해 보세요.",
       visitor: "방문",
       guide: "안내",
       generating: "답변 생성중",
@@ -235,6 +208,82 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
     void append({ role: "user", content: question });
   };
 
+  const onHintClick = (question: string) => {
+    if (hintsDragRef.current.dragged) return;
+    sendExample(question);
+  };
+
+  const onHintsPointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0) return;
+    const el = hintsViewportRef.current;
+    if (!el) return;
+    hintsDragRef.current = { active: true, startX: e.clientX, startScroll: el.scrollLeft, dragged: false };
+    hintsAutoPauseRef.current = true;
+    el.setPointerCapture(e.pointerId);
+    el.classList.add("es-hints-viewport--dragging");
+  };
+
+  const onHintsPointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    const state = hintsDragRef.current;
+    const el = hintsViewportRef.current;
+    if (!state.active || !el) return;
+    const dx = e.clientX - state.startX;
+    if (Math.abs(dx) > 5) state.dragged = true;
+    el.scrollLeft = state.startScroll - dx;
+  };
+
+  const endHintsPointer = (e: PointerEvent<HTMLDivElement>) => {
+    const el = hintsViewportRef.current;
+    if (!el) return;
+    const wasDragged = hintsDragRef.current.dragged;
+    hintsDragRef.current.active = false;
+    hintsAutoPauseRef.current = false;
+    if (el.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId);
+    el.classList.remove("es-hints-viewport--dragging");
+    if (wasDragged) {
+      window.setTimeout(() => {
+        hintsDragRef.current.dragged = false;
+      }, 0);
+    } else {
+      hintsDragRef.current.dragged = false;
+    }
+  };
+
+  useEffect(() => {
+    const el = hintsViewportRef.current;
+    if (!el) return;
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let raf = 0;
+    const step = () => {
+      if (!hintsAutoPauseRef.current && !hintsDragRef.current.active) {
+        el.scrollLeft += 0.35;
+        const loopAt = el.scrollWidth / 2;
+        if (loopAt > 0 && el.scrollLeft >= loopAt - 1) el.scrollLeft = 0;
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+
+    const pause = () => {
+      hintsAutoPauseRef.current = true;
+    };
+    const resume = () => {
+      if (!hintsDragRef.current.active) hintsAutoPauseRef.current = false;
+    };
+
+    el.addEventListener("mouseenter", pause);
+    el.addEventListener("mouseleave", resume);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("mouseenter", pause);
+      el.removeEventListener("mouseleave", resume);
+    };
+  }, []);
+
   const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     handleSubmit(e);
   };
@@ -248,6 +297,35 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
 
   const typingLine =
     rawSearching && busy ? t.searchingSources : t.generating;
+
+  const lastMessageText = useMemo(() => {
+    const m = messages[messages.length - 1];
+    return m ? messageText(m) : "";
+  }, [messages]);
+
+  const scrollToBottom = useCallback(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+      return;
+    }
+    bottomRef.current?.scrollIntoView({ block: "end", behavior: "instant" });
+  }, []);
+
+  useLayoutEffect(() => {
+    scrollToBottom();
+  }, [messages.length, lastMessageText, showGeneratingBubble, typingLine, scrollToBottom]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+
+    const ro = new ResizeObserver(() => scrollToBottom());
+    ro.observe(el);
+    for (const child of el.children) ro.observe(child);
+
+    return () => ro.disconnect();
+  }, [messages.length, scrollToBottom]);
 
   return (
     <div className="es-page">
@@ -286,73 +364,87 @@ export function ChatPanel({ variant = "default", hideHeaderLogo = false, headerL
           <p className="es-sub">{t.sub}</p>
         </header>
 
-        <div className="es-card">
-          {error && (
-            <p className="es-error" role="alert">
-              {t.errorPrefix} {error.message} — {t.errorSuffix}
-            </p>
-          )}
-          {messages.length === 0 && !error && (
-            <div className="es-empty-state">
-              <p className="es-empty">{t.empty}</p>
+        <div className="es-chat-shell">
+          <div className="es-card">
+            <div className="es-card-scroll" ref={scrollRef}>
+              {error && (
+                <p className="es-error" role="alert">
+                  {t.errorPrefix} {error.message} — {t.errorSuffix}
+                </p>
+              )}
+              {messages.length === 0 && !error && (
+                <div className="es-empty-state">
+                  <p className="es-empty">{t.empty}</p>
+                </div>
+              )}
+              {messages.map((m, i) => (
+                <div
+                  key={m.id || `m-${i}`}
+                  className={`es-row ${m.role === "user" ? "es-row--user" : "es-row--bot"}`}
+                >
+                  <div className="es-meta">{m.role === "user" ? t.visitor : t.guide}</div>
+                  <div className={`es-bubble ${m.role === "user" ? "es-bubble--user" : "es-bubble--bot"}`}>
+                    {messageText(m)}
+                  </div>
+                </div>
+              ))}
+              {showGeneratingBubble && (
+                <div className="es-row es-row--bot es-row--typing" aria-live="polite">
+                  <div className="es-meta">{t.guide}</div>
+                  <div className="es-bubble es-bubble--bot es-bubble--typing">{typingLine}</div>
+                </div>
+              )}
+              <div ref={bottomRef} className="es-scroll-anchor" aria-hidden="true" />
             </div>
-          )}
-          {messages.map((m, i) => (
-            <div
-              key={m.id || `m-${i}`}
-              className={`es-row ${m.role === "user" ? "es-row--user" : "es-row--bot"}`}
-            >
-              <div className="es-meta">{m.role === "user" ? t.visitor : t.guide}</div>
-              <div className={`es-bubble ${m.role === "user" ? "es-bubble--user" : "es-bubble--bot"}`}>
-                {messageText(m)}
-              </div>
-            </div>
-          ))}
-          {showGeneratingBubble && (
-            <div className="es-row es-row--bot es-row--typing" aria-live="polite">
-              <div className="es-meta">{t.guide}</div>
-              <div className="es-bubble es-bubble--bot es-bubble--typing">{typingLine}</div>
-            </div>
-          )}
-        </div>
 
-        <section className="es-hints" aria-label={t.suggestions}>
-          <p className="es-hints-label">{t.suggestions}</p>
-          <div className="es-hints-grid">
-            {EXAMPLE_PROMPTS.map((p) => (
-              <button
-                key={p.question}
-                type="button"
-                className="es-hint-slat"
-                disabled={busy}
-                onClick={() => sendExample(p.question)}
+            <section className="es-hints-strip es-hints-strip--in-card" aria-label={t.suggestions}>
+              <p className="es-hints-label">{t.suggestions}</p>
+              <div
+                ref={hintsViewportRef}
+                className="es-hints-viewport"
+                onPointerDown={onHintsPointerDown}
+                onPointerMove={onHintsPointerMove}
+                onPointerUp={endHintsPointer}
+                onPointerCancel={endHintsPointer}
               >
-                {lang === "en" ? p.labelEn : p.labelKo}
-              </button>
-            ))}
-          </div>
-        </section>
+                <div className="es-hints-track">
+                  {[...EXAMPLE_PROMPTS, ...EXAMPLE_PROMPTS].map((p, i) => (
+                    <button
+                      key={`${p.question}-${i}`}
+                      type="button"
+                      className="es-hint-slat es-hint-slat--slide"
+                      disabled={busy}
+                      onClick={() => onHintClick(p.question)}
+                    >
+                      {lang === "en" ? p.labelEn : p.labelKo}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </section>
 
-        <form className="es-composer" onSubmit={onFormSubmit}>
-          <div className="es-input-wrap">
-            <textarea
-              className="es-input"
-              value={input}
-              onChange={handleInputChange}
-              onKeyDown={onKeyDown}
-              placeholder={t.placeholder}
-              rows={3}
-            />
+            <form className="es-composer es-composer--in-card" onSubmit={onFormSubmit}>
+              <div className="es-input-wrap">
+                <textarea
+                  className="es-input"
+                  value={input}
+                  onChange={handleInputChange}
+                  onKeyDown={onKeyDown}
+                  placeholder={t.placeholder}
+                  rows={2}
+                />
+              </div>
+              <div className="es-form-actions">
+                <button type="submit" className="es-btn es-btn--slit" disabled={busy}>
+                  {busy ? t.sending : t.send}
+                </button>
+                <button type="button" className="es-btn es-btn--slit es-btn--ghost" onClick={refreshChat}>
+                  {t.refresh}
+                </button>
+              </div>
+            </form>
           </div>
-          <div className="es-form-actions">
-            <button type="submit" className="es-btn es-btn--slit" disabled={busy}>
-              {busy ? t.sending : t.send}
-            </button>
-            <button type="button" className="es-btn es-btn--slit es-btn--ghost" onClick={refreshChat}>
-              {t.refresh}
-            </button>
-          </div>
-        </form>
+        </div>
 
         <footer className="es-footer">
           {variant !== "kiosk" ? <a href="/admin/gaps">{t.adminFooter}</a> : null}

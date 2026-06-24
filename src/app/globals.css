@@ -47,11 +47,16 @@ a:hover {
   --splash-fade-in-ms: 1000ms;
   --splash-crossfade-ms: 1000ms;
   position: relative;
-  min-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
 }
 
 .es-entry-chat {
-  min-height: 100vh;
+  height: 100%;
+  max-height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
   opacity: 0;
   transition: opacity var(--splash-crossfade-ms, 1000ms) cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
@@ -128,10 +133,14 @@ a:hover {
 /* --- 챗 패널 --- */
 .es-page {
   position: relative;
-  min-height: 100vh;
-  padding: 24px clamp(14px, 3.5vw, 40px) 48px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100dvh;
+  min-height: 0;
+  padding: 24px clamp(14px, 3.5vw, 40px) max(16px, env(safe-area-inset-bottom));
   background: var(--bg);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .es-linear {
@@ -162,9 +171,19 @@ a:hover {
   width: 100%;
   max-width: min(720px, calc(100vw - 28px));
   margin: 0 auto;
+  flex: 1 1 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.es-header {
+  flex-shrink: 0;
+  text-align: left;
+  padding: 14px 120px 12px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .es-lang-bar {
@@ -199,12 +218,6 @@ a:hover {
 .es-lang-btn--on {
   color: var(--text);
   background: var(--accent-soft);
-}
-
-.es-header {
-  text-align: left;
-  padding: 14px 120px 12px 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .es-kicker {
@@ -249,23 +262,52 @@ a:hover {
   color: var(--muted);
 }
 
+.es-chat-shell {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .es-card {
   border: 1px solid var(--line);
   border-radius: 2px;
   background: var(--bg-elev);
   box-shadow: 0 1px 0 var(--shadow);
-  padding: 16px 16px 14px;
-  min-height: 280px;
-  max-height: min(52vh, 520px);
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  overflow: auto;
+  overflow: hidden;
   font-family: var(--font-chat);
 }
 
+.es-card-scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  overflow-anchor: none;
+}
+
+.es-scroll-anchor {
+  height: 1px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
 .es-empty-state {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -361,6 +403,13 @@ a:hover {
   gap: 12px;
 }
 
+.es-composer--in-card {
+  flex-shrink: 0;
+  border-top: 1px solid var(--line);
+  padding: 12px 16px 14px;
+  background: var(--bg-elev);
+}
+
 .es-input-wrap {
   flex: 1;
   min-width: 0;
@@ -376,9 +425,9 @@ a:hover {
 
 .es-input {
   width: 100%;
-  min-height: 92px;
-  resize: vertical;
-  padding: 14px 16px;
+  min-height: 56px;
+  resize: none;
+  padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: var(--bg-elev);
@@ -437,24 +486,63 @@ a:hover {
   cursor: not-allowed;
 }
 
-.es-hints {
-  padding: 12px 2px 4px;
-  margin: 0;
+.es-hints-strip {
+  flex-shrink: 0;
+}
+
+.es-hints-strip--in-card {
+  flex-shrink: 0;
+  padding: 8px 12px 10px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-elev);
+}
+
+.es-hints-strip--in-card .es-hints-label {
+  margin-bottom: 6px;
+  font-size: 0.72rem;
 }
 
 .es-hints-label {
-  margin: 0 0 10px;
-  font-size: 0.82rem;
+  margin: 0 0 8px;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--muted);
   font-family: var(--font-ui);
 }
 
-.es-hints-grid {
+.es-hints-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.es-hints-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.es-hints-viewport--dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.es-hints-viewport--dragging .es-hint-slat {
+  pointer-events: none;
+}
+
+.es-hints-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  padding: 2px 4px 4px;
 }
 
 .es-hint-slat {
@@ -472,10 +560,18 @@ a:hover {
   transition: border-color 0.45s ease, color 0.45s ease, background 0.45s ease, transform 0.2s ease;
 }
 
+.es-hint-slat--slide {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  background: var(--bg-elev);
+  box-shadow: 0 1px 0 var(--shadow);
+  touch-action: manipulation;
+}
+
 .es-hint-slat:hover:not(:disabled) {
   border-color: var(--line-strong);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.6);
+  background: #fff;
 }
 
 .es-hint-slat:disabled {
@@ -484,6 +580,7 @@ a:hover {
 }
 
 .es-footer {
+  flex-shrink: 0;
   text-align: center;
   font-size: 0.75rem;
   color: var(--muted);
@@ -495,12 +592,17 @@ a:hover {
 }
 
 @media (max-width: 540px) {
+  .es-page {
+    padding: 16px 14px max(12px, env(safe-area-inset-bottom));
+  }
+
   .es-header {
     padding-right: 0;
   }
 
-  .es-composer {
+  .es-composer--in-card {
     flex-direction: column;
+    padding: 10px 12px 12px;
   }
 
   .es-form-actions {
@@ -512,6 +614,11 @@ a:hover {
   .es-btn--slit {
     flex: 1;
     min-width: 0;
+  }
+
+  .es-hint-slat--slide {
+    font-size: 0.82rem;
+    padding: 6px 14px;
   }
 }
 
